@@ -1,0 +1,69 @@
+# Strategy rules — premium-selling defaults.
+# Tune freely; nothing in code should hardcode these values.
+
+# M2M flip definition — the path-aware risk threshold.
+# Per the client: "first meaningful M2M loss" — not expiration breakeven.
+# We model it as: the underlying level at which, `early_red_days_forward`
+# days from entry, the spread's M2M loss equals `early_red_loss_pct` of
+# credit. Tune `early_red_loss_pct` to match the client's "what counts as
+# meaningfully red" — 0.25 means "down 25% of credit."
+m2m:
+  early_red_days_forward: 5
+  early_red_loss_pct: 0.25
+
+# Probability of profit (POP) target band. Trades outside this range are dropped.
+pop:
+  min: 0.70
+  max: 0.90
+  target: 0.80   # ranking pulls toward this center
+
+# Days to expiration window for new entries.
+dte:
+  min: 14
+  max: 21
+  early_exit_dte: 10   # close/avoid carrying past this
+
+# Profit-taking ladders.
+exits:
+  primary_pct: 0.50    # take half off at 50% of max credit
+  secondary_pct: 0.25  # initial scale at 25%
+  time_target_days_50: 7   # rough estimate of days to hit 50% target
+  time_target_days_25: 3
+
+# Strike-distance buffers.
+# Per client feedback: 2x-EM is too blunt — in benign VIX we end up
+# undertrading SPX. Tier the index buffer by VIX so we trade *selectively*
+# in low vol (tighter buffer) rather than refusing entirely. Equity rule
+# is unchanged (1.5x ATR — 2x-EM does NOT auto-apply to equity names).
+buffers:
+  index_products: ["SPX", "SPY", "QQQ", "IWM", "NDX", "RUT"]
+  # VIX-aware index buffer schedule. Keys are upper-inclusive VIX thresholds.
+  # The first row whose VIX upper-bound is >= current VIX wins. Final row
+  # (vix_max: null) is the catch-all for very high VIX.
+  index_em_tiers:
+    - { vix_max: 14.0, em_multiplier: 1.25 }   # very calm — be willing to trade tighter
+    - { vix_max: 18.0, em_multiplier: 1.50 }   # benign — moderate buffer
+    - { vix_max: 24.0, em_multiplier: 2.00 }   # normal — full 2x
+    - { vix_max: null, em_multiplier: 2.50 }   # elevated — extra cushion
+  # Legacy single-multiplier — used only if the tiers above are removed.
+  index_em_multiplier: 2.0
+  equity_atr_multiplier: 1.5
+  equity_atr_period: 14
+
+# Spread geometry.
+spread:
+  min_width: 1.0
+  max_width: 5.0
+  preferred_width: 2.5
+  # At 2x-EM index buffers and ~16% VIX, realistic credit/width is 10-20%.
+  # 0.20 was too tight and rejected every benign-vol SPX trade.
+  min_credit_to_width_ratio: 0.08
+  max_credit_to_width_ratio: 0.45
+
+# Ranking weights. Higher = more emphasis on that factor.
+ranking_weights:
+  pop_centering: 1.0          # closeness to pop.target
+  m2m_distance: 1.5           # further M2M flip = better
+  credit_quality: 1.0         # credit-to-width ratio sweet spot
+  liquidity: 0.8              # tight spreads, OI/volume
+  early_red_pl_penalty: 1.2   # penalize trades that go red fast

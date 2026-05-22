@@ -1,0 +1,28 @@
+# Data adapter / cache configuration.
+
+provider: yfinance   # yfinance | tradier | polygon (future)
+
+cache:
+  enabled: true
+  # Time-to-live in seconds for each data type. Options chains move fast
+  # intraday, so keep that TTL short. History rarely changes.
+  ttl_seconds:
+    quote: 60
+    chain: 300
+    history: 86400
+    vix: 60
+  # On-disk parquet/JSON cache path. Defaults to options_system/data/cache/.
+  on_disk: true
+
+# Risk-free rate proxy used by the Black-Scholes greek estimator.
+risk_free_rate: 0.045
+
+# Default lookbacks.
+history:
+  default_period: "6mo"
+  long_period: "2y"
+
+# Retry / rate-limit handling for yfinance flakiness.
+retries:
+  max_attempts: 3
+  backoff_base_seconds: 1.5

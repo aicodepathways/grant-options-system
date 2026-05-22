@@ -1,0 +1,49 @@
+# Risk rules — when to flag, when to bail. All thresholds are configurable
+# defaults, not hard-coded behavior.
+
+# Unrealized loss tolerance, expressed as a multiple of credit received.
+# e.g., max_loss_mult_of_credit: 2.0 means exit if loss > 2x credit collected.
+# `max_loss_dollars_per_spread` is the client's "-$200 rule" — a hard
+# dollar stop applied to the spread regardless of credit/width ratios.
+# Set to null to disable. Applies per spread (multiply by contract count
+# in position management).
+loss_tolerance:
+  max_loss_mult_of_credit: 2.0
+  max_loss_pct_of_width: 0.60
+  max_loss_dollars_per_spread: 2.00     # $200 per 1-contract spread (option-pricing units)
+
+# M2M proximity flagging.
+# Two thresholds: one for the early-red (path-aware) flip, one for the
+# expiration breakeven. The early-red flip will typically be closer to
+# spot than the expiration breakeven, so its thresholds are tighter.
+m2m:
+  # Path-aware "early-red" thresholds (5d / 25% credit loss by default).
+  early_red_reject_pct_distance: 0.010
+  early_red_warn_pct_distance:   0.020
+  early_red_penalty_band_pct:    0.035
+  # Legacy thresholds — still applied to the expiration breakeven so
+  # ranking penalizes trades whose worst-case expiry buffer is too thin.
+  warn_pct_distance: 0.03
+  reject_pct_distance: 0.015
+  penalty_band_pct: 0.05
+
+# Approach to short strike (for credit spreads).
+short_strike_approach:
+  warn_pct: 0.02
+  reject_pct: 0.01
+
+# Gamma-risk zones near expiration.
+gamma:
+  # Below this DTE, escalate exit pressure.
+  hot_dte: 7
+  # Below this DTE, do not open new positions.
+  no_open_dte: 5
+  # Below this DTE, force-close regardless of P/L.
+  force_close_dte: 2
+
+# Structural break — exit when underlying violates technical levels.
+structure_break:
+  # Close above prior swing high / below prior swing low closes the position.
+  swing_lookback: 10
+  # ATR-multiple move from entry that triggers exit.
+  atr_break_mult: 2.0

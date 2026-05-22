@@ -1,0 +1,46 @@
+# Regime classification thresholds.
+# Output: a regime label and a binary deploy/no-trade gate.
+
+vix:
+  # Below this, IV is too crushed to sell premium attractively.
+  too_low: 12.0
+  # Comfort zone for premium selling.
+  benign_max: 20.0
+  # Elevated — trade smaller, tighter rules.
+  elevated_max: 28.0
+  # Above this, no new premium-selling deployments.
+  panic: 32.0
+  # Daily VIX spike that blocks deployment regardless of absolute level.
+  spike_pct_1d: 0.20
+
+spx:
+  # Trend filters. SPX must be above its X-day SMA to deploy bull-side spreads.
+  sma_fast: 20
+  sma_slow: 50
+  # Compression detection — Bollinger band width relative to recent average.
+  bb_period: 20
+  bb_std: 2.0
+  bb_width_compression_pct: 0.50  # current width <= 50% of avg width
+  # Breakout / breakdown detection.
+  breakout_lookback: 20
+  breakout_buffer: 0.005   # 0.5% above prior high counts as breakout
+
+# Regime states the engine may emit.
+regimes:
+  - BENIGN_TREND       # deploy: yes, full size
+  - BENIGN_CHOP        # deploy: yes
+  - COMPRESSION        # deploy: yes — favors iron condors
+  - ELEVATED_VOL       # deploy: yes, half size, tighter buffers
+  - BREAKOUT           # deploy: cautious, directional bias
+  - PANIC              # NO-TRADE
+  - LOW_VOL_NO_EDGE    # NO-TRADE — premium too cheap
+
+# Map each regime to a deployment decision and a sizing factor.
+deployment:
+  BENIGN_TREND:    { deploy: true,  size_mult: 1.0 }
+  BENIGN_CHOP:     { deploy: true,  size_mult: 1.0 }
+  COMPRESSION:     { deploy: true,  size_mult: 1.0 }
+  ELEVATED_VOL:    { deploy: true,  size_mult: 0.5 }
+  BREAKOUT:        { deploy: true,  size_mult: 0.5 }
+  PANIC:           { deploy: false, size_mult: 0.0 }
+  LOW_VOL_NO_EDGE: { deploy: false, size_mult: 0.0 }

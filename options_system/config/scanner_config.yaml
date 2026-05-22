@@ -1,0 +1,49 @@
+# Scanner inputs — universe and per-candidate quality bars.
+
+# Universe to scan each day. Index/ETF first, then equity defensives.
+universe:
+  index_etfs:
+    - SPY
+    - QQQ
+    - IWM
+  equities:
+    - PG
+    - KO
+    - JNJ
+    - PEP
+    - ABBV
+    - XLP
+    - XLU
+    - XLV
+    - MCD
+    - CL
+    - WMT
+
+# IV filters — premium-selling needs adequate IV but not panic-level.
+iv:
+  min: 0.15        # 15% annualized IV floor
+  max: 0.80        # above this, structure breaks become too likely
+  iv_rank_min: 0.30  # if IV-rank is computable, prefer >= 30th pctile
+
+# Liquidity / quality gates.
+liquidity:
+  max_bid_ask_spread_pct: 0.10   # (ask - bid) / mid <= 10%
+  min_open_interest: 100
+  min_volume: 10
+  min_underlying_dollar_volume: 5_000_000
+
+# Technical compression — favor names whose realized vol has tightened.
+compression:
+  enabled: true
+  bb_period: 20
+  bb_width_compression_pct: 0.65
+  atr_period: 14
+  atr_compression_lookback: 50
+  atr_compression_pct: 0.75   # current ATR <= 75% of trailing avg
+
+# Output sizing.
+output:
+  max_candidates_per_run: 25
+  # If fewer than min_candidates qualify, return what we have. We never
+  # lower the quality bar to hit a minimum count.
+  prefer_quality_over_quantity: true

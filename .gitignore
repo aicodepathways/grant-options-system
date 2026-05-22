@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project — runtime artifacts that should not be checked in.
+# Cached yfinance pulls (regenerated on demand, can be large)
+options_system/data/cache/
+# Per-day JSONL logs from pipeline runs
+options_system/logging_system/logs/
+
+# Local secrets / overrides (Streamlit reads .streamlit/secrets.toml at runtime)
+.streamlit/secrets.toml
+.env
+.env.local
