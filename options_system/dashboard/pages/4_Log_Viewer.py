@@ -5,9 +5,13 @@ calendar date, four streams (candidates, decisions, trades, events).
 """
 from __future__ import annotations
 
+# --- Streamlit Cloud path fix (see options_system/dashboard/app.py for context) ---
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+
 import json
 from datetime import date, datetime
-from pathlib import Path
 from typing import Any, Dict, List
 
 import pandas as pd

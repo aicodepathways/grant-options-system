@@ -8,8 +8,15 @@ its native multi-page layout. This file is the landing page.
 """
 from __future__ import annotations
 
-import logging
+# --- Streamlit Cloud path fix ---
+# Cloud runs this script directly, putting only options_system/dashboard/
+# in sys.path. Add the repo root so `from options_system...` imports resolve.
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+# --------------------------------
+
+import logging
 
 import streamlit as st
 

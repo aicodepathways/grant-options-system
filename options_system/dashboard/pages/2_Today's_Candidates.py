@@ -2,6 +2,11 @@
 credit, POP, M2M distance, exit levels. Color-coded by rank."""
 from __future__ import annotations
 
+# --- Streamlit Cloud path fix (see options_system/dashboard/app.py for context) ---
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+
 from datetime import date
 from typing import List
 
