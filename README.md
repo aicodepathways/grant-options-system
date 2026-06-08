@@ -313,9 +313,22 @@ Items still on the roadmap, in rough priority order:
 4. **Real historical option chains** for backtests. Polygon or CBOE
    Datashop. Replaces the synthetic-chain approximation.
 5. **Position management dashboard.** Track live open positions, show
-   running P/L, surface exit signals as they trigger.
-6. **Optional HMM-based regime layer** alongside the rules engine. A
+   running P/L, surface exit signals as they trigger. Today the system
+   can evaluate a position you describe to it, but does not watch your
+   portfolio on its own.
+6. **More accurate POP.** Current POP is `1 minus absolute delta of
+   short leg`, a first-order estimate. A full distribution-based POP
+   (or vol-surface-adjusted) would be marginally better.
+7. **Correlated-path resilience score.** Today's score uses independent
+   single-day shocks across spot and IV. A Monte Carlo over correlated
+   paths would model momentum continuation and joint distributions.
+8. **Optional HMM-based regime layer** alongside the rules engine. A
    second opinion on the deploy/no-trade gate.
+9. **CI/CD.** Tests run locally today (13 unit tests across regime,
+   greeks, failure logic). No GitHub Actions workflow yet. Phase 2 add.
+10. **Alerting.** No SMS/email/Slack alerts today. When a trade
+    surfaces, the user has to be looking at the dashboard. A simple
+    daily-digest email or push notification is a small Phase 2 addition.
 
 ## Connecting an AI Advisor to the Scanner
 
@@ -374,7 +387,7 @@ Editing a YAML file is enough to change behavior. No code changes required.
 
 ## Dashboard
 
-The Streamlit dashboard has 5 pages:
+The Streamlit dashboard has 6 pages:
 
 1. **Overview**: pipeline status, regime banner, quick counts.
 2. **Regime Overview**: VIX and SPX charts with band overlays, classifier
@@ -384,6 +397,11 @@ The Streamlit dashboard has 5 pages:
 4. **Trade Detail**: full execution card for any proposal, validation
    status, failure-logic flags, exit ladder, copy-paste text card.
 5. **Log Viewer**: searchable history of past scans, decisions, and trades.
+6. **Daily Snapshot**: single plain-text dump of today's regime,
+   candidates, and top proposals, formatted for paste-in to an outside
+   AI advisor (Chat, ChatGPT, Claude). Streamlit pages render via
+   JavaScript so external AIs cannot reliably browse the dashboard URL
+   directly; this page exists as a copy-pasteable bridge.
 
 The sidebar includes a **Replay mode** that lets the user point the
 pipeline at any past date in the last two years. Real OHLCV and VIX
@@ -392,6 +410,10 @@ today's live regime returns no candidates.
 
 A purple "Replay mode" banner sits at the top of every page when this is
 on, so live and replay are never confused.
+
+If Yahoo Finance is having an outage (occasionally yfinance returns
+malformed responses), the pages show a clear error banner rather than
+crashing, and Replay mode keeps working since it uses cached history.
 
 ## Glossary
 
