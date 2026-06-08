@@ -89,7 +89,14 @@ class YFinanceAdapter(MarketDataAdapter):
                     fn.__name__, attempt + 1, self.max_attempts, exc, wait,
                 )
                 time.sleep(wait)
-        raise RuntimeError(f"yfinance call failed after retries: {last_exc}")
+        # Wrap with a friendlier message so the dashboard / pipeline can show
+        # something useful instead of leaking yfinance internals.
+        kind = type(last_exc).__name__ if last_exc else "Exception"
+        msg = str(last_exc) or repr(last_exc)
+        raise RuntimeError(
+            f"Yahoo Finance data fetch failed ({kind}: {msg}). "
+            f"This is usually a transient Yahoo API issue; retry in a minute."
+        )
 
     # --- abstract method implementations -------------------------------------
 

@@ -24,6 +24,8 @@ def main() -> None:
 
     run = sidebar_controls()
     replay_banner(run)
+    if run.error:
+        st.error(f"Live data unavailable: {run.error}")
     regime_banner(run.regime)
     st.markdown("---")
 

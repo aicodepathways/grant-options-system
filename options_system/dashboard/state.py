@@ -112,7 +112,7 @@ def run_pipeline(top_n: int = 5, force_deploy: bool = False,
 
     except Exception as exc:
         logger.exception("pipeline run failed")
-        daily.log_event("error", message=str(exc))
+        daily.log_event("pipeline error", error=str(exc))
         run.error = str(exc)
     finally:
         daily.log_event("dashboard_run_finished", counts=daily.counts())

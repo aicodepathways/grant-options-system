@@ -35,6 +35,13 @@ def main() -> None:
 
     run = sidebar_controls()
     replay_banner(run)
+    if run.error:
+        st.error(
+            f"Live data unavailable right now: {run.error}\n\n"
+            "Yahoo Finance occasionally rate-limits or returns malformed "
+            "responses. Try Refresh in a minute, or switch to Replay mode "
+            "in the sidebar to view a past date."
+        )
     regime_banner(run.regime)
 
     st.markdown("---")
