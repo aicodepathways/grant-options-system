@@ -330,6 +330,46 @@ Items still on the roadmap, in rough priority order:
     surfaces, the user has to be looking at the dashboard. A simple
     daily-digest email or push notification is a small Phase 2 addition.
 
+### Client-Requested Phase 2 Scores
+
+These came out of the client's sessions with his AI advisor and are on
+the roadmap in addition to the items above. They share a theme: move the
+scanner from "is this trade structurally good" toward "is this trade on
+the right side of how the market is actually positioned."
+
+11. **Liquidity Distortion Score.** Detects overpriced fear: unusual put
+    skew, downside protection overpricing, institutional hedging demand,
+    options buyers overpaying. Identifies the conditions where selling
+    premium is selling something rich rather than something fair. Put-call
+    IV skew and open-interest concentration are computable today from the
+    existing chain data; the deeper flow signals need a paid data feed.
+12. **Institutional Positioning Divergence Score (IPDS).** The client's
+    core question: "Where is the highest probability that institutional
+    positioning and retail behavior are diverging, and does our
+    premium-selling strategy (or a debit spread) benefit from that?"
+    Candidate components: institutional accumulation probability
+    (price/volume behavior, VWAP interaction, volume profile,
+    support/resistance reactions), dealer positioning (gamma exposure,
+    vanna/charm where practical, open-interest concentration), options
+    positioning (put/call skew, block trades, flow imbalance), regime
+    confirmation, and the Liquidity Distortion Score as a subcomponent.
+    Output would be a divergence read attached to each proposal
+    (institutional bias, retail positioning, divergence strength,
+    premium-selling edge, recommended structure) rather than a bare
+    VALID/INVALID. Data reality: a useful first version (skew, OI
+    concentration, a dealer-gamma proxy computed from OI and our own
+    greeks) is buildable from current or cheap data; the full version
+    (block trades, options flow imbalance, dark pool prints) requires a
+    commercial feed such as Polygon options, CBOE, or a flow service.
+13. **Directional Theta Score.** A quality measure for the theta
+    opportunity itself: probability of achieving a 20-40% profit before
+    adverse movement, blending theta capture rate against the early-red
+    flip distance and regime.
+14. **Highest 3-Day 20-30% Probability Ranking.** Rank proposals by the
+    probability of hitting a 20-30% profit target within the first three
+    days, aligning ranking with the client's cash-flow-oriented early
+    exit style rather than max-profit-at-expiration.
+
 ## Connecting an AI Advisor to the Scanner
 
 Grant asked about connecting Chat directly to the scanner. Here is how
