@@ -1,0 +1,42 @@
+name: Daily snapshot
+
+on:
+  schedule:
+    # 13:40 UTC = 6:40 AM Pacific (during daylight time). Weekdays only.
+    - cron: "40 13 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run pipeline and write snapshot
+        env:
+          OPTIONS_NOCACHE: "1"
+        run: python scripts/publish_snapshot.py
+
+      - name: Commit snapshot
+        if: always()
+        run: |
+          git config user.name "snapshot-bot"
+          git config user.email "actions@github.com"
+          git add docs/
+          if git diff --cached --quiet; then
+            echo "No snapshot changes to commit."
+          else
+            git commit -m "Daily snapshot $(date -u +%F)"
+            git push
+          fi

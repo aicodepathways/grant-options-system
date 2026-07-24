@@ -52,8 +52,22 @@ def format_trade_card(
     lines.append("=" * 56)
     lines.append(f"  {proposal.strategy}  —  {proposal.symbol}  "
                  f"(spot ${proposal.underlying_price:.2f})")
-    lines.append(f"  Expires: {_fmt_date(proposal.expiration)}   "
+    lines.append(f"  Mode: {proposal.mode.upper()}   "
+                 f"Expires: {_fmt_date(proposal.expiration)}   "
                  f"DTE: {(proposal.expiration - date.today()).days}")
+    if proposal.score_card:
+        sc = proposal.score_card
+        overall = sc.get("Overall", 0)
+        if overall >= 70 and "M2M_TOO_CLOSE" not in proposal.flags:
+            verdict = "STRONG CANDIDATE"
+        elif overall >= 50:
+            verdict = "ACCEPTABLE — REVIEW FLAGS"
+        else:
+            verdict = "WEAK — CONSIDER SKIPPING"
+        lines.append(f"  Score: {overall}/100  ->  {verdict}")
+        detail = " · ".join(
+            f"{k} {v}" for k, v in sc.items() if k != "Overall")
+        lines.append(f"    {detail}")
     lines.append("=" * 56)
     lines.append("")
     lines.append("LEGS  (Robinhood: Trade > Trade Options > custom)")

@@ -1,6 +1,28 @@
 # Strategy rules — premium-selling defaults.
 # Tune freely; nothing in code should hardcode these values.
 
+# Trading modes — Phase 1.6, per client decision (Option C).
+# "Income" is the original conservative spec and uses the top-level
+# pop/spread/buffers settings unchanged. "Opportunity" matches the client's
+# actual low-vol SPX style observed in his June 11 / May 18 fills: strikes
+# near half the expected move, credit 30-50% of width, POP floor ~55%.
+# Names describe purpose, not risk level (client's request).
+modes:
+  income:
+    enabled: true
+  opportunity:
+    enabled: true
+    index_only: true            # equities always stay on income rules
+    vix_max: 18.0               # only offered in calm tape
+    pop:
+      min: 0.55
+      max: 0.80
+      target: 0.65
+    spread:
+      min_credit_to_width_ratio: 0.30
+      max_credit_to_width_ratio: 0.50
+    index_em_multiplier: 0.5    # strikes near half the expected move
+
 # M2M flip definition — the path-aware risk threshold.
 # Per the client: "first meaningful M2M loss" — not expiration breakeven.
 # We model it as: the underlying level at which, `early_red_days_forward`

@@ -76,24 +76,65 @@ class TradeBuilder:
     def _build_from_chain(
         self, candidate: Candidate, chain: OptionChain
     ) -> List[TradeProposal]:
-        spread_cfg = self.strategy_cfg.get("spread", {})
+        results: List[TradeProposal] = []
+        for mode_name, mode_cfg in self._active_modes(candidate):
+            results.extend(
+                self._build_mode(candidate, chain, mode_name, mode_cfg))
+        return results
+
+    def _active_modes(self, candidate: Candidate):
+        """Yield (name, overrides) for each mode that applies to this
+        candidate. Falls back to a single income mode if no modes block
+        exists in config (backtest configs, older setups)."""
+        modes = self.strategy_cfg.get("modes")
+        if not modes:
+            yield "income", {}
+            return
+        for name, cfg in modes.items():
+            cfg = cfg or {}
+            if not cfg.get("enabled", True):
+                continue
+            if cfg.get("index_only") and not candidate.is_index_product:
+                continue
+            vix_max = cfg.get("vix_max")
+            if vix_max is not None:
+                try:
+                    if float(self.adapter.get_vix().last) > float(vix_max):
+                        continue
+                except Exception:
+                    continue
+            yield name, cfg
+
+    def _build_mode(
+        self,
+        candidate: Candidate,
+        chain: OptionChain,
+        mode_name: str,
+        mode_cfg: Dict,
+    ) -> List[TradeProposal]:
+        spread_cfg = {**self.strategy_cfg.get("spread", {}),
+                      **(mode_cfg.get("spread") or {})}
         widths = self._candidate_widths(spread_cfg)
         results: List[TradeProposal] = []
 
         # Build buffer (in $) — based on expected move for index products,
-        # ATR for equities.
-        buffer_dollars = self._buffer_dollars(candidate, chain)
+        # ATR for equities. Mode may override the index EM multiplier.
+        buffer_dollars = self._buffer_dollars(candidate, chain, mode_cfg)
         if buffer_dollars <= 0:
             return results
 
         for w in widths:
             put_spread = self._build_vertical(
-                chain, candidate, side="PUT", width=w, buffer_dollars=buffer_dollars
+                chain, candidate, side="PUT", width=w,
+                buffer_dollars=buffer_dollars,
+                mode_name=mode_name, mode_cfg=mode_cfg,
             )
             if put_spread is not None:
                 results.append(put_spread)
             call_spread = self._build_vertical(
-                chain, candidate, side="CALL", width=w, buffer_dollars=buffer_dollars
+                chain, candidate, side="CALL", width=w,
+                buffer_dollars=buffer_dollars,
+                mode_name=mode_name, mode_cfg=mode_cfg,
             )
             if call_spread is not None:
                 results.append(call_spread)
@@ -101,7 +142,8 @@ class TradeBuilder:
         # Iron condor when both sides exist for the same width.
         for w in widths:
             ic = self._build_iron_condor(
-                chain, candidate, width=w, buffer_dollars=buffer_dollars
+                chain, candidate, width=w, buffer_dollars=buffer_dollars,
+                mode_name=mode_name, mode_cfg=mode_cfg,
             )
             if ic is not None:
                 results.append(ic)
@@ -117,9 +159,14 @@ class TradeBuilder:
         side: str,
         width: float,
         buffer_dollars: float,
+        mode_name: str = "income",
+        mode_cfg: Optional[Dict] = None,
     ) -> Optional[TradeProposal]:
-        spread_cfg = self.strategy_cfg.get("spread", {})
-        pop_cfg = self.strategy_cfg.get("pop", {})
+        mode_cfg = mode_cfg or {}
+        spread_cfg = {**self.strategy_cfg.get("spread", {}),
+                      **(mode_cfg.get("spread") or {})}
+        pop_cfg = {**self.strategy_cfg.get("pop", {}),
+                   **(mode_cfg.get("pop") or {})}
         min_ratio = float(spread_cfg.get("min_credit_to_width_ratio", 0.20))
         max_ratio = float(spread_cfg.get("max_credit_to_width_ratio", 0.45))
         pop_min, pop_max = float(pop_cfg.get("min", 0.70)), float(pop_cfg.get("max", 0.90))
@@ -220,6 +267,7 @@ class TradeBuilder:
                 "short_delta": short.delta,
                 "credit_to_width_ratio": ratio,
             },
+            mode=mode_name,
         )
 
     # --- iron condor -------------------------------------------------------
@@ -230,9 +278,15 @@ class TradeBuilder:
         candidate: Candidate,
         width: float,
         buffer_dollars: float,
+        mode_name: str = "income",
+        mode_cfg: Optional[Dict] = None,
     ) -> Optional[TradeProposal]:
-        put_side = self._build_vertical(chain, candidate, "PUT", width, buffer_dollars)
-        call_side = self._build_vertical(chain, candidate, "CALL", width, buffer_dollars)
+        put_side = self._build_vertical(
+            chain, candidate, "PUT", width, buffer_dollars,
+            mode_name=mode_name, mode_cfg=mode_cfg)
+        call_side = self._build_vertical(
+            chain, candidate, "CALL", width, buffer_dollars,
+            mode_name=mode_name, mode_cfg=mode_cfg)
         if put_side is None or call_side is None:
             return None
 
@@ -288,6 +342,7 @@ class TradeBuilder:
                 "put_flip": flip_low, "call_flip": flip_high,
                 "buffer_dollars": buffer_dollars,
             },
+            mode=mode_name,
         )
 
     # --- analytics ---------------------------------------------------------
@@ -300,12 +355,17 @@ class TradeBuilder:
         widths = sorted({pref, wmin, wmax, (wmin + pref) / 2.0, (pref + wmax) / 2.0})
         return [w for w in widths if wmin <= w <= wmax]
 
-    def _buffer_dollars(self, candidate: Candidate, chain: OptionChain) -> float:
+    def _buffer_dollars(self, candidate: Candidate, chain: OptionChain,
+                        mode_cfg: Optional[Dict] = None) -> float:
         bcfg = self.strategy_cfg.get("buffers", {})
+        mode_cfg = mode_cfg or {}
         if candidate.is_index_product:
             em = self._expected_move(chain, candidate)
-            mult = self._index_em_multiplier(bcfg)
-            return em * mult
+            # A mode may pin its own EM multiplier (opportunity = 0.5x);
+            # otherwise fall through to the VIX-tier schedule.
+            if mode_cfg.get("index_em_multiplier") is not None:
+                return em * float(mode_cfg["index_em_multiplier"])
+            return em * self._index_em_multiplier(bcfg)
         atr = candidate.atr or 0.0
         return atr * float(bcfg.get("equity_atr_multiplier", 1.5))
 
@@ -504,7 +564,12 @@ class TradeBuilder:
 
     def _score_proposal(self, p: TradeProposal) -> None:
         weights = self.strategy_cfg.get("ranking_weights", {})
-        target_pop = float(self.strategy_cfg.get("pop", {}).get("target", 0.80))
+        # POP centering uses the target of the mode that built the proposal
+        # (income 0.80, opportunity 0.65 by default).
+        mode_cfg = (self.strategy_cfg.get("modes") or {}).get(p.mode) or {}
+        pop_cfg = {**self.strategy_cfg.get("pop", {}),
+                   **(mode_cfg.get("pop") or {})}
+        target_pop = float(pop_cfg.get("target", 0.80))
 
         # POP centering: peaks at target_pop.
         pop_score = 1.0 - abs(p.pop - target_pop) / 0.20
@@ -568,3 +633,20 @@ class TradeBuilder:
             f"early_red_score={red_score:.2f}",
             f"penalty={penalty:.2f}",
         ]
+
+        # 0-100 decision card. Overall = the weighted rank score normalized
+        # by the maximum achievable (all subscores 1.0, no penalty).
+        max_possible = sum(float(weights.get(k, d)) for k, d in [
+            ("pop_centering", 1.0), ("m2m_distance", 1.5),
+            ("credit_quality", 1.0), ("liquidity", 0.8),
+            ("early_red_pl_penalty", 1.2),
+        ])
+        overall = max(0.0, min(1.0, score / max_possible)) if max_possible else 0.0
+        p.score_card = {
+            "POP Fit": round(pop_score * 100),
+            "M2M Distance": round(m2m_score * 100),
+            "Credit Quality": round(credit_score * 100),
+            "Liquidity": round(liquidity_score * 100),
+            "Resilience": round(red_score * 100),
+            "Overall": round(overall * 100),
+        }

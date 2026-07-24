@@ -108,6 +108,8 @@ def main() -> None:
         height=min(60 + 36 * len(view), 720),
         column_config={
             "DTE": st.column_config.NumberColumn("DTE", width="small"),
+            "Score": st.column_config.ProgressColumn(
+                "Score", min_value=0, max_value=100, format="%d"),
             "POP": st.column_config.ProgressColumn(
                 "POP", min_value=0, max_value=1, format="%.0f%%"),
             "Rank": st.column_config.NumberColumn("Rank", format="%.2f"),
@@ -138,6 +140,8 @@ def _proposals_to_dataframe(proposals: List[TradeProposal]) -> pd.DataFrame:
         rows.append({
             "Rank #": i + 1,
             "Symbol": p.symbol,
+            "Mode": p.mode.title(),
+            "Score": p.score_card.get("Overall"),
             "Strategy": p.strategy,
             "Expiration": p.expiration.isoformat(),
             "DTE": (p.expiration - today).days,

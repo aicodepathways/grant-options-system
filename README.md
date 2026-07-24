@@ -105,6 +105,22 @@ every expiration in the DTE window. It tries every width in the configured
 set (1.0, 1.75, 2.5, 3.75, 5.0 by default), on both the put side and the
 call side, plus iron condors that combine both sides.
 
+### Trading Modes (Phase 1.6)
+
+The builder runs every candidate through two rule sets and tags each
+proposal with its mode:
+
+- **INCOME mode**: the original conservative spec. Wide strikes
+  (VIX-tiered expected-move buffer), 70-90% POP, credit 8-45% of width.
+  Applies to all tickers.
+- **OPPORTUNITY mode**: matches the client's actual low-volatility SPX
+  style, calibrated from his real June 11 and May 18 fills. Strikes near
+  half the expected move, credit 30-50% of width, POP floor about 55%.
+  Index products only, and only offered when VIX is under 18.
+
+Both appear side by side in the candidates table so the trader picks per
+trade. Mode names describe purpose, not risk level, per the client.
+
 ### Strike Selection
 
 The builder targets a short-strike distance from spot that depends on
@@ -369,6 +385,20 @@ the right side of how the market is actually positioned."
     probability of hitting a 20-30% profit target within the first three
     days, aligning ranking with the client's cash-flow-oriented early
     exit style rather than max-profit-at-expiration.
+
+## Morning Snapshot for AI Advisors (live)
+
+Every weekday morning an automated job runs the full pipeline and
+publishes the result to this repository. An AI advisor (Chat, ChatGPT,
+Claude) can read it directly at this stable URL:
+
+    https://raw.githubusercontent.com/aicodepathways/grant-options-system/main/docs/daily_snapshot.md
+
+A JSON version lives next to it at `docs/daily_snapshot.json`, and
+`docs/last_run_status.md` says whether the most recent run succeeded.
+If a morning run fails (Yahoo outage), the previous snapshot stays in
+place and the status file records the failure, so the advisor should
+check the Generated timestamp before treating the data as today's.
 
 ## Connecting an AI Advisor to the Scanner
 

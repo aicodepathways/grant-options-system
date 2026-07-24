@@ -67,6 +67,11 @@ class TradeProposal:
     rank_reasons: List[str] = field(default_factory=list)
     flags: List[str] = field(default_factory=list)
     metrics: Dict[str, Any] = field(default_factory=dict)
+    # Which trading mode produced this proposal: "income" (conservative
+    # spec) or "opportunity" (closer strikes / richer credit, index-only).
+    mode: str = "income"
+    # 0-100 per-category scores + "Overall", filled by the ranking pass.
+    score_card: Dict[str, int] = field(default_factory=dict)
 
     @property
     def credit_to_width_ratio(self) -> float:
@@ -110,4 +115,6 @@ class TradeProposal:
             "rank_reasons": list(self.rank_reasons),
             "flags": list(self.flags),
             "metrics": dict(self.metrics),
+            "mode": self.mode,
+            "score_card": dict(self.score_card),
         }

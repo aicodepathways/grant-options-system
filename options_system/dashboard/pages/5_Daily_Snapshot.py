@@ -173,6 +173,10 @@ def _render_proposal(idx: int, p: TradeProposal,
     lines: List[str] = []
     dte = (p.expiration - date.today()).days
     lines.append(f"### #{idx}: {p.symbol} {p.strategy} exp {p.expiration} ({dte} DTE)")
+    lines.append(f"  Mode: {p.mode.upper()}")
+    if p.score_card:
+        lines.append(f"  Overall score: {p.score_card.get('Overall', 0)}/100  "
+                     f"({', '.join(f'{k} {v}' for k, v in p.score_card.items() if k != 'Overall')})")
 
     # Legs
     for leg in p.legs:
