@@ -1,6 +1,6 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-07-27 15:57 UTC (live data)
+Generated: 2026-07-27 16:01 UTC (live data)
 
 ## Regime
 Label: BENIGN_CHOP
@@ -9,30 +9,30 @@ Size multiplier: 1.00
   - SPX below slow SMA, no compression — benign chop
 
 ## Candidates
-- WMT: score 0.51, spot $111.77, near-ATM IV 26.4%, ATR $2.61
+- WMT: score 0.50, spot $111.70, near-ATM IV 25.8%, ATR $2.45
 
 ## Trade Proposals
 ### #1: WMT BEAR_CALL exp 2026-08-14 (18 DTE)
   Mode: INCOME
-  Overall score: 19/100 (POP Fit 57, M2M Distance 14, Credit Quality 90, Liquidity 1, Resilience 5)
-  Leg: SELL Call $116.00 mid 1.09
-  Leg: BUY Call $117.00 mid 0.82
-  Spot $111.77  Credit $0.27  Width $1.00  POP 71%
-  Early-red M2M flip: $113.88 (1.89% above spot)
-  Expiration breakeven: $116.27  Resilience: 0.05
-  Exits: 50% at $0.14, 25% at $0.20
+  Overall score: 27/100 (POP Fit 60, M2M Distance 18, Credit Quality 80, Liquidity 29, Resilience 25)
+  Leg: SELL Call $116.00 mid 1.08
+  Leg: BUY Call $117.00 mid 0.84
+  Spot $111.70  Credit $0.24  Width $1.00  POP 72%
+  Early-red M2M flip: $114.30 (2.33% above spot)
+  Expiration breakeven: $116.24  Resilience: 0.25
+  Exits: 50% at $0.12, 25% at $0.18
   Validation: VALID
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: WMT BULL_PUT exp 2026-08-14 (18 DTE)
+### #2: WMT BEAR_CALL exp 2026-08-14 (18 DTE)
   Mode: INCOME
-  Overall score: 19/100 (POP Fit 98, M2M Distance 13, Credit Quality 50, Liquidity 0, Resilience 5)
-  Leg: SELL Put $107.00 mid 0.74
-  Leg: BUY Put $105.00 mid 0.45
-  Spot $111.77  Credit $0.30  Width $2.00  POP 80%
-  Early-red M2M flip: $109.92 (1.66% below spot)
-  Expiration breakeven: $106.70  Resilience: 0.05
-  Exits: 50% at $0.15, 25% at $0.22
+  Overall score: 26/100 (POP Fit 60, M2M Distance 12, Credit Quality 59, Liquidity 87, Resilience 3)
+  Leg: SELL Call $116.00 mid 1.08
+  Leg: BUY Call $120.00 mid 0.38
+  Spot $111.70  Credit $0.71  Width $4.00  POP 72%
+  Early-red M2M flip: $113.46 (1.57% above spot)
+  Expiration breakeven: $116.70  Resilience: 0.03
+  Exits: 50% at $0.35, 25% at $0.53
   Validation: VALID
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 

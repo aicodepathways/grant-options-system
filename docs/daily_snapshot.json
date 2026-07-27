@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-07-27T15:57:43.892712",
+  "generated_utc": "2026-07-27T16:01:33.455363",
   "regime": {
     "regime": "BENIGN_CHOP",
     "deploy": true,
@@ -8,29 +8,29 @@
       "SPX below slow SMA, no compression \u2014 benign chop"
     ],
     "metrics": {
-      "vix": 19.479999542236328,
-      "vix_spike_1d_pct": 0.04171116296651247,
+      "vix": 19.520000457763672,
+      "vix_spike_1d_pct": 0.05059206339706595,
       "breakout_state": "none",
-      "bb_width": 0.03118051008766176,
-      "bb_width_avg": 0.0450541842079279,
+      "bb_width": 0.027965282444606186,
+      "bb_width_avg": 0.044324367281079566,
       "trend_state": "chop"
     },
-    "timestamp": "2026-07-27T15:57:35.358082"
+    "timestamp": "2026-07-27T16:01:24.211171"
   },
   "candidates": [
     {
       "symbol": "WMT",
       "is_index_product": false,
-      "underlying_price": 111.7699966430664,
-      "avg_iv": 0.26367923828125,
-      "iv_rank": 0.6538461538461539,
-      "atr": 2.6121422903878346,
-      "atr_compression_ratio": 0.8937470078469103,
-      "bb_width_compression_ratio": 0.5385757063713975,
+      "underlying_price": 111.69999694824219,
+      "avg_iv": 0.257819921875,
+      "iv_rank": 0.580952380952381,
+      "atr": 2.445713588169643,
+      "atr_compression_ratio": 0.8390301546185428,
+      "bb_width_compression_ratio": 0.5351135282519002,
       "expirations_in_window": [
         "2026-08-14"
       ],
-      "quality_score": 0.5056523110162923,
+      "quality_score": 0.49713506673152147,
       "reasons": [
         "passed all filters"
       ]
@@ -41,7 +41,7 @@
       "symbol": "WMT",
       "strategy": "BEAR_CALL",
       "expiration": "2026-08-14",
-      "underlying_price": 111.7699966430664,
+      "underlying_price": 111.69999694824219,
       "legs": [
         {
           "action": "SELL",
@@ -49,11 +49,11 @@
           "strike": 116.0,
           "expiration": "2026-08-14",
           "quantity": 1,
-          "mid": 1.095,
-          "bid": 1.06,
-          "ask": 1.13,
-          "delta": 0.2858726809508399,
-          "iv": 0.2644116528320312,
+          "mid": 1.08,
+          "bid": 1.08,
+          "ask": 1.08,
+          "delta": 0.2794549659891938,
+          "iv": 0.26099371826171874,
           "contract_symbol": "WMT260814C00116000"
         },
         {
@@ -62,37 +62,37 @@
           "strike": 117.0,
           "expiration": "2026-08-14",
           "quantity": 1,
-          "mid": 0.825,
-          "bid": 0.77,
-          "ask": 0.88,
-          "delta": 0.23700807050701084,
-          "iv": 0.2629468237304688,
+          "mid": 0.8400000000000001,
+          "bid": 0.78,
+          "ask": 0.9,
+          "delta": 0.237901160127157,
+          "iv": 0.26758544921875,
           "contract_symbol": "WMT260814C00117000"
         }
       ],
-      "credit": 0.27,
+      "credit": 0.24,
       "width": 1.0,
-      "max_loss": 0.73,
-      "credit_to_width_ratio": 0.27,
-      "pop": 0.7141273190491602,
-      "m2m_flip_price": 113.8780076210387,
-      "m2m_flip_distance_pct": 0.018860258041379016,
-      "expiration_breakeven_price": 116.27,
-      "expiration_breakeven_distance_pct": 0.04026128202637595,
-      "expected_move": 6.544718833448961,
-      "atr": 2.6121422903878346,
-      "early_red_pl_score": 0.05,
-      "exit_50pct_target_credit": 0.135,
-      "exit_25pct_target_credit": 0.2025,
+      "max_loss": 0.76,
+      "credit_to_width_ratio": 0.24,
+      "pop": 0.7205450340108062,
+      "m2m_flip_price": 114.30470288638026,
+      "m2m_flip_distance_pct": 0.023318764631166427,
+      "expiration_breakeven_price": 116.24,
+      "expiration_breakeven_distance_pct": 0.04064461213782739,
+      "expected_move": 6.395278386110005,
+      "atr": 2.445713588169643,
+      "early_red_pl_score": 0.25,
+      "exit_50pct_target_credit": 0.12,
+      "exit_25pct_target_credit": 0.18,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.0563244568163392,
+      "rank_score": 1.5028204511596732,
       "rank_reasons": [
-        "pop_score=0.57",
-        "m2m_score=0.14",
-        "credit_score=0.90",
-        "liquidity_score=0.01",
-        "early_red_score=0.05",
+        "pop_score=0.60",
+        "m2m_score=0.18",
+        "credit_score=0.80",
+        "liquidity_score=0.29",
+        "early_red_score=0.25",
         "penalty=0.70"
       ],
       "flags": [
@@ -100,76 +100,76 @@
         "EARLY_RED_VULNERABLE"
       ],
       "metrics": {
-        "buffer_dollars": 3.9182134355817517,
-        "short_delta": 0.2858726809508399,
-        "credit_to_width_ratio": 0.27
+        "buffer_dollars": 3.6685703822544644,
+        "short_delta": 0.2794549659891938,
+        "credit_to_width_ratio": 0.24
       },
       "mode": "income",
       "score_card": {
-        "POP Fit": 57,
-        "M2M Distance": 14,
-        "Credit Quality": 90,
-        "Liquidity": 1,
-        "Resilience": 5,
-        "Overall": 19
+        "POP Fit": 60,
+        "M2M Distance": 18,
+        "Credit Quality": 80,
+        "Liquidity": 29,
+        "Resilience": 25,
+        "Overall": 27
       }
     },
     {
       "symbol": "WMT",
-      "strategy": "BULL_PUT",
+      "strategy": "BEAR_CALL",
       "expiration": "2026-08-14",
-      "underlying_price": 111.7699966430664,
+      "underlying_price": 111.69999694824219,
       "legs": [
         {
           "action": "SELL",
-          "right": "P",
-          "strike": 107.0,
+          "right": "C",
+          "strike": 116.0,
           "expiration": "2026-08-14",
           "quantity": 1,
-          "mid": 0.745,
-          "bid": 0.69,
-          "ask": 0.8,
-          "delta": -0.19696132074332828,
-          "iv": 0.25025163818359375,
-          "contract_symbol": "WMT260814P00107000"
+          "mid": 1.08,
+          "bid": 1.08,
+          "ask": 1.08,
+          "delta": 0.2794549659891938,
+          "iv": 0.26099371826171874,
+          "contract_symbol": "WMT260814C00116000"
         },
         {
           "action": "BUY",
-          "right": "P",
-          "strike": 105.0,
+          "right": "C",
+          "strike": 120.0,
           "expiration": "2026-08-14",
           "quantity": 1,
-          "mid": 0.445,
-          "bid": 0.39,
-          "ask": 0.5,
-          "delta": -0.1277173995408335,
-          "iv": 0.2629468237304688,
-          "contract_symbol": "WMT260814P00105000"
+          "mid": 0.375,
+          "bid": 0.37,
+          "ask": 0.38,
+          "delta": 0.12043009778276881,
+          "iv": 0.2602613037109375,
+          "contract_symbol": "WMT260814C00120000"
         }
       ],
-      "credit": 0.3,
-      "width": 2.0,
-      "max_loss": 1.7,
-      "credit_to_width_ratio": 0.15,
-      "pop": 0.8030386792566717,
-      "m2m_flip_price": 109.91527232364751,
-      "m2m_flip_distance_pct": 0.016594116266656873,
-      "expiration_breakeven_price": 106.7,
-      "expiration_breakeven_distance_pct": 0.04536098054343923,
-      "expected_move": 6.544718833448961,
-      "atr": 2.6121422903878346,
-      "early_red_pl_score": 0.05,
-      "exit_50pct_target_credit": 0.15,
-      "exit_25pct_target_credit": 0.22499999999999998,
+      "credit": 0.7050000000000001,
+      "width": 4.0,
+      "max_loss": 3.295,
+      "credit_to_width_ratio": 0.17625000000000002,
+      "pop": 0.7205450340108062,
+      "m2m_flip_price": 113.4576981451828,
+      "m2m_flip_distance_pct": 0.01573591087701705,
+      "expiration_breakeven_price": 116.705,
+      "expiration_breakeven_distance_pct": 0.04480754868844761,
+      "expected_move": 6.395278386110005,
+      "atr": 2.445713588169643,
+      "early_red_pl_score": 0.03333333333333333,
+      "exit_50pct_target_credit": 0.35250000000000004,
+      "exit_25pct_target_credit": 0.52875,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.0337349459539182,
+      "rank_score": 1.406787555699686,
       "rank_reasons": [
-        "pop_score=0.98",
-        "m2m_score=0.13",
-        "credit_score=0.50",
-        "liquidity_score=0.00",
-        "early_red_score=0.05",
+        "pop_score=0.60",
+        "m2m_score=0.12",
+        "credit_score=0.59",
+        "liquidity_score=0.87",
+        "early_red_score=0.03",
         "penalty=0.70"
       ],
       "flags": [
@@ -177,18 +177,18 @@
         "EARLY_RED_VULNERABLE"
       ],
       "metrics": {
-        "buffer_dollars": 3.9182134355817517,
-        "short_delta": -0.19696132074332828,
-        "credit_to_width_ratio": 0.15
+        "buffer_dollars": 3.6685703822544644,
+        "short_delta": 0.2794549659891938,
+        "credit_to_width_ratio": 0.17625000000000002
       },
       "mode": "income",
       "score_card": {
-        "POP Fit": 98,
-        "M2M Distance": 13,
-        "Credit Quality": 50,
-        "Liquidity": 0,
-        "Resilience": 5,
-        "Overall": 19
+        "POP Fit": 60,
+        "M2M Distance": 12,
+        "Credit Quality": 59,
+        "Liquidity": 87,
+        "Resilience": 3,
+        "Overall": 26
       }
     }
   ],
@@ -201,7 +201,7 @@
       "reasons": [
         "all checks passed"
       ],
-      "fresh_credit": 0.27,
+      "fresh_credit": 0.24,
       "credit_drift_pct": 0.0,
       "regime": {
         "regime": "BENIGN_CHOP",
@@ -211,28 +211,28 @@
           "SPX below slow SMA, no compression \u2014 benign chop"
         ],
         "metrics": {
-          "vix": 19.479999542236328,
-          "vix_spike_1d_pct": 0.04171116296651247,
+          "vix": 19.520000457763672,
+          "vix_spike_1d_pct": 0.05005383794373445,
           "breakout_state": "none",
-          "bb_width": 0.03118051008766176,
-          "bb_width_avg": 0.0450541842079279,
+          "bb_width": 0.027965282444606186,
+          "bb_width_avg": 0.044324367281079566,
           "trend_state": "chop"
         },
-        "timestamp": "2026-07-27T15:57:43.890651"
+        "timestamp": "2026-07-27T16:01:33.334413"
       },
       "flags": [
-        "wide spread on C 117.0: 13.3%"
+        "wide spread on C 117.0: 14.3%"
       ]
     },
     {
       "symbol": "WMT",
-      "strategy": "BULL_PUT",
+      "strategy": "BEAR_CALL",
       "expiration": "2026-08-14",
       "valid": true,
       "reasons": [
         "all checks passed"
       ],
-      "fresh_credit": 0.3,
+      "fresh_credit": 0.7050000000000001,
       "credit_drift_pct": 0.0,
       "regime": {
         "regime": "BENIGN_CHOP",
@@ -242,19 +242,16 @@
           "SPX below slow SMA, no compression \u2014 benign chop"
         ],
         "metrics": {
-          "vix": 19.479999542236328,
-          "vix_spike_1d_pct": 0.04171116296651247,
+          "vix": 19.520000457763672,
+          "vix_spike_1d_pct": 0.05005383794373445,
           "breakout_state": "none",
-          "bb_width": 0.03118051008766176,
-          "bb_width_avg": 0.0450541842079279,
+          "bb_width": 0.027965282444606186,
+          "bb_width_avg": 0.044324367281079566,
           "trend_state": "chop"
         },
-        "timestamp": "2026-07-27T15:57:43.891171"
+        "timestamp": "2026-07-27T16:01:33.408138"
       },
-      "flags": [
-        "wide spread on P 107.0: 14.8%",
-        "wide spread on P 105.0: 24.7%"
-      ]
+      "flags": []
     }
   ]
 }
