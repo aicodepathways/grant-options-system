@@ -135,6 +135,23 @@ def render_markdown(regime, candidates, proposals, validations) -> str:
     return "\n".join(lines)
 
 
+def render_html(md: str) -> str:
+    """Wrap the markdown snapshot in minimal static HTML.
+
+    Deliberately no JavaScript and no styling beyond a monospace block:
+    the audience is an AI advisor's web fetcher, which needs the text in
+    the raw HTML response body.
+    """
+    import html as _html
+    return (
+        "<!DOCTYPE html>\n<html><head><meta charset='utf-8'>"
+        "<title>Grant Options System - Daily Snapshot</title></head>"
+        "<body><pre>\n"
+        + _html.escape(md)
+        + "\n</pre></body></html>\n"
+    )
+
+
 def main() -> int:
     DOCS.mkdir(exist_ok=True)
     try:
@@ -156,6 +173,11 @@ def main() -> int:
 
     md = render_markdown(regime, candidates, proposals, validations)
     (DOCS / "daily_snapshot.md").write_text(md)
+    # HTML twin served via GitHub Pages. ChatGPT's browsing tool often
+    # fails on raw.githubusercontent.com but reads normal *.github.io
+    # pages fine, so this is the URL the client's AI advisor uses:
+    #   https://aicodepathways.github.io/grant-options-system/
+    (DOCS / "index.html").write_text(render_html(md))
     (DOCS / "daily_snapshot.json").write_text(json.dumps({
         "generated_utc": datetime.utcnow().isoformat(),
         "regime": regime.to_dict(),

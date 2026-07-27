@@ -390,9 +390,14 @@ the right side of how the market is actually positioned."
 
 Every weekday morning an automated job runs the full pipeline and
 publishes the result to this repository. An AI advisor (Chat, ChatGPT,
-Claude) can read it directly at this stable URL:
+Claude) should read it at this stable URL, which is a plain webpage:
 
-    https://raw.githubusercontent.com/aicodepathways/grant-options-system/main/docs/daily_snapshot.md
+    https://aicodepathways.github.io/grant-options-system/
+
+(The raw file also exists at
+`docs/daily_snapshot.md`, but some AI browsing tools cannot fetch
+raw.githubusercontent.com links, so the github.io page above is the
+reliable address.)
 
 A JSON version lives next to it at `docs/daily_snapshot.json`, and
 `docs/last_run_status.md` says whether the most recent run succeeded.
