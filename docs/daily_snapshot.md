@@ -1,6 +1,6 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-07-30 15:35 UTC (live data)
+Generated: 2026-07-31 15:39 UTC (live data)
 
 ## Regime
 Label: BENIGN_CHOP
