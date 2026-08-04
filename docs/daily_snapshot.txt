@@ -1,12 +1,12 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-08-03 16:07 UTC (live data)
+Generated: 2026-08-04 15:59 UTC (live data)
 
 ## Regime
-Label: BENIGN_TREND
+Label: BREAKOUT
 Decision: DEPLOY
-Size multiplier: 1.00
-  - SPX above slow SMA — benign trend
+Size multiplier: 0.50
+  - SPX breakout up
 
 ## Candidates
 No candidates passed scanner filters today.

@@ -1,21 +1,18 @@
 {
-  "generated_utc": "2026-08-03T16:07:11.328729",
+  "generated_utc": "2026-08-04T15:59:50.878729",
   "regime": {
-    "regime": "BENIGN_TREND",
+    "regime": "BREAKOUT",
     "deploy": true,
-    "size_mult": 1.0,
+    "size_mult": 0.5,
     "reasons": [
-      "SPX above slow SMA \u2014 benign trend"
+      "SPX breakout up"
     ],
     "metrics": {
-      "vix": 15.649999618530273,
-      "vix_spike_1d_pct": -0.021263299403044004,
-      "breakout_state": "none",
-      "bb_width": 0.03672905397796876,
-      "bb_width_avg": 0.04225964686996572,
-      "trend_state": "trend"
+      "vix": 16.15999984741211,
+      "vix_spike_1d_pct": 0.018915523154413163,
+      "breakout_state": "breakout_up"
     },
-    "timestamp": "2026-08-03T16:07:01.881170"
+    "timestamp": "2026-08-04T15:59:42.497825"
   },
   "candidates": [],
   "proposals": [],
