@@ -1,0 +1,44 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Grant Options Scanner Feed",
+    "description": "Read-only access to the daily scanner snapshot. One endpoint, no auth.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://aicodepathways.github.io/grant-options-system"
+    }
+  ],
+  "paths": {
+    "/daily_snapshot.json": {
+      "get": {
+        "operationId": "getDailySnapshot",
+        "summary": "Get today's scanner snapshot",
+        "description": "Returns the most recent morning pipeline run: regime, candidates, trade proposals with Income/Opportunity modes and 0-100 scores, and validation results. Check generated_utc to confirm the data is from today before summarizing it as today's run.",
+        "responses": {
+          "200": {
+            "description": "Latest snapshot",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "generated_utc": {
+                      "type": "string",
+                      "description": "When this snapshot was produced (UTC). If this is not today's date, the morning run failed and this is stale data."
+                    },
+                    "regime": { "type": "object" },
+                    "candidates": { "type": "array", "items": { "type": "object" } },
+                    "proposals": { "type": "array", "items": { "type": "object" } },
+                    "validations": { "type": "array", "items": { "type": "object" } }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

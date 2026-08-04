@@ -173,6 +173,9 @@ def main() -> int:
 
     md = render_markdown(regime, candidates, proposals, validations)
     (DOCS / "daily_snapshot.md").write_text(md)
+    # .txt alias — served as text/plain by Pages, the friendliest possible
+    # content type for AI fetchers that struggle with markdown or HTML.
+    (DOCS / "daily_snapshot.txt").write_text(md)
     # HTML twin served via GitHub Pages. ChatGPT's browsing tool often
     # fails on raw.githubusercontent.com but reads normal *.github.io
     # pages fine, so this is the URL the client's AI advisor uses:
