@@ -2,12 +2,25 @@ name: Daily snapshot
 
 on:
   schedule:
-    # 13:40 UTC = 6:40 AM Pacific (during daylight time). Weekdays only.
-    - cron: "40 13 * * 1-5"
+    # GitHub's cron queue routinely starts jobs 30-120 minutes late, so a
+    # single morning run left the client reading yesterday's snapshot.
+    # Schedule several refreshes across the morning (times are UTC;
+    # Pacific during daylight time is UTC-7). Weekdays only.
+    - cron: "45 13 * * 1-5"   # ~6:45 AM PT target
+    - cron: "15 14 * * 1-5"   # ~7:15 AM PT
+    - cron: "0 15 * * 1-5"    # ~8:00 AM PT
+    - cron: "30 16 * * 1-5"   # ~9:30 AM PT
+    - cron: "0 19 * * 1-5"    # ~12:00 PM PT midday refresh
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# Refreshes can queue up behind GitHub delays; never let two runs push
+# concurrently.
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
 
 jobs:
   publish:
@@ -38,5 +51,6 @@ jobs:
             echo "No snapshot changes to commit."
           else
             git commit -m "Daily snapshot $(date -u +%F)"
+            git pull --rebase origin main
             git push
           fi

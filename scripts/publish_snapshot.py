@@ -60,10 +60,27 @@ def run_pipeline():
 
 
 def render_markdown(regime, candidates, proposals, validations) -> str:
+    # Pacific time in the header because the client reads in Pacific.
+    # Zoneinfo handles PDT/PST automatically.
+    try:
+        from zoneinfo import ZoneInfo
+        now_pt = datetime.now(ZoneInfo("America/Los_Angeles"))
+        pt_str = f"{now_pt:%A, %B %d, %Y at %I:%M %p} Pacific"
+    except Exception:
+        pt_str = "unavailable"
+
     lines = []
     lines.append("# Grant Options Income System — Daily Snapshot")
     lines.append("")
     lines.append(f"Generated: {datetime.utcnow():%Y-%m-%d %H:%M} UTC (live data)")
+    lines.append(f"Generated (Pacific): {pt_str}")
+    lines.append("")
+    lines.append("Freshness note for the reader: this page refreshes several "
+                 "times each weekday morning, roughly 6:45 AM to noon Pacific. "
+                 "Exact times drift because the free scheduler queues jobs. "
+                 "If the date above is not today, today's first run has not "
+                 "completed yet; advise re-checking after 7:30 AM Pacific "
+                 "rather than treating it as a failure.")
     lines.append("")
     lines.append("## Regime")
     lines.append(f"Label: {regime.regime}")
