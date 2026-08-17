@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-08-14 14:34 UTC (live data)
-Generated (Pacific): Friday, August 14, 2026 at 07:34 AM Pacific
+Generated: 2026-08-17 14:04 UTC (live data)
+Generated (Pacific): Monday, August 17, 2026 at 07:04 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
