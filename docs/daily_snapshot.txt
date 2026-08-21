@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-08-20 14:18 UTC (live data)
-Generated (Pacific): Thursday, August 20, 2026 at 07:18 AM Pacific
+Generated: 2026-08-21 14:16 UTC (live data)
+Generated (Pacific): Friday, August 21, 2026 at 07:16 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,30 +12,30 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-- QQQ: score 0.32, spot $711.83, near-ATM IV 20.0%, ATR $10.23
+- QQQ: score 0.32, spot $710.09, near-ATM IV 19.4%, ATR $9.69
 
 ## Trade Proposals
-### #1: QQQ BEAR_CALL exp 2026-09-04 (15 DTE)
+### #1: QQQ BEAR_CALL exp 2026-09-04 (14 DTE)
   Mode: OPPORTUNITY
-  Overall score: 25/100 (POP Fit 84, M2M Distance 11, Credit Quality 99, Liquidity 83, Resilience 2)
-  Leg: SELL Call $727.00 mid 5.51
-  Leg: BUY Call $730.00 mid 4.61
-  Spot $711.83  Credit $0.90  Width $3.00  POP 68%
-  Early-red M2M flip: $719.20 (1.03% above spot)
-  Expiration breakeven: $727.90  Resilience: 0.02
-  Exits: 50% at $0.45, 25% at $0.68
+  Overall score: 26/100 (POP Fit 88, M2M Distance 13, Credit Quality 92, Liquidity 86, Resilience 3)
+  Leg: SELL Call $724.00 mid 5.54
+  Leg: BUY Call $729.00 mid 3.92
+  Spot $710.09  Credit $1.62  Width $5.00  POP 67%
+  Early-red M2M flip: $718.20 (1.14% above spot)
+  Expiration breakeven: $725.62  Resilience: 0.03
+  Exits: 50% at $0.81, 25% at $1.21
   Validation: VALID
   Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
-### #2: QQQ BEAR_CALL exp 2026-09-04 (15 DTE)
+### #2: QQQ BEAR_CALL exp 2026-09-04 (14 DTE)
   Mode: OPPORTUNITY
-  Overall score: 23/100 (POP Fit 84, M2M Distance 14, Credit Quality 82, Liquidity 82, Resilience 3)
-  Leg: SELL Call $727.00 mid 5.51
-  Leg: BUY Call $732.00 mid 3.75
-  Spot $711.83  Credit $1.76  Width $5.00  POP 68%
-  Early-red M2M flip: $720.65 (1.24% above spot)
-  Expiration breakeven: $728.76  Resilience: 0.03
-  Exits: 50% at $0.88, 25% at $1.32
+  Overall score: 26/100 (POP Fit 88, M2M Distance 13, Credit Quality 92, Liquidity 85, Resilience 3)
+  Leg: SELL Call $724.00 mid 5.54
+  Leg: BUY Call $728.00 mid 4.23
+  Spot $710.09  Credit $1.30  Width $4.00  POP 67%
+  Early-red M2M flip: $718.11 (1.13% above spot)
+  Expiration breakeven: $725.30  Resilience: 0.03
+  Exits: 50% at $0.65, 25% at $0.98
   Validation: VALID
   Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
