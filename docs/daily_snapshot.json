@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-21T14:16:51.729182",
+  "generated_utc": "2026-08-24T14:23:03.023183",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,30 +8,29 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 15.449999809265137,
-      "vix_spike_1d_pct": -0.03497816437294396,
+      "vix": 15.949999809265137,
+      "vix_spike_1d_pct": 0.054196939102569154,
       "breakout_state": "none",
-      "bb_width": 0.07579537306636112,
-      "bb_width_avg": 0.0509046390869818,
+      "bb_width": 0.07017316873956914,
+      "bb_width_avg": 0.05130943900494937,
       "trend_state": "trend"
     },
-    "timestamp": "2026-08-21T14:16:43.422970"
+    "timestamp": "2026-08-24T14:22:53.171266"
   },
   "candidates": [
     {
       "symbol": "QQQ",
       "is_index_product": true,
-      "underlying_price": 710.090087890625,
-      "avg_iv": 0.19396252822875978,
-      "iv_rank": 0.39622641509433965,
-      "atr": 9.686366489955358,
-      "atr_compression_ratio": 0.6292141541653463,
-      "bb_width_compression_ratio": 1.3137886731412067,
+      "underlying_price": 704.5399780273438,
+      "avg_iv": 0.1927113200378418,
+      "iv_rank": 0.4716981132075472,
+      "atr": 8.689993722098214,
+      "atr_compression_ratio": 0.569554916433061,
+      "bb_width_compression_ratio": 1.2424273240566188,
       "expirations_in_window": [
-        "2026-09-04",
         "2026-09-11"
       ],
-      "quality_score": 0.3153277993376015,
+      "quality_score": 0.34495418710227893,
       "reasons": [
         "passed all filters"
       ]
@@ -41,59 +40,59 @@
     {
       "symbol": "QQQ",
       "strategy": "BEAR_CALL",
-      "expiration": "2026-09-04",
-      "underlying_price": 710.090087890625,
+      "expiration": "2026-09-11",
+      "underlying_price": 704.510009765625,
       "legs": [
         {
           "action": "SELL",
           "right": "C",
-          "strike": 724.0,
-          "expiration": "2026-09-04",
+          "strike": 720.0,
+          "expiration": "2026-09-11",
           "quantity": 1,
-          "mid": 5.535,
-          "bid": 5.5,
-          "ask": 5.57,
-          "delta": 0.32588735732605945,
-          "iv": 0.19196364685058598,
-          "contract_symbol": "QQQ260904C00724000"
+          "mid": 5.495,
+          "bid": 5.46,
+          "ask": 5.53,
+          "delta": 0.3191894858834485,
+          "iv": 0.1795125994873047,
+          "contract_symbol": "QQQ260911C00720000"
         },
         {
           "action": "BUY",
           "right": "C",
-          "strike": 729.0,
-          "expiration": "2026-09-04",
+          "strike": 725.0,
+          "expiration": "2026-09-11",
           "quantity": 1,
-          "mid": 3.92,
-          "bid": 3.89,
-          "ask": 3.95,
-          "delta": 0.25658376107880654,
-          "iv": 0.186531572265625,
-          "contract_symbol": "QQQ260904C00729000"
+          "mid": 3.9699999999999998,
+          "bid": 3.94,
+          "ask": 4.0,
+          "delta": 0.25471346613585827,
+          "iv": 0.17536225036621095,
+          "contract_symbol": "QQQ260911C00725000"
         }
       ],
-      "credit": 1.6150000000000002,
+      "credit": 1.5250000000000004,
       "width": 5.0,
-      "max_loss": 3.385,
-      "credit_to_width_ratio": 0.32300000000000006,
-      "pop": 0.6741126426739406,
-      "m2m_flip_price": 718.202126971446,
-      "m2m_flip_distance_pct": 0.011423957634612797,
-      "expiration_breakeven_price": 725.615,
-      "expiration_breakeven_distance_pct": 0.021863299282902125,
-      "expected_move": 26.97421857729268,
-      "atr": 9.686366489955358,
-      "early_red_pl_score": 0.03333333333333333,
-      "exit_50pct_target_credit": 0.8075000000000001,
-      "exit_25pct_target_credit": 1.2112500000000002,
+      "max_loss": 3.4749999999999996,
+      "credit_to_width_ratio": 0.30500000000000005,
+      "pop": 0.6808105141165515,
+      "m2m_flip_price": 711.8667167276144,
+      "m2m_flip_distance_pct": 0.010442302962362192,
+      "expiration_breakeven_price": 721.525,
+      "expiration_breakeven_distance_pct": 0.0241515237519982,
+      "expected_move": 30.149784657965842,
+      "atr": 8.689993722098214,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.7625000000000002,
+      "exit_25pct_target_credit": 1.1437500000000003,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.4314471590307838,
+      "rank_score": 1.4005421418567228,
       "rank_reasons": [
-        "pop_score=0.88",
-        "m2m_score=0.13",
-        "credit_score=0.92",
+        "pop_score=0.85",
+        "m2m_score=0.11",
+        "credit_score=0.98",
         "liquidity_score=0.86",
-        "early_red_score=0.03",
+        "early_red_score=0.02",
         "penalty=1.30"
       ],
       "flags": [
@@ -101,76 +100,76 @@
         "EARLY_RED_VULNERABLE"
       ],
       "metrics": {
-        "buffer_dollars": 13.48710928864634,
-        "short_delta": 0.32588735732605945,
-        "credit_to_width_ratio": 0.32300000000000006
+        "buffer_dollars": 15.074892328982921,
+        "short_delta": 0.3191894858834485,
+        "credit_to_width_ratio": 0.30500000000000005
       },
       "mode": "opportunity",
       "score_card": {
-        "POP Fit": 88,
-        "M2M Distance": 13,
-        "Credit Quality": 92,
+        "POP Fit": 85,
+        "M2M Distance": 11,
+        "Credit Quality": 98,
         "Liquidity": 86,
-        "Resilience": 3,
-        "Overall": 26
+        "Resilience": 2,
+        "Overall": 25
       }
     },
     {
       "symbol": "QQQ",
       "strategy": "BEAR_CALL",
-      "expiration": "2026-09-04",
-      "underlying_price": 710.090087890625,
+      "expiration": "2026-09-11",
+      "underlying_price": 704.510009765625,
       "legs": [
         {
           "action": "SELL",
           "right": "C",
-          "strike": 724.0,
-          "expiration": "2026-09-04",
+          "strike": 720.0,
+          "expiration": "2026-09-11",
           "quantity": 1,
-          "mid": 5.535,
-          "bid": 5.5,
-          "ask": 5.57,
-          "delta": 0.32588735732605945,
-          "iv": 0.19196364685058598,
-          "contract_symbol": "QQQ260904C00724000"
+          "mid": 5.495,
+          "bid": 5.46,
+          "ask": 5.53,
+          "delta": 0.3191894858834485,
+          "iv": 0.1795125994873047,
+          "contract_symbol": "QQQ260911C00720000"
         },
         {
           "action": "BUY",
           "right": "C",
-          "strike": 728.0,
-          "expiration": "2026-09-04",
+          "strike": 724.0,
+          "expiration": "2026-09-11",
           "quantity": 1,
-          "mid": 4.234999999999999,
-          "bid": 4.2,
-          "ask": 4.27,
-          "delta": 0.2706561640724042,
-          "iv": 0.18811847045898436,
-          "contract_symbol": "QQQ260904C00728000"
+          "mid": 4.25,
+          "bid": 4.22,
+          "ask": 4.28,
+          "delta": 0.26727666653575377,
+          "iv": 0.17621673400878907,
+          "contract_symbol": "QQQ260911C00724000"
         }
       ],
-      "credit": 1.3000000000000007,
+      "credit": 1.245,
       "width": 4.0,
-      "max_loss": 2.6999999999999993,
-      "credit_to_width_ratio": 0.3250000000000002,
-      "pop": 0.6741126426739406,
-      "m2m_flip_price": 718.108918108046,
-      "m2m_flip_distance_pct": 0.011292694200593029,
-      "expiration_breakeven_price": 725.3,
-      "expiration_breakeven_distance_pct": 0.021419693597691414,
-      "expected_move": 26.97421857729268,
-      "atr": 9.686366489955358,
-      "early_red_pl_score": 0.03333333333333333,
-      "exit_50pct_target_credit": 0.6500000000000004,
-      "exit_25pct_target_credit": 0.9750000000000005,
+      "max_loss": 2.755,
+      "credit_to_width_ratio": 0.31125,
+      "pop": 0.6808105141165515,
+      "m2m_flip_price": 711.8609872050583,
+      "m2m_flip_distance_pct": 0.010434170327656303,
+      "expiration_breakeven_price": 721.245,
+      "expiration_breakeven_distance_pct": 0.023754084402494675,
+      "expected_move": 30.149784657965842,
+      "atr": 8.689993722098214,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.6225,
+      "exit_25pct_target_credit": 0.9337500000000001,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.41758562657992,
+      "rank_score": 1.3835649306099242,
       "rank_reasons": [
-        "pop_score=0.88",
-        "m2m_score=0.13",
-        "credit_score=0.92",
-        "liquidity_score=0.85",
-        "early_red_score=0.03",
+        "pop_score=0.85",
+        "m2m_score=0.11",
+        "credit_score=0.96",
+        "liquidity_score=0.87",
+        "early_red_score=0.02",
         "penalty=1.30"
       ],
       "flags": [
@@ -178,18 +177,18 @@
         "EARLY_RED_VULNERABLE"
       ],
       "metrics": {
-        "buffer_dollars": 13.48710928864634,
-        "short_delta": 0.32588735732605945,
-        "credit_to_width_ratio": 0.3250000000000002
+        "buffer_dollars": 15.074892328982921,
+        "short_delta": 0.3191894858834485,
+        "credit_to_width_ratio": 0.31125
       },
       "mode": "opportunity",
       "score_card": {
-        "POP Fit": 88,
-        "M2M Distance": 13,
-        "Credit Quality": 92,
-        "Liquidity": 85,
-        "Resilience": 3,
-        "Overall": 26
+        "POP Fit": 85,
+        "M2M Distance": 11,
+        "Credit Quality": 96,
+        "Liquidity": 87,
+        "Resilience": 2,
+        "Overall": 25
       }
     }
   ],
@@ -197,12 +196,12 @@
     {
       "symbol": "QQQ",
       "strategy": "BEAR_CALL",
-      "expiration": "2026-09-04",
+      "expiration": "2026-09-11",
       "valid": true,
       "reasons": [
         "all checks passed"
       ],
-      "fresh_credit": 1.6150000000000002,
+      "fresh_credit": 1.5250000000000004,
       "credit_drift_pct": 0.0,
       "regime": {
         "regime": "BENIGN_TREND",
@@ -212,26 +211,26 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 15.449999809265137,
-          "vix_spike_1d_pct": -0.03497816437294396,
+          "vix": 15.949999809265137,
+          "vix_spike_1d_pct": 0.05485789275796874,
           "breakout_state": "none",
-          "bb_width": 0.07579537306636112,
-          "bb_width_avg": 0.0509046390869818,
+          "bb_width": 0.07017316873956914,
+          "bb_width_avg": 0.05130943900494937,
           "trend_state": "trend"
         },
-        "timestamp": "2026-08-21T14:16:51.245828"
+        "timestamp": "2026-08-24T14:23:02.738682"
       },
       "flags": []
     },
     {
       "symbol": "QQQ",
       "strategy": "BEAR_CALL",
-      "expiration": "2026-09-04",
+      "expiration": "2026-09-11",
       "valid": true,
       "reasons": [
         "all checks passed"
       ],
-      "fresh_credit": 1.3000000000000007,
+      "fresh_credit": 1.245,
       "credit_drift_pct": 0.0,
       "regime": {
         "regime": "BENIGN_TREND",
@@ -241,14 +240,14 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 15.449999809265137,
-          "vix_spike_1d_pct": -0.03497816437294396,
+          "vix": 15.949999809265137,
+          "vix_spike_1d_pct": 0.05485789275796874,
           "breakout_state": "none",
-          "bb_width": 0.07579537306636112,
-          "bb_width_avg": 0.0509046390869818,
+          "bb_width": 0.07017316873956914,
+          "bb_width_avg": 0.05130943900494937,
           "trend_state": "trend"
         },
-        "timestamp": "2026-08-21T14:16:51.548402"
+        "timestamp": "2026-08-24T14:23:02.892298"
       },
       "flags": []
     }
