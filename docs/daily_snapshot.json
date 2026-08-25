@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-24T14:23:03.023183",
+  "generated_utc": "2026-08-25T14:25:06.531348",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,29 +8,46 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 15.949999809265137,
-      "vix_spike_1d_pct": 0.054196939102569154,
+      "vix": 15.779999732971191,
+      "vix_spike_1d_pct": -0.004416444593930299,
       "breakout_state": "none",
-      "bb_width": 0.07017316873956914,
-      "bb_width_avg": 0.05130943900494937,
+      "bb_width": 0.06424801396531568,
+      "bb_width_avg": 0.051623212704042035,
       "trend_state": "trend"
     },
-    "timestamp": "2026-08-24T14:22:53.171266"
+    "timestamp": "2026-08-25T14:24:55.757717"
   },
   "candidates": [
     {
       "symbol": "QQQ",
       "is_index_product": true,
-      "underlying_price": 704.5399780273438,
-      "avg_iv": 0.1927113200378418,
-      "iv_rank": 0.4716981132075472,
-      "atr": 8.689993722098214,
-      "atr_compression_ratio": 0.569554916433061,
-      "bb_width_compression_ratio": 1.2424273240566188,
+      "underlying_price": 709.5499877929688,
+      "avg_iv": 0.1907429559326172,
+      "iv_rank": 0.37735849056603776,
+      "atr": 8.411420549665179,
+      "atr_compression_ratio": 0.5568090041665916,
+      "bb_width_compression_ratio": 1.1169610646357424,
       "expirations_in_window": [
         "2026-09-11"
       ],
-      "quality_score": 0.34495418710227893,
+      "quality_score": 0.34941529273045097,
+      "reasons": [
+        "passed all filters"
+      ]
+    },
+    {
+      "symbol": "IWM",
+      "is_index_product": true,
+      "underlying_price": 298.6700134277344,
+      "avg_iv": 0.16654275848388672,
+      "iv_rank": 0.3018867924528302,
+      "atr": 2.827852521623884,
+      "atr_compression_ratio": 0.6106863250518638,
+      "bb_width_compression_ratio": 1.1279151555510403,
+      "expirations_in_window": [
+        "2026-09-11"
+      ],
+      "quality_score": 0.3023080751447515,
       "reasons": [
         "passed all filters"
       ]
@@ -41,133 +58,56 @@
       "symbol": "QQQ",
       "strategy": "BEAR_CALL",
       "expiration": "2026-09-11",
-      "underlying_price": 704.510009765625,
+      "underlying_price": 709.5999755859375,
       "legs": [
         {
           "action": "SELL",
-          "right": "C",
-          "strike": 720.0,
-          "expiration": "2026-09-11",
-          "quantity": 1,
-          "mid": 5.495,
-          "bid": 5.46,
-          "ask": 5.53,
-          "delta": 0.3191894858834485,
-          "iv": 0.1795125994873047,
-          "contract_symbol": "QQQ260911C00720000"
-        },
-        {
-          "action": "BUY",
           "right": "C",
           "strike": 725.0,
           "expiration": "2026-09-11",
           "quantity": 1,
-          "mid": 3.9699999999999998,
-          "bid": 3.94,
-          "ask": 4.0,
-          "delta": 0.25471346613585827,
-          "iv": 0.17536225036621095,
+          "mid": 5.6850000000000005,
+          "bid": 5.65,
+          "ask": 5.72,
+          "delta": 0.3225508092435122,
+          "iv": 0.18674519317626953,
           "contract_symbol": "QQQ260911C00725000"
-        }
-      ],
-      "credit": 1.5250000000000004,
-      "width": 5.0,
-      "max_loss": 3.4749999999999996,
-      "credit_to_width_ratio": 0.30500000000000005,
-      "pop": 0.6808105141165515,
-      "m2m_flip_price": 711.8667167276144,
-      "m2m_flip_distance_pct": 0.010442302962362192,
-      "expiration_breakeven_price": 721.525,
-      "expiration_breakeven_distance_pct": 0.0241515237519982,
-      "expected_move": 30.149784657965842,
-      "atr": 8.689993722098214,
-      "early_red_pl_score": 0.016666666666666666,
-      "exit_50pct_target_credit": 0.7625000000000002,
-      "exit_25pct_target_credit": 1.1437500000000003,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 1.4005421418567228,
-      "rank_reasons": [
-        "pop_score=0.85",
-        "m2m_score=0.11",
-        "credit_score=0.98",
-        "liquidity_score=0.86",
-        "early_red_score=0.02",
-        "penalty=1.30"
-      ],
-      "flags": [
-        "M2M_TOO_CLOSE",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 15.074892328982921,
-        "short_delta": 0.3191894858834485,
-        "credit_to_width_ratio": 0.30500000000000005
-      },
-      "mode": "opportunity",
-      "score_card": {
-        "POP Fit": 85,
-        "M2M Distance": 11,
-        "Credit Quality": 98,
-        "Liquidity": 86,
-        "Resilience": 2,
-        "Overall": 25
-      }
-    },
-    {
-      "symbol": "QQQ",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-09-11",
-      "underlying_price": 704.510009765625,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "C",
-          "strike": 720.0,
-          "expiration": "2026-09-11",
-          "quantity": 1,
-          "mid": 5.495,
-          "bid": 5.46,
-          "ask": 5.53,
-          "delta": 0.3191894858834485,
-          "iv": 0.1795125994873047,
-          "contract_symbol": "QQQ260911C00720000"
         },
         {
           "action": "BUY",
           "right": "C",
-          "strike": 724.0,
+          "strike": 730.0,
           "expiration": "2026-09-11",
           "quantity": 1,
-          "mid": 4.25,
-          "bid": 4.22,
-          "ask": 4.28,
-          "delta": 0.26727666653575377,
-          "iv": 0.17621673400878907,
-          "contract_symbol": "QQQ260911C00724000"
+          "mid": 4.1,
+          "bid": 4.07,
+          "ask": 4.13,
+          "delta": 0.2579422840332264,
+          "iv": 0.18170984313964844,
+          "contract_symbol": "QQQ260911C00730000"
         }
       ],
-      "credit": 1.245,
-      "width": 4.0,
-      "max_loss": 2.755,
-      "credit_to_width_ratio": 0.31125,
-      "pop": 0.6808105141165515,
-      "m2m_flip_price": 711.8609872050583,
-      "m2m_flip_distance_pct": 0.010434170327656303,
-      "expiration_breakeven_price": 721.245,
-      "expiration_breakeven_distance_pct": 0.023754084402494675,
-      "expected_move": 30.149784657965842,
-      "atr": 8.689993722098214,
+      "credit": 1.5850000000000009,
+      "width": 5.0,
+      "max_loss": 3.414999999999999,
+      "credit_to_width_ratio": 0.31700000000000017,
+      "pop": 0.6774491907564878,
+      "m2m_flip_price": 717.3873593593016,
+      "m2m_flip_distance_pct": 0.010974329257739694,
+      "expiration_breakeven_price": 726.585,
+      "expiration_breakeven_distance_pct": 0.023936055522039024,
+      "expected_move": 29.210576542691257,
+      "atr": 8.411420549665179,
       "early_red_pl_score": 0.016666666666666666,
-      "exit_50pct_target_credit": 0.6225,
-      "exit_25pct_target_credit": 0.9337500000000001,
+      "exit_50pct_target_credit": 0.7925000000000004,
+      "exit_25pct_target_credit": 1.1887500000000006,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.3835649306099242,
+      "rank_score": 1.3960281500495901,
       "rank_reasons": [
-        "pop_score=0.85",
-        "m2m_score=0.11",
-        "credit_score=0.96",
+        "pop_score=0.86",
+        "m2m_score=0.12",
+        "credit_score=0.94",
         "liquidity_score=0.87",
         "early_red_score=0.02",
         "penalty=1.30"
@@ -177,16 +117,93 @@
         "EARLY_RED_VULNERABLE"
       ],
       "metrics": {
-        "buffer_dollars": 15.074892328982921,
-        "short_delta": 0.3191894858834485,
-        "credit_to_width_ratio": 0.31125
+        "buffer_dollars": 14.605288271345628,
+        "short_delta": 0.3225508092435122,
+        "credit_to_width_ratio": 0.31700000000000017
       },
       "mode": "opportunity",
       "score_card": {
-        "POP Fit": 85,
-        "M2M Distance": 11,
-        "Credit Quality": 96,
+        "POP Fit": 86,
+        "M2M Distance": 12,
+        "Credit Quality": 94,
         "Liquidity": 87,
+        "Resilience": 2,
+        "Overall": 25
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "strategy": "BEAR_CALL",
+      "expiration": "2026-09-11",
+      "underlying_price": 709.5999755859375,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "C",
+          "strike": 725.0,
+          "expiration": "2026-09-11",
+          "quantity": 1,
+          "mid": 5.6850000000000005,
+          "bid": 5.65,
+          "ask": 5.72,
+          "delta": 0.3225508092435122,
+          "iv": 0.18674519317626953,
+          "contract_symbol": "QQQ260911C00725000"
+        },
+        {
+          "action": "BUY",
+          "right": "C",
+          "strike": 729.0,
+          "expiration": "2026-09-11",
+          "quantity": 1,
+          "mid": 4.385,
+          "bid": 4.36,
+          "ask": 4.41,
+          "delta": 0.2702649341367488,
+          "iv": 0.18247277496337888,
+          "contract_symbol": "QQQ260911C00729000"
+        }
+      ],
+      "credit": 1.3000000000000007,
+      "width": 4.0,
+      "max_loss": 2.6999999999999993,
+      "credit_to_width_ratio": 0.3250000000000002,
+      "pop": 0.6774491907564878,
+      "m2m_flip_price": 717.3123975014314,
+      "m2m_flip_distance_pct": 0.010868689657331981,
+      "expiration_breakeven_price": 726.3,
+      "expiration_breakeven_distance_pct": 0.02353442078443246,
+      "expected_move": 29.210576542691257,
+      "atr": 8.411420549665179,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.6500000000000004,
+      "exit_25pct_target_credit": 0.9750000000000005,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.3805771962823605,
+      "rank_reasons": [
+        "pop_score=0.86",
+        "m2m_score=0.12",
+        "credit_score=0.92",
+        "liquidity_score=0.88",
+        "early_red_score=0.02",
+        "penalty=1.30"
+      ],
+      "flags": [
+        "M2M_TOO_CLOSE",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 14.605288271345628,
+        "short_delta": 0.3225508092435122,
+        "credit_to_width_ratio": 0.3250000000000002
+      },
+      "mode": "opportunity",
+      "score_card": {
+        "POP Fit": 86,
+        "M2M Distance": 12,
+        "Credit Quality": 92,
+        "Liquidity": 88,
         "Resilience": 2,
         "Overall": 25
       }
@@ -201,7 +218,7 @@
       "reasons": [
         "all checks passed"
       ],
-      "fresh_credit": 1.5250000000000004,
+      "fresh_credit": 1.5850000000000009,
       "credit_drift_pct": 0.0,
       "regime": {
         "regime": "BENIGN_TREND",
@@ -211,14 +228,14 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 15.949999809265137,
-          "vix_spike_1d_pct": 0.05485789275796874,
+          "vix": 15.779999732971191,
+          "vix_spike_1d_pct": -0.004416444593930299,
           "breakout_state": "none",
-          "bb_width": 0.07017316873956914,
-          "bb_width_avg": 0.05130943900494937,
+          "bb_width": 0.06424801756475852,
+          "bb_width_avg": 0.05162321279402811,
           "trend_state": "trend"
         },
-        "timestamp": "2026-08-24T14:23:02.738682"
+        "timestamp": "2026-08-25T14:25:06.330957"
       },
       "flags": []
     },
@@ -230,7 +247,7 @@
       "reasons": [
         "all checks passed"
       ],
-      "fresh_credit": 1.245,
+      "fresh_credit": 1.3000000000000007,
       "credit_drift_pct": 0.0,
       "regime": {
         "regime": "BENIGN_TREND",
@@ -240,14 +257,14 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 15.949999809265137,
-          "vix_spike_1d_pct": 0.05485789275796874,
+          "vix": 15.779999732971191,
+          "vix_spike_1d_pct": -0.004416444593930299,
           "breakout_state": "none",
-          "bb_width": 0.07017316873956914,
-          "bb_width_avg": 0.05130943900494937,
+          "bb_width": 0.06424801756475852,
+          "bb_width_avg": 0.05162321279402811,
           "trend_state": "trend"
         },
-        "timestamp": "2026-08-24T14:23:02.892298"
+        "timestamp": "2026-08-25T14:25:06.442828"
       },
       "flags": []
     }
