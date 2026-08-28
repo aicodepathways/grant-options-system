@@ -32,6 +32,74 @@ logger = logging.getLogger("publish_snapshot")
 DOCS = REPO_ROOT / "docs"
 
 
+def warmup_data(adapter, min_coverage: float = 0.70,
+                rounds: int = 3, round_sleep: int = 20) -> None:
+    """Pre-fetch history for every symbol the pipeline needs, retrying the
+    failures across multiple rounds.
+
+    Two jobs: (1) hammer Yahoo until enough of the universe actually
+    responds — each round retries only what failed, and the successes land
+    in the adapter's cache so the scanner reuses them without refetching;
+    (2) hard-fail the run when coverage is too thin, so a Yahoo-blocked
+    runner produces a failed job (which the workflow retries on a fresh
+    machine with a fresh IP) instead of publishing a hollow snapshot that
+    says "no candidates today" when the truth is "no data today."
+
+    Raises RuntimeError if the regime symbols fail or coverage stays below
+    `min_coverage` after all rounds.
+    """
+    import time as _time
+
+    from options_system.config import load_config
+
+    u = load_config("scanner_config").get("universe", {}) or {}
+    universe = list(u.get("index_etfs", [])) + list(u.get("equities", []))
+    spx = getattr(adapter, "SPX_SYMBOL", "^GSPC")
+    vix = getattr(adapter, "VIX_SYMBOL", "^VIX")
+
+    # Regime inputs are non-negotiable — retry them within each round via
+    # the adapter's own retry logic, and fail the run if they never load.
+    regime_ok = False
+    pending = set(universe)
+    for rnd in range(1, rounds + 1):
+        if not regime_ok:
+            try:
+                adapter.get_history(spx, period="6mo")
+                adapter.get_vix_history(period="3mo")
+                adapter.get_vix()
+                regime_ok = True
+            except Exception as exc:
+                logger.warning("warmup round %d: regime data failed: %s", rnd, exc)
+
+        for sym in sorted(pending):
+            try:
+                adapter.get_history(sym, period="6mo")
+                pending.discard(sym)
+            except Exception as exc:
+                logger.warning("warmup round %d: %s failed: %s", rnd, sym, exc)
+
+        coverage = 1.0 - (len(pending) / max(len(universe), 1))
+        logger.info("warmup round %d: regime_ok=%s coverage=%.0f%% (%d/%d tickers)",
+                    rnd, regime_ok, coverage * 100,
+                    len(universe) - len(pending), len(universe))
+        if regime_ok and coverage >= min_coverage:
+            return
+        if rnd < rounds:
+            _time.sleep(round_sleep)
+
+    if not regime_ok:
+        raise RuntimeError(
+            "Yahoo refused the regime inputs (SPX/VIX) after "
+            f"{rounds} warmup rounds — data source unavailable from this host"
+        )
+    coverage = 1.0 - (len(pending) / max(len(universe), 1))
+    raise RuntimeError(
+        f"universe data coverage {coverage:.0%} below required "
+        f"{min_coverage:.0%} after {rounds} warmup rounds "
+        f"(missing: {', '.join(sorted(pending))})"
+    )
+
+
 def run_pipeline():
     from options_system.data import get_adapter
     from options_system.regime_engine import RegimeEngine
@@ -40,6 +108,7 @@ def run_pipeline():
     from options_system.validator import Validator
 
     adapter = get_adapter()
+    warmup_data(adapter)
     regime_engine = RegimeEngine(adapter)
     scanner = Scanner(adapter)
     builder = TradeBuilder(adapter)

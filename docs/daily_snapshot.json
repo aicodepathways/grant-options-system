@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-28T22:12:06.382870",
+  "generated_utc": "2026-08-28T22:19:53.181282",
   "regime": {
     "regime": "COMPRESSION",
     "deploy": true,
@@ -12,9 +12,9 @@
       "vix_spike_1d_pct": -0.005513433662586483,
       "breakout_state": "none",
       "bb_width": 0.025484028221034297,
-      "bb_width_avg": 0.05098560283722264
+      "bb_width_avg": 0.050985602837222685
     },
-    "timestamp": "2026-08-28T22:11:59.101251"
+    "timestamp": "2026-08-28T22:19:47.004164"
   },
   "candidates": [],
   "proposals": [],

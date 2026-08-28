@@ -11,10 +11,16 @@ on:
     - cron: "0,30 13-16 * * 1-5"   # every 30 min, 6:00-9:30 AM PT window
     - cron: "0 18 * * 1-5"          # ~11:00 AM PT
     - cron: "0 20 * * 1-5"          # ~1:00 PM PT
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      retry:
+        description: "Self-retry attempt counter (leave 0 for manual runs)"
+        required: false
+        default: "0"
 
 permissions:
   contents: write
+  actions: write   # lets a failed run re-dispatch itself on a fresh runner
 
 # Refreshes can queue up behind GitHub delays; never let two runs push
 # concurrently.
@@ -36,10 +42,28 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      # No OPTIONS_NOCACHE here: the runner starts with an empty cache, and
+      # the warmup phase deliberately fills it so the scanner reuses the
+      # successfully-fetched data instead of asking Yahoo twice.
       - name: Run pipeline and write snapshot
-        env:
-          OPTIONS_NOCACHE: "1"
+        id: pipeline
         run: python scripts/publish_snapshot.py
+
+      # Yahoo blocks by IP reputation and every runner gets a different IP,
+      # so a retry on a fresh machine is a genuinely new attempt. Cap at 5.
+      - name: Re-dispatch on a fresh runner if the pipeline failed
+        if: failure() && steps.pipeline.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RETRY: ${{ github.event.inputs.retry || '0' }}
+        run: |
+          if [ "$RETRY" -lt 5 ]; then
+            next=$((RETRY + 1))
+            echo "Pipeline failed on this runner; dispatching attempt $next on a fresh one."
+            gh workflow run daily-snapshot.yml -f retry=$next --repo "$GITHUB_REPOSITORY"
+          else
+            echo "Retry cap reached ($RETRY); leaving previous snapshot in place."
+          fi
 
       - name: Commit snapshot
         if: always()

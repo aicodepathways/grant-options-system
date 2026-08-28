@@ -1,0 +1,36 @@
+name: Snapshot watchdog
+
+# Checks the PUBLIC page (what the client's AI actually reads) and compares
+# its Generated date to today. If the page is stale mid-morning — because
+# GitHub skipped the cron slots, or every runner drew a Yahoo-blocked IP —
+# it kicks the snapshot workflow again. Cheap (a curl), so scheduled at
+# several points through the trading day. Weekdays only.
+
+on:
+  schedule:
+    - cron: "30 15 * * 1-5"   # ~8:30 AM PT
+    - cron: "0 17 * * 1-5"    # ~10:00 AM PT
+    - cron: "30 19 * * 1-5"   # ~12:30 PM PT
+  workflow_dispatch: {}
+
+permissions:
+  actions: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compare page date to today and re-kick if stale
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGE: "https://aicodepathways.github.io/grant-options-system/daily_snapshot.txt"
+        run: |
+          today=$(date -u +%Y-%m-%d)
+          generated=$(curl -s "$PAGE?watchdog=$(date +%s)" | grep -m1 '^Generated:' | grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' || true)
+          echo "today=$today page_generated=$generated"
+          if [ "$generated" = "$today" ]; then
+            echo "Snapshot is current. Nothing to do."
+          else
+            echo "Snapshot is stale (page says '$generated'). Dispatching a fresh run."
+            gh workflow run daily-snapshot.yml -f retry=0 --repo "$GITHUB_REPOSITORY"
+          fi
