@@ -76,7 +76,27 @@ class Validator:
                 proposal=proposal, valid=False, reasons=reasons, regime=regime,
             )
 
-        # 2. Re-fetch the chain.
+        # 2. Hard rejects on builder-time quality flags. Added after the
+        # Aug 19 QQQ case: a proposal can score 25/100 with severe flags yet
+        # clear every live-market check below, which reads to the user as
+        # the system endorsing it. Severe flags now fail validation outright.
+        hr_cfg = self.failure_cfg.get("hard_rejects", {}) or {}
+        if hr_cfg.get("enabled", False):
+            max_rej_resilience = float(hr_cfg.get("max_rejectable_resilience", 0.10))
+            if proposal.early_red_pl_score <= max_rej_resilience:
+                reasons.append(
+                    f"resilience {proposal.early_red_pl_score:.2f} at or below "
+                    f"hard-reject floor {max_rej_resilience:.2f}"
+                )
+            if (hr_cfg.get("honor_m2m_too_close_flag", True)
+                    and "M2M_TOO_CLOSE" in proposal.flags):
+                reasons.append("builder flagged M2M_TOO_CLOSE at construction")
+            if reasons:
+                return ValidationResult(
+                    proposal=proposal, valid=False, reasons=reasons, regime=regime,
+                )
+
+        # 3. Re-fetch the chain.
         try:
             fresh = self.adapter.get_option_chain(proposal.symbol, proposal.expiration)
         except Exception as exc:

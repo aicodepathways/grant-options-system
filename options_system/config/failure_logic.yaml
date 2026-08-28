@@ -27,6 +27,19 @@ m2m:
   reject_pct_distance: 0.015
   penalty_band_pct: 0.05
 
+# Hard rejects — added after the Aug 19 QQQ case, where proposals carrying
+# M2M_TOO_CLOSE + EARLY_RED_VULNERABLE + resilience 0.00 still validated as
+# VALID (the score said 25/100 but nothing hard-gated them). Per client:
+# severe warnings should reject outright, not just lower the score.
+# Set enabled: false to restore present-but-flagged behavior.
+hard_rejects:
+  enabled: true
+  # Proposals with resilience at or below this are INVALID.
+  max_rejectable_resilience: 0.10
+  # Builder's M2M_TOO_CLOSE flag (early-red flip within m2m.reject_pct_distance
+  # of spot at build time) makes the proposal INVALID.
+  honor_m2m_too_close_flag: true
+
 # Approach to short strike (for credit spreads).
 short_strike_approach:
   warn_pct: 0.02

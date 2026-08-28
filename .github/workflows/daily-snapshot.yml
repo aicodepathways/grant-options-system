@@ -2,15 +2,15 @@ name: Daily snapshot
 
 on:
   schedule:
-    # GitHub's cron queue routinely starts jobs 30-120 minutes late, so a
-    # single morning run left the client reading yesterday's snapshot.
-    # Schedule several refreshes across the morning (times are UTC;
-    # Pacific during daylight time is UTC-7). Weekdays only.
-    - cron: "45 13 * * 1-5"   # ~6:45 AM PT target
-    - cron: "15 14 * * 1-5"   # ~7:15 AM PT
-    - cron: "0 15 * * 1-5"    # ~8:00 AM PT
-    - cron: "30 16 * * 1-5"   # ~9:30 AM PT
-    - cron: "0 19 * * 1-5"    # ~12:00 PM PT midday refresh
+    # GitHub not only delays scheduled runs, it silently SKIPS most of
+    # them under load — observed behavior: with five slots defined,
+    # exactly one fired per day at a random time, and some days none
+    # fired before market morning. Dense half-hour slots through the
+    # morning maximize the odds that at least one fires early. Times are
+    # UTC; Pacific during daylight time is UTC-7. Weekdays only.
+    - cron: "0,30 13-16 * * 1-5"   # every 30 min, 6:00-9:30 AM PT window
+    - cron: "0 18 * * 1-5"          # ~11:00 AM PT
+    - cron: "0 20 * * 1-5"          # ~1:00 PM PT
   workflow_dispatch: {}
 
 permissions:
