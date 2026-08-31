@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-08-28 22:20 UTC (live data)
-Generated (Pacific): Friday, August 28, 2026 at 03:20 PM Pacific
+Generated: 2026-08-31 19:22 UTC (live data)
+Generated (Pacific): Monday, August 31, 2026 at 12:22 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -9,7 +9,7 @@ Freshness note for the reader: this page refreshes several times each weekday mo
 Label: COMPRESSION
 Decision: DEPLOY
 Size multiplier: 1.00
-  - SPX BB-width compressed: 0.0255 <= 50% of avg 0.0510
+  - SPX BB-width compressed: 0.0220 <= 50% of avg 0.0505
 
 ## Candidates
 No candidates passed scanner filters today.
