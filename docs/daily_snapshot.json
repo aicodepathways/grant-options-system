@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-08-31T22:30:39.212253",
+  "generated_utc": "2026-08-31T23:28:35.753028",
   "regime": {
     "regime": "COMPRESSION",
     "deploy": true,
@@ -14,7 +14,7 @@
       "bb_width": 0.021812128547532093,
       "bb_width_avg": 0.0505356396651138
     },
-    "timestamp": "2026-08-31T22:30:35.050334"
+    "timestamp": "2026-08-31T23:28:29.477911"
   },
   "candidates": [],
   "proposals": [],
