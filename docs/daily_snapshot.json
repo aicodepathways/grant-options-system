@@ -1,20 +1,20 @@
 {
-  "generated_utc": "2026-09-01T17:08:39.101970",
+  "generated_utc": "2026-09-01T20:37:13.569920",
   "regime": {
     "regime": "COMPRESSION",
     "deploy": true,
     "size_mult": 1.0,
     "reasons": [
-      "SPX BB-width compressed: 0.0237 <= 50% of avg 0.0501"
+      "SPX BB-width compressed: 0.0240 <= 50% of avg 0.0506"
     ],
     "metrics": {
-      "vix": 15.920000076293945,
-      "vix_spike_1d_pct": 0.06702412834359683,
+      "vix": 16.34000015258789,
+      "vix_spike_1d_pct": 0.09517426736144269,
       "breakout_state": "none",
-      "bb_width": 0.023741971765908157,
-      "bb_width_avg": 0.05012278625972331
+      "bb_width": 0.0239699804757753,
+      "bb_width_avg": 0.05059429854398466
     },
-    "timestamp": "2026-09-01T17:08:33.196317"
+    "timestamp": "2026-09-01T20:37:07.791525"
   },
   "candidates": [],
   "proposals": [],
