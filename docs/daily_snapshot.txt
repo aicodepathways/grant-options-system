@@ -1,15 +1,15 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-03 21:58 UTC (live data)
-Generated (Pacific): Thursday, September 03, 2026 at 02:58 PM Pacific
+Generated: 2026-09-04 16:43 UTC (live data)
+Generated (Pacific): Friday, September 04, 2026 at 09:43 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: BENIGN_TREND
+Label: COMPRESSION
 Decision: DEPLOY
 Size multiplier: 1.00
-  - SPX above slow SMA — benign trend
+  - SPX BB-width compressed: 0.0241 <= 50% of avg 0.0490
 
 ## Candidates
 No candidates passed scanner filters today.
