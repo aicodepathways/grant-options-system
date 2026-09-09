@@ -1,23 +1,90 @@
 # Scanner inputs — universe and per-candidate quality bars.
 
-# Universe to scan each day. Index/ETF first, then equity defensives.
+# Universe to scan each day.
+# Expanded September 2026 per client request: the original 14-name
+# defensive watchlist produced zero candidates for two straight weeks in
+# a quiet market. This is now a broad liquid optionable universe (~60
+# names): major index ETFs, all sector SPDRs, and the most liquid
+# optionable large caps across sectors. Names still have to pass every
+# quality filter below; a bigger funnel, not a lower bar.
+# Note: scanning "every stock in the market" is neither feasible on free
+# Yahoo data (rate limits) nor useful — option liquidity concentrates in
+# a few hundred names, and the illiquid rest fails the spread/OI gates
+# anyway. This list covers where premium-selling is actually tradeable.
 universe:
   index_etfs:
     - SPY
     - QQQ
     - IWM
-  equities:
-    - PG
-    - KO
-    - JNJ
-    - PEP
-    - ABBV
+    - DIA
+    - XLE
+    - XLF
+    - XLI
+    - XLK
     - XLP
     - XLU
     - XLV
+    - XLY
+    - XLB
+    - SMH
+    - XBI
+    - GLD
+    - TLT
+    - EEM
+  equities:
+    # Mega-cap tech / high option volume
+    - AAPL
+    - MSFT
+    - NVDA
+    - AMZN
+    - GOOGL
+    - META
+    - TSLA
+    - AMD
+    - AVGO
+    - NFLX
+    - ORCL
+    - CRM
+    - QCOM
+    - MU
+    - INTC
+    # Financials
+    - JPM
+    - BAC
+    - WFC
+    - GS
+    - MS
+    - SCHW
+    # Healthcare
+    - JNJ
+    - UNH
+    - PFE
+    - MRK
+    - ABBV
+    - LLY
+    # Consumer / defensives (the original income names stay)
+    - PG
+    - KO
+    - PEP
+    - WMT
     - MCD
     - CL
-    - WMT
+    - COST
+    - HD
+    - NKE
+    - SBUX
+    - DIS
+    # Industrials / energy
+    - XOM
+    - CVX
+    - CAT
+    - BA
+    - GE
+    - HON
+    - UPS
+    # Telecom
+    - T
+    - VZ
 
 # IV filters — premium-selling needs adequate IV but not panic-level.
 iv:
