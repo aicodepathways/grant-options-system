@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-09T20:29:59.921124",
+  "generated_utc": "2026-09-09T22:03:40.292762",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,14 +8,14 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 16.479999542236328,
-      "vix_spike_1d_pct": 0.04834600905201923,
+      "vix": 16.459999084472656,
+      "vix_spike_1d_pct": 0.047073715322761424,
       "breakout_state": "none",
       "bb_width": 0.02488211683449555,
       "bb_width_avg": 0.048326578836899343,
       "trend_state": "trend"
     },
-    "timestamp": "2026-09-09T20:29:34.678250"
+    "timestamp": "2026-09-09T22:03:18.221812"
   },
   "candidates": [
     {
@@ -211,14 +211,14 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 16.479999542236328,
-          "vix_spike_1d_pct": 0.04834600905201923,
+          "vix": 16.459999084472656,
+          "vix_spike_1d_pct": 0.047073715322761424,
           "breakout_state": "none",
           "bb_width": 0.02488211683449555,
           "bb_width_avg": 0.048326578836899343,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-09T20:29:59.918875"
+        "timestamp": "2026-09-09T22:03:40.290786"
       },
       "flags": []
     },
@@ -240,14 +240,14 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 16.479999542236328,
-          "vix_spike_1d_pct": 0.04834600905201923,
+          "vix": 16.459999084472656,
+          "vix_spike_1d_pct": 0.047073715322761424,
           "breakout_state": "none",
           "bb_width": 0.02488211683449555,
           "bb_width_avg": 0.048326578836899343,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-09T20:29:59.920147"
+        "timestamp": "2026-09-09T22:03:40.291835"
       },
       "flags": []
     }
