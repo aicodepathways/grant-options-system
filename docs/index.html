@@ -2,43 +2,68 @@
 <html><head><meta charset='utf-8'><title>Grant Options System - Daily Snapshot</title></head><body><pre>
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-09 22:03 UTC (live data)
-Generated (Pacific): Wednesday, September 09, 2026 at 03:03 PM Pacific
+Generated: 2026-09-10 16:53 UTC (live data)
+Generated (Pacific): Thursday, September 10, 2026 at 09:53 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today&#x27;s first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: BENIGN_TREND
+Label: BENIGN_CHOP
 Decision: DEPLOY
 Size multiplier: 1.00
-  - SPX above slow SMA — benign trend
+  - SPX below slow SMA, no compression — benign chop
 
 ## Candidates
-- TSLA: score 0.65, spot $367.81, near-ATM IV 41.0%, ATR $15.25
+- TSLA: score 0.65, spot $365.75, near-ATM IV 40.3%, ATR $15.29
+- WMT: score 0.39, spot $106.00, near-ATM IV 23.5%, ATR $1.93
 
 ## Trade Proposals
-### #1: TSLA BEAR_CALL exp 2026-09-25 (16 DTE)
+### #1: TSLA BEAR_CALL exp 2026-09-25 (15 DTE)
   Mode: INCOME
-  Overall score: 28/100 (POP Fit 85, M2M Distance 13, Credit Quality 57, Liquidity 74, Resilience 2)
-  Leg: SELL Call $395.00 mid 4.25
-  Leg: BUY Call $400.00 mid 3.40
-  Spot $367.81  Credit $0.85  Width $5.00  POP 77%
-  Early-red M2M flip: $376.69 (2.42% above spot)
-  Expiration breakeven: $395.85  Resilience: 0.02
-  Exits: 50% at $0.42, 25% at $0.64
+  Overall score: 28/100 (POP Fit 79, M2M Distance 13, Credit Quality 58, Liquidity 79, Resilience 2)
+  Leg: SELL Call $390.00 mid 4.28
+  Leg: BUY Call $395.00 mid 3.40
+  Spot $366.01  Credit $0.88  Width $5.00  POP 76%
+  Early-red M2M flip: $374.68 (2.37% above spot)
+  Expiration breakeven: $390.88  Resilience: 0.02
+  Exits: 50% at $0.44, 25% at $0.66
   Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: TSLA BEAR_CALL exp 2026-09-25 (16 DTE)
+### #2: TSLA BEAR_CALL exp 2026-09-25 (15 DTE)
   Mode: INCOME
-  Overall score: 28/100 (POP Fit 85, M2M Distance 13, Credit Quality 57, Liquidity 74, Resilience 2)
-  Leg: SELL Call $395.00 mid 4.25
-  Leg: BUY Call $400.00 mid 3.40
-  Spot $367.81  Credit $0.85  Width $5.00  POP 77%
-  Early-red M2M flip: $376.69 (2.42% above spot)
-  Expiration breakeven: $395.85  Resilience: 0.02
-  Exits: 50% at $0.42, 25% at $0.64
+  Overall score: 28/100 (POP Fit 79, M2M Distance 13, Credit Quality 58, Liquidity 79, Resilience 2)
+  Leg: SELL Call $390.00 mid 4.28
+  Leg: BUY Call $395.00 mid 3.40
+  Spot $366.01  Credit $0.88  Width $5.00  POP 76%
+  Early-red M2M flip: $374.68 (2.37% above spot)
+  Expiration breakeven: $390.88  Resilience: 0.02
+  Exits: 50% at $0.44, 25% at $0.66
   Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10)
+  Flags: M2M_WARN, EARLY_RED_VULNERABLE
+
+### #3: WMT BULL_PUT exp 2026-09-25 (15 DTE)
+  Mode: INCOME
+  Overall score: 16/100 (POP Fit 78, M2M Distance 14, Credit Quality 48, Liquidity 0, Resilience 8)
+  Leg: SELL Put $103.00 mid 0.78
+  Leg: BUY Put $99.00 mid 0.21
+  Spot $105.99  Credit $0.58  Width $4.00  POP 76%
+  Early-red M2M flip: $104.38 (1.52% below spot)
+  Expiration breakeven: $102.42  Resilience: 0.08
+  Exits: 50% at $0.29, 25% at $0.43
+  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Flags: M2M_WARN, EARLY_RED_VULNERABLE
+
+### #4: WMT BULL_PUT exp 2026-09-25 (15 DTE)
+  Mode: INCOME
+  Overall score: 15/100 (POP Fit 78, M2M Distance 14, Credit Quality 43, Liquidity 0, Resilience 8)
+  Leg: SELL Put $103.00 mid 0.78
+  Leg: BUY Put $98.00 mid 0.15
+  Spot $105.99  Credit $0.64  Width $5.00  POP 76%
+  Early-red M2M flip: $104.35 (1.54% below spot)
+  Expiration breakeven: $102.36  Resilience: 0.08
+  Exits: 50% at $0.32, 25% at $0.48
+  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
