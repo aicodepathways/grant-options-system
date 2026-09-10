@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-10T20:28:42.375977",
+  "generated_utc": "2026-09-10T22:01:43.022322",
   "regime": {
     "regime": "BENIGN_CHOP",
     "deploy": true,
@@ -8,14 +8,14 @@
       "SPX below slow SMA, no compression \u2014 benign chop"
     ],
     "metrics": {
-      "vix": 17.93000030517578,
-      "vix_spike_1d_pct": 0.08930749103685146,
+      "vix": 17.84000015258789,
+      "vix_spike_1d_pct": 0.08383968073346018,
       "breakout_state": "none",
       "bb_width": 0.027146000218742788,
       "bb_width_avg": 0.04805257089114177,
       "trend_state": "chop"
     },
-    "timestamp": "2026-09-10T20:28:17.446863"
+    "timestamp": "2026-09-10T22:01:23.039265"
   },
   "candidates": [
     {
@@ -382,14 +382,14 @@
           "SPX below slow SMA, no compression \u2014 benign chop"
         ],
         "metrics": {
-          "vix": 17.93000030517578,
-          "vix_spike_1d_pct": 0.08930749103685146,
+          "vix": 17.84000015258789,
+          "vix_spike_1d_pct": 0.08383968073346018,
           "breakout_state": "none",
           "bb_width": 0.027146000218742788,
           "bb_width_avg": 0.04805257089114177,
           "trend_state": "chop"
         },
-        "timestamp": "2026-09-10T20:28:42.366064"
+        "timestamp": "2026-09-10T22:01:43.010712"
       },
       "flags": []
     },
@@ -411,14 +411,14 @@
           "SPX below slow SMA, no compression \u2014 benign chop"
         ],
         "metrics": {
-          "vix": 17.93000030517578,
-          "vix_spike_1d_pct": 0.08930749103685146,
+          "vix": 17.84000015258789,
+          "vix_spike_1d_pct": 0.08383968073346018,
           "breakout_state": "none",
           "bb_width": 0.027146000218742788,
           "bb_width_avg": 0.04805257089114177,
           "trend_state": "chop"
         },
-        "timestamp": "2026-09-10T20:28:42.367313"
+        "timestamp": "2026-09-10T22:01:43.011702"
       },
       "flags": []
     },
@@ -440,14 +440,14 @@
           "SPX below slow SMA, no compression \u2014 benign chop"
         ],
         "metrics": {
-          "vix": 17.93000030517578,
-          "vix_spike_1d_pct": 0.08930749103685146,
+          "vix": 17.84000015258789,
+          "vix_spike_1d_pct": 0.08383968073346018,
           "breakout_state": "none",
           "bb_width": 0.027146000218742788,
           "bb_width_avg": 0.04805257089114177,
           "trend_state": "chop"
         },
-        "timestamp": "2026-09-10T20:28:42.368522"
+        "timestamp": "2026-09-10T22:01:43.012645"
       },
       "flags": []
     },
@@ -469,14 +469,14 @@
           "SPX below slow SMA, no compression \u2014 benign chop"
         ],
         "metrics": {
-          "vix": 17.93000030517578,
-          "vix_spike_1d_pct": 0.08930749103685146,
+          "vix": 17.84000015258789,
+          "vix_spike_1d_pct": 0.08383968073346018,
           "breakout_state": "none",
           "bb_width": 0.027146000218742788,
           "bb_width_avg": 0.04805257089114177,
           "trend_state": "chop"
         },
-        "timestamp": "2026-09-10T20:28:42.369766"
+        "timestamp": "2026-09-10T22:01:43.013559"
       },
       "flags": []
     }
