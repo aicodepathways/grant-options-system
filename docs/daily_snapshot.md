@@ -1,67 +1,67 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-10 22:01 UTC (live data)
-Generated (Pacific): Thursday, September 10, 2026 at 03:01 PM Pacific
+Generated: 2026-09-11 16:54 UTC (live data)
+Generated (Pacific): Friday, September 11, 2026 at 09:54 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: BENIGN_CHOP
+Label: BENIGN_TREND
 Decision: DEPLOY
 Size multiplier: 1.00
-  - SPX below slow SMA, no compression — benign chop
+  - SPX above slow SMA — benign trend
 
 ## Candidates
-- TSLA: score 0.64, spot $363.56, near-ATM IV 39.5%, ATR $15.29
-- AAPL: score 0.44, spot $326.57, near-ATM IV 26.1%, ATR $7.52
+- TSLA: score 0.62, spot $365.25, near-ATM IV 37.4%, ATR $14.27
+- WMT: score 0.39, spot $106.56, near-ATM IV 22.2%, ATR $1.86
 
 ## Trade Proposals
-### #1: TSLA BULL_PUT exp 2026-09-25 (15 DTE)
+### #1: TSLA BULL_PUT exp 2026-10-02 (21 DTE)
   Mode: INCOME
-  Overall score: 29/100 (POP Fit 92, M2M Distance 13, Credit Quality 54, Liquidity 76, Resilience 3)
-  Leg: SELL Put $340.00 mid 3.40
-  Leg: BUY Put $335.00 mid 2.58
-  Spot $363.56  Credit $0.82  Width $5.00  POP 82%
-  Early-red M2M flip: $354.75 (2.42% below spot)
-  Expiration breakeven: $339.19  Resilience: 0.03
-  Exits: 50% at $0.41, 25% at $0.61
-  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
+  Overall score: 34/100 (POP Fit 100, M2M Distance 14, Credit Quality 70, Liquidity 73, Resilience 5)
+  Leg: SELL Put $340.00 mid 4.35
+  Leg: BUY Put $335.00 mid 3.30
+  Spot $365.31  Credit $1.05  Width $5.00  POP 80%
+  Early-red M2M flip: $355.28 (2.75% below spot)
+  Expiration breakeven: $338.95  Resilience: 0.05
+  Exits: 50% at $0.52, 25% at $0.79
+  Validation: INVALID (resilience 0.05 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: TSLA BULL_PUT exp 2026-09-25 (15 DTE)
+### #2: TSLA BULL_PUT exp 2026-10-02 (21 DTE)
   Mode: INCOME
-  Overall score: 29/100 (POP Fit 92, M2M Distance 13, Credit Quality 54, Liquidity 76, Resilience 3)
-  Leg: SELL Put $340.00 mid 3.40
-  Leg: BUY Put $335.00 mid 2.58
-  Spot $363.56  Credit $0.82  Width $5.00  POP 82%
-  Early-red M2M flip: $354.75 (2.42% below spot)
-  Expiration breakeven: $339.19  Resilience: 0.03
-  Exits: 50% at $0.41, 25% at $0.61
-  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
+  Overall score: 34/100 (POP Fit 100, M2M Distance 14, Credit Quality 70, Liquidity 73, Resilience 5)
+  Leg: SELL Put $340.00 mid 4.35
+  Leg: BUY Put $335.00 mid 3.30
+  Spot $365.31  Credit $1.05  Width $5.00  POP 80%
+  Early-red M2M flip: $355.28 (2.75% below spot)
+  Expiration breakeven: $338.95  Resilience: 0.05
+  Exits: 50% at $0.52, 25% at $0.79
+  Validation: INVALID (resilience 0.05 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #3: AAPL BULL_PUT exp 2026-09-25 (15 DTE)
+### #3: WMT BEAR_CALL exp 2026-10-02 (21 DTE)
   Mode: INCOME
-  Overall score: 28/100 (POP Fit 85, M2M Distance 13, Credit Quality 65, Liquidity 61, Resilience 3)
-  Leg: SELL Put $315.00 mid 2.63
-  Leg: BUY Put $310.00 mid 1.66
-  Spot $326.57  Credit $0.97  Width $5.00  POP 77%
-  Early-red M2M flip: $321.46 (1.56% below spot)
-  Expiration breakeven: $314.03  Resilience: 0.03
-  Exits: 50% at $0.48, 25% at $0.73
-  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
+  Overall score: 22/100 (POP Fit 53, M2M Distance 13, Credit Quality 73, Liquidity 46, Resilience 8)
+  Leg: SELL Call $110.00 mid 0.96
+  Leg: BUY Call $111.00 mid 0.74
+  Spot $106.57  Credit $0.22  Width $1.00  POP 71%
+  Early-red M2M flip: $108.28 (1.61% above spot)
+  Expiration breakeven: $110.22  Resilience: 0.08
+  Exits: 50% at $0.11, 25% at $0.16
+  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #4: AAPL BULL_PUT exp 2026-09-25 (15 DTE)
+### #4: WMT BULL_PUT exp 2026-09-25 (14 DTE)
   Mode: INCOME
-  Overall score: 28/100 (POP Fit 85, M2M Distance 13, Credit Quality 65, Liquidity 61, Resilience 3)
-  Leg: SELL Put $315.00 mid 2.63
-  Leg: BUY Put $310.00 mid 1.66
-  Spot $326.57  Credit $0.97  Width $5.00  POP 77%
-  Early-red M2M flip: $321.46 (1.56% below spot)
-  Expiration breakeven: $314.03  Resilience: 0.03
-  Exits: 50% at $0.48, 25% at $0.73
-  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
+  Overall score: 19/100 (POP Fit 98, M2M Distance 18, Credit Quality 31, Liquidity 0, Resilience 13)
+  Leg: SELL Put $103.00 mid 0.56
+  Leg: BUY Put $98.00 mid 0.10
+  Spot $106.57  Credit $0.47  Width $5.00  POP 80%
+  Early-red M2M flip: $104.69 (1.76% below spot)
+  Expiration breakeven: $102.53  Resilience: 0.13
+  Exits: 50% at $0.23, 25% at $0.35
+  Validation: VALID
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
