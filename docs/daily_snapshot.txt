@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-15 17:28 UTC (live data)
-Generated (Pacific): Tuesday, September 15, 2026 at 10:28 AM Pacific
+Generated: 2026-09-15 20:55 UTC (live data)
+Generated (Pacific): Tuesday, September 15, 2026 at 01:55 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -9,84 +9,59 @@ Freshness note for the reader: this page refreshes several times each weekday mo
 Label: COMPRESSION
 Decision: DEPLOY
 Size multiplier: 1.00
-  - SPX BB-width compressed: 0.0229 <= 50% of avg 0.0469
+  - SPX BB-width compressed: 0.0226 <= 50% of avg 0.0469
 
 ## Candidates
-- TSLA: score 0.68, spot $359.22, near-ATM IV 42.1%, ATR $13.94
-- AMZN: score 0.55, spot $248.52, near-ATM IV 31.0%, ATR $5.80
-- WMT: score 0.47, spot $108.61, near-ATM IV 24.1%, ATR $1.80
+- TSLA: score 0.68, spot $356.58, near-ATM IV 41.9%, ATR $13.99
+- AMZN: score 0.54, spot $248.42, near-ATM IV 30.6%, ATR $5.89
 
 ## Trade Proposals
 ### #1: TSLA BULL_PUT exp 2026-10-02 (17 DTE)
   Mode: INCOME
-  Overall score: 32/100 (POP Fit 99, M2M Distance 12, Credit Quality 58, Liquidity 80, Resilience 3)
-  Leg: SELL Put $335.00 mid 4.10
-  Leg: BUY Put $330.00 mid 3.23
-  Spot $359.21  Credit $0.87  Width $5.00  POP 80%
-  Early-red M2M flip: $350.33 (2.47% below spot)
-  Expiration breakeven: $334.12  Resilience: 0.03
-  Exits: 50% at $0.44, 25% at $0.66
+  Overall score: 31/100 (POP Fit 89, M2M Distance 13, Credit Quality 72, Liquidity 70, Resilience 3)
+  Leg: SELL Put $335.00 mid 4.67
+  Leg: BUY Put $330.00 mid 3.60
+  Spot $356.58  Credit $1.08  Width $5.00  POP 78%
+  Early-red M2M flip: $347.47 (2.55% below spot)
+  Expiration breakeven: $333.93  Resilience: 0.03
+  Exits: 50% at $0.54, 25% at $0.81
   Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ### #2: TSLA BULL_PUT exp 2026-10-02 (17 DTE)
   Mode: INCOME
-  Overall score: 32/100 (POP Fit 99, M2M Distance 12, Credit Quality 58, Liquidity 80, Resilience 3)
-  Leg: SELL Put $335.00 mid 4.10
-  Leg: BUY Put $330.00 mid 3.23
-  Spot $359.21  Credit $0.87  Width $5.00  POP 80%
-  Early-red M2M flip: $350.33 (2.47% below spot)
-  Expiration breakeven: $334.12  Resilience: 0.03
-  Exits: 50% at $0.44, 25% at $0.66
+  Overall score: 31/100 (POP Fit 89, M2M Distance 13, Credit Quality 72, Liquidity 70, Resilience 3)
+  Leg: SELL Put $335.00 mid 4.67
+  Leg: BUY Put $330.00 mid 3.60
+  Spot $356.58  Credit $1.08  Width $5.00  POP 78%
+  Early-red M2M flip: $347.47 (2.55% below spot)
+  Expiration breakeven: $333.93  Resilience: 0.03
+  Exits: 50% at $0.54, 25% at $0.81
   Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #3: AMZN BULL_PUT exp 2026-10-02 (17 DTE)
+### #3: AMZN BEAR_CALL exp 2026-10-02 (17 DTE)
   Mode: INCOME
-  Overall score: 27/100 (POP Fit 90, M2M Distance 13, Credit Quality 46, Liquidity 62, Resilience 8)
-  Leg: SELL Put $235.00 mid 1.86
-  Leg: BUY Put $230.00 mid 1.17
-  Spot $248.56  Credit $0.69  Width $5.00  POP 82%
-  Early-red M2M flip: $243.58 (2.00% below spot)
-  Expiration breakeven: $234.31  Resilience: 0.08
-  Exits: 50% at $0.35, 25% at $0.52
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Overall score: 22/100 (POP Fit 66, M2M Distance 12, Credit Quality 65, Liquidity 49, Resilience 3)
+  Leg: SELL Call $260.00 mid 2.60
+  Leg: BUY Call $265.00 mid 1.64
+  Spot $248.42  Credit $0.97  Width $5.00  POP 73%
+  Early-red M2M flip: $252.83 (1.77% above spot)
+  Expiration breakeven: $260.97  Resilience: 0.03
+  Exits: 50% at $0.48, 25% at $0.73
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #4: AMZN BULL_PUT exp 2026-10-02 (17 DTE)
+### #4: AMZN BEAR_CALL exp 2026-10-02 (17 DTE)
   Mode: INCOME
-  Overall score: 27/100 (POP Fit 90, M2M Distance 13, Credit Quality 46, Liquidity 62, Resilience 8)
-  Leg: SELL Put $235.00 mid 1.86
-  Leg: BUY Put $230.00 mid 1.17
-  Spot $248.56  Credit $0.69  Width $5.00  POP 82%
-  Early-red M2M flip: $243.58 (2.00% below spot)
-  Expiration breakeven: $234.31  Resilience: 0.08
-  Exits: 50% at $0.35, 25% at $0.52
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
-  Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
-### #5: WMT BULL_PUT exp 2026-10-02 (17 DTE)
-  Mode: INCOME
-  Overall score: 17/100 (POP Fit 88, M2M Distance 13, Credit Quality 45, Liquidity 0, Resilience 8)
-  Leg: SELL Put $105.00 mid 0.77
-  Leg: BUY Put $101.00 mid 0.23
-  Spot $108.64  Credit $0.54  Width $4.00  POP 78%
-  Early-red M2M flip: $106.98 (1.53% below spot)
-  Expiration breakeven: $104.47  Resilience: 0.08
-  Exits: 50% at $0.27, 25% at $0.40
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
-  Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
-### #6: WMT BULL_PUT exp 2026-10-02 (17 DTE)
-  Mode: INCOME
-  Overall score: 16/100 (POP Fit 88, M2M Distance 13, Credit Quality 40, Liquidity 0, Resilience 8)
-  Leg: SELL Put $105.00 mid 0.77
-  Leg: BUY Put $100.00 mid 0.17
-  Spot $108.64  Credit $0.59  Width $5.00  POP 78%
-  Early-red M2M flip: $106.96 (1.55% below spot)
-  Expiration breakeven: $104.41  Resilience: 0.08
-  Exits: 50% at $0.30, 25% at $0.45
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Overall score: 22/100 (POP Fit 66, M2M Distance 12, Credit Quality 65, Liquidity 49, Resilience 3)
+  Leg: SELL Call $260.00 mid 2.60
+  Leg: BUY Call $265.00 mid 1.64
+  Spot $248.42  Credit $0.97  Width $5.00  POP 73%
+  Early-red M2M flip: $252.83 (1.77% above spot)
+  Expiration breakeven: $260.97  Resilience: 0.03
+  Exits: 50% at $0.48, 25% at $0.73
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
