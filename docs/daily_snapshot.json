@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-17T17:27:47.279912",
+  "generated_utc": "2026-09-17T20:59:55.398144",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,29 +8,29 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 15.619999885559082,
-      "vix_spike_1d_pct": -0.11801238322739345,
+      "vix": 15.4399995803833,
+      "vix_spike_1d_pct": -0.12817615027883264,
       "breakout_state": "none",
-      "bb_width": 0.025861861559412187,
-      "bb_width_avg": 0.04636215759558425,
+      "bb_width": 0.02576280096849635,
+      "bb_width_avg": 0.04635968108079898,
       "trend_state": "trend"
     },
-    "timestamp": "2026-09-17T17:27:20.743896"
+    "timestamp": "2026-09-17T20:59:35.950957"
   },
   "candidates": [
     {
       "symbol": "TSLA",
       "is_index_product": false,
-      "underlying_price": 367.635009765625,
-      "avg_iv": 0.41882905395507813,
-      "iv_rank": 0.5277777777777778,
+      "underlying_price": 366.20001220703125,
+      "avg_iv": 0.40704938659667966,
+      "iv_rank": 0.5233644859813084,
       "atr": 14.455001831054688,
       "atr_compression_ratio": 0.9704172531903936,
-      "bb_width_compression_ratio": 0.37818990615228737,
+      "bb_width_compression_ratio": 0.37509419393600313,
       "expirations_in_window": [
         "2026-10-02"
       ],
-      "quality_score": 0.6663838047168871,
+      "quality_score": 0.6535003721631224,
       "reasons": [
         "passed all filters"
       ]
@@ -38,16 +38,16 @@
     {
       "symbol": "WMT",
       "is_index_product": false,
-      "underlying_price": 106.75499725341797,
-      "avg_iv": 0.2282181671142578,
-      "iv_rank": 0.9259259259259259,
+      "underlying_price": 106.79000091552734,
+      "avg_iv": 0.22913368530273437,
+      "iv_rank": 0.9252336448598131,
       "atr": 1.737142835344587,
       "atr_compression_ratio": 0.6693455458639332,
-      "bb_width_compression_ratio": 0.610155169042093,
+      "bb_width_compression_ratio": 0.6104514303492138,
       "expirations_in_window": [
         "2026-10-02"
       ],
-      "quality_score": 0.5311987308529549,
+      "quality_score": 0.532036392161483,
       "reasons": [
         "passed all filters"
       ]
@@ -56,32 +56,15 @@
       "symbol": "AMZN",
       "is_index_product": false,
       "underlying_price": 251.19000244140625,
-      "avg_iv": 0.29444064941406245,
-      "iv_rank": 0.3055555555555556,
+      "avg_iv": 0.2870249520874023,
+      "iv_rank": 0.308411214953271,
       "atr": 6.077139718191964,
       "atr_compression_ratio": 0.8182260316673461,
-      "bb_width_compression_ratio": 0.4434441944236947,
+      "bb_width_compression_ratio": 0.44344419442369254,
       "expirations_in_window": [
         "2026-10-02"
       ],
-      "quality_score": 0.5121342680194367,
-      "reasons": [
-        "passed all filters"
-      ]
-    },
-    {
-      "symbol": "MCD",
-      "is_index_product": false,
-      "underlying_price": 249.52999877929688,
-      "avg_iv": 0.22113815979003904,
-      "iv_rank": 0.37037037037037035,
-      "atr": 3.86785888671875,
-      "atr_compression_ratio": 0.7202469216684365,
-      "bb_width_compression_ratio": 1.4909238533111908,
-      "expirations_in_window": [
-        "2026-10-02"
-      ],
-      "quality_score": 0.3004902652363458,
+      "quality_score": 0.5045764813465372,
       "reasons": [
         "passed all filters"
       ]
@@ -89,10 +72,395 @@
   ],
   "proposals": [
     {
+      "symbol": "TSLA",
+      "strategy": "BEAR_CALL",
+      "expiration": "2026-10-02",
+      "underlying_price": 366.20001220703125,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "C",
+          "strike": 390.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 4.55,
+          "bid": 4.5,
+          "ask": 4.6,
+          "delta": 0.24932899060887725,
+          "iv": 0.41925629577636714,
+          "contract_symbol": "TSLA261002C00390000"
+        },
+        {
+          "action": "BUY",
+          "right": "C",
+          "strike": 395.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 3.5999999999999996,
+          "bid": 3.55,
+          "ask": 3.65,
+          "delta": 0.20598765348792103,
+          "iv": 0.4220638848876953,
+          "contract_symbol": "TSLA261002C00395000"
+        }
+      ],
+      "credit": 0.9500000000000002,
+      "width": 5.0,
+      "max_loss": 4.05,
+      "credit_to_width_ratio": 0.19000000000000003,
+      "pop": 0.7506710093911227,
+      "m2m_flip_price": 374.85706128459424,
+      "m2m_flip_distance_pct": 0.023640220614380328,
+      "expiration_breakeven_price": 390.95,
+      "expiration_breakeven_distance_pct": 0.0675859829818256,
+      "expected_move": 30.21792621091685,
+      "atr": 14.455001831054688,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.4750000000000001,
+      "exit_25pct_target_credit": 0.7125000000000001,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.4986566480998829,
+      "rank_reasons": [
+        "pop_score=0.75",
+        "m2m_score=0.13",
+        "credit_score=0.63",
+        "liquidity_score=0.75",
+        "early_red_score=0.02",
+        "penalty=0.70"
+      ],
+      "flags": [
+        "M2M_WARN",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 21.68250274658203,
+        "short_delta": 0.24932899060887725,
+        "credit_to_width_ratio": 0.19000000000000003
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 75,
+        "M2M Distance": 13,
+        "Credit Quality": 63,
+        "Liquidity": 75,
+        "Resilience": 2,
+        "Overall": 27
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "strategy": "BEAR_CALL",
+      "expiration": "2026-10-02",
+      "underlying_price": 366.20001220703125,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "C",
+          "strike": 390.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 4.55,
+          "bid": 4.5,
+          "ask": 4.6,
+          "delta": 0.24932899060887725,
+          "iv": 0.41925629577636714,
+          "contract_symbol": "TSLA261002C00390000"
+        },
+        {
+          "action": "BUY",
+          "right": "C",
+          "strike": 395.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 3.5999999999999996,
+          "bid": 3.55,
+          "ask": 3.65,
+          "delta": 0.20598765348792103,
+          "iv": 0.4220638848876953,
+          "contract_symbol": "TSLA261002C00395000"
+        }
+      ],
+      "credit": 0.9500000000000002,
+      "width": 5.0,
+      "max_loss": 4.05,
+      "credit_to_width_ratio": 0.19000000000000003,
+      "pop": 0.7506710093911227,
+      "m2m_flip_price": 374.85706128459424,
+      "m2m_flip_distance_pct": 0.023640220614380328,
+      "expiration_breakeven_price": 390.95,
+      "expiration_breakeven_distance_pct": 0.0675859829818256,
+      "expected_move": 30.21792621091685,
+      "atr": 14.455001831054688,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.4750000000000001,
+      "exit_25pct_target_credit": 0.7125000000000001,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.4986566480998829,
+      "rank_reasons": [
+        "pop_score=0.75",
+        "m2m_score=0.13",
+        "credit_score=0.63",
+        "liquidity_score=0.75",
+        "early_red_score=0.02",
+        "penalty=0.70"
+      ],
+      "flags": [
+        "M2M_WARN",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 21.68250274658203,
+        "short_delta": 0.24932899060887725,
+        "credit_to_width_ratio": 0.19000000000000003
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 75,
+        "M2M Distance": 13,
+        "Credit Quality": 63,
+        "Liquidity": 75,
+        "Resilience": 2,
+        "Overall": 27
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-02",
+      "underlying_price": 251.19000244140625,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 240.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 1.8199999999999998,
+          "bid": 1.74,
+          "ask": 1.9,
+          "delta": -0.19901262763255612,
+          "iv": 0.2866282275390625,
+          "contract_symbol": "AMZN261002P00240000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 235.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 1.07,
+          "bid": 1.02,
+          "ask": 1.12,
+          "delta": -0.12308838102929087,
+          "iv": 0.2990792749023437,
+          "contract_symbol": "AMZN261002P00235000"
+        }
+      ],
+      "credit": 0.7499999999999998,
+      "width": 5.0,
+      "max_loss": 4.25,
+      "credit_to_width_ratio": 0.14999999999999997,
+      "pop": 0.8009873723674439,
+      "m2m_flip_price": 246.77002677321434,
+      "m2m_flip_distance_pct": 0.017596144851437446,
+      "expiration_breakeven_price": 239.25,
+      "expiration_breakeven_distance_pct": 0.047533748657817024,
+      "expected_move": 14.61575318691541,
+      "atr": 6.077139718191964,
+      "early_red_pl_score": 0.05,
+      "exit_50pct_target_credit": 0.3749999999999999,
+      "exit_25pct_target_credit": 0.5624999999999998,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.131190851872225,
+      "rank_reasons": [
+        "pop_score=1.00",
+        "m2m_score=0.13",
+        "credit_score=0.50",
+        "liquidity_score=0.09",
+        "early_red_score=0.05",
+        "penalty=0.70"
+      ],
+      "flags": [
+        "M2M_WARN",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 9.115709577287946,
+        "short_delta": -0.19901262763255612,
+        "credit_to_width_ratio": 0.14999999999999997
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 100,
+        "M2M Distance": 13,
+        "Credit Quality": 50,
+        "Liquidity": 9,
+        "Resilience": 5,
+        "Overall": 21
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-02",
+      "underlying_price": 251.19000244140625,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 240.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 1.8199999999999998,
+          "bid": 1.74,
+          "ask": 1.9,
+          "delta": -0.19901262763255612,
+          "iv": 0.2866282275390625,
+          "contract_symbol": "AMZN261002P00240000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 235.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 1.07,
+          "bid": 1.02,
+          "ask": 1.12,
+          "delta": -0.12308838102929087,
+          "iv": 0.2990792749023437,
+          "contract_symbol": "AMZN261002P00235000"
+        }
+      ],
+      "credit": 0.7499999999999998,
+      "width": 5.0,
+      "max_loss": 4.25,
+      "credit_to_width_ratio": 0.14999999999999997,
+      "pop": 0.8009873723674439,
+      "m2m_flip_price": 246.77002677321434,
+      "m2m_flip_distance_pct": 0.017596144851437446,
+      "expiration_breakeven_price": 239.25,
+      "expiration_breakeven_distance_pct": 0.047533748657817024,
+      "expected_move": 14.61575318691541,
+      "atr": 6.077139718191964,
+      "early_red_pl_score": 0.05,
+      "exit_50pct_target_credit": 0.3749999999999999,
+      "exit_25pct_target_credit": 0.5624999999999998,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.131190851872225,
+      "rank_reasons": [
+        "pop_score=1.00",
+        "m2m_score=0.13",
+        "credit_score=0.50",
+        "liquidity_score=0.09",
+        "early_red_score=0.05",
+        "penalty=0.70"
+      ],
+      "flags": [
+        "M2M_WARN",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 9.115709577287946,
+        "short_delta": -0.19901262763255612,
+        "credit_to_width_ratio": 0.14999999999999997
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 100,
+        "M2M Distance": 13,
+        "Credit Quality": 50,
+        "Liquidity": 9,
+        "Resilience": 5,
+        "Overall": 21
+      }
+    },
+    {
+      "symbol": "WMT",
+      "strategy": "BEAR_CALL",
+      "expiration": "2026-10-02",
+      "underlying_price": 106.79000091552734,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "C",
+          "strike": 110.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 0.79,
+          "bid": 0.76,
+          "ask": 0.82,
+          "delta": 0.2788236328663792,
+          "iv": 0.22486126708984372,
+          "contract_symbol": "WMT261002C00110000"
+        },
+        {
+          "action": "BUY",
+          "right": "C",
+          "strike": 111.0,
+          "expiration": "2026-10-02",
+          "quantity": 1,
+          "mid": 0.55,
+          "bid": 0.5,
+          "ask": 0.6,
+          "delta": 0.21731933211020454,
+          "iv": 0.22583781982421874,
+          "contract_symbol": "WMT261002C00111000"
+        }
+      ],
+      "credit": 0.24,
+      "width": 1.0,
+      "max_loss": 0.76,
+      "credit_to_width_ratio": 0.24,
+      "pop": 0.7211763671336209,
+      "m2m_flip_price": 108.37279843701981,
+      "m2m_flip_distance_pct": 0.014821589174294374,
+      "expiration_breakeven_price": 110.24,
+      "expiration_breakeven_distance_pct": 0.032306386879813374,
+      "expected_move": 4.960423173674874,
+      "atr": 1.737142835344587,
+      "early_red_pl_score": 0.06666666666666667,
+      "exit_50pct_target_credit": 0.12,
+      "exit_25pct_target_credit": 0.18,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 0.39860528903426373,
+      "rank_reasons": [
+        "pop_score=0.61",
+        "m2m_score=0.14",
+        "credit_score=0.80",
+        "liquidity_score=0.00",
+        "early_red_score=0.07",
+        "penalty=1.30"
+      ],
+      "flags": [
+        "M2M_TOO_CLOSE",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 2.6057142530168806,
+        "short_delta": 0.2788236328663792,
+        "credit_to_width_ratio": 0.24
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 61,
+        "M2M Distance": 14,
+        "Credit Quality": 80,
+        "Liquidity": 0,
+        "Resilience": 7,
+        "Overall": 7
+      }
+    },
+    {
       "symbol": "WMT",
       "strategy": "BULL_PUT",
       "expiration": "2026-10-02",
-      "underlying_price": 106.74500274658203,
+      "underlying_price": 106.79000091552734,
       "legs": [
         {
           "action": "SELL",
@@ -100,11 +468,11 @@
           "strike": 104.0,
           "expiration": "2026-10-02",
           "quantity": 1,
-          "mid": 0.845,
-          "bid": 0.84,
+          "mid": 0.7749999999999999,
+          "bid": 0.7,
           "ask": 0.85,
-          "delta": -0.25675807621732416,
-          "iv": 0.2180253979492187,
+          "delta": -0.25523773220795,
+          "iv": 0.21973436523437498,
           "contract_symbol": "WMT261002P00104000"
         },
         {
@@ -114,498 +482,36 @@
           "expiration": "2026-10-02",
           "quantity": 1,
           "mid": 0.5800000000000001,
-          "bid": 0.56,
-          "ask": 0.6,
-          "delta": -0.19261913129115715,
-          "iv": 0.21900195068359374,
+          "bid": 0.51,
+          "ask": 0.65,
+          "delta": -0.19934926806478193,
+          "iv": 0.22827920166015625,
           "contract_symbol": "WMT261002P00103000"
         }
       ],
-      "credit": 0.2649999999999999,
+      "credit": 0.19499999999999984,
       "width": 1.0,
-      "max_loss": 0.7350000000000001,
-      "credit_to_width_ratio": 0.2649999999999999,
-      "pop": 0.7432419237826758,
-      "m2m_flip_price": 105.02252661646344,
-      "m2m_flip_distance_pct": 0.016136363162665684,
-      "expiration_breakeven_price": 103.735,
-      "expiration_breakeven_distance_pct": 0.02819806706762591,
-      "expected_move": 4.938521662765073,
+      "max_loss": 0.8050000000000002,
+      "credit_to_width_ratio": 0.19499999999999984,
+      "pop": 0.74476226779205,
+      "m2m_flip_price": 105.54598966427147,
+      "m2m_flip_distance_pct": 0.01164913606696102,
+      "expiration_breakeven_price": 103.805,
+      "expiration_breakeven_distance_pct": 0.027952063769420905,
+      "expected_move": 4.960423173674874,
       "atr": 1.737142835344587,
-      "early_red_pl_score": 0.11666666666666667,
-      "exit_50pct_target_credit": 0.13249999999999995,
-      "exit_25pct_target_credit": 0.19874999999999993,
+      "early_red_pl_score": 0.03333333333333333,
+      "exit_50pct_target_credit": 0.09749999999999992,
+      "exit_25pct_target_credit": 0.14624999999999988,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.7488661085661412,
+      "rank_score": 0.2810028879740347,
       "rank_reasons": [
         "pop_score=0.72",
-        "m2m_score=0.16",
-        "credit_score=0.88",
-        "liquidity_score=0.60",
-        "early_red_score=0.12",
-        "penalty=0.70"
-      ],
-      "flags": [
-        "M2M_WARN",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 2.6057142530168806,
-        "short_delta": -0.25675807621732416,
-        "credit_to_width_ratio": 0.2649999999999999
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 72,
-        "M2M Distance": 16,
-        "Credit Quality": 88,
-        "Liquidity": 60,
-        "Resilience": 12,
-        "Overall": 32
-      }
-    },
-    {
-      "symbol": "TSLA",
-      "strategy": "BULL_PUT",
-      "expiration": "2026-10-02",
-      "underlying_price": 367.7099914550781,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "P",
-          "strike": 345.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 4.125,
-          "bid": 4.05,
-          "ask": 4.2,
-          "delta": -0.20623124836185536,
-          "iv": 0.4162656030273437,
-          "contract_symbol": "TSLA261002P00345000"
-        },
-        {
-          "action": "BUY",
-          "right": "P",
-          "strike": 340.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 3.1500000000000004,
-          "bid": 3.1,
-          "ask": 3.2,
-          "delta": -0.16316689482042213,
-          "iv": 0.42139250488281255,
-          "contract_symbol": "TSLA261002P00340000"
-        }
-      ],
-      "credit": 0.9749999999999996,
-      "width": 5.0,
-      "max_loss": 4.025,
-      "credit_to_width_ratio": 0.19499999999999992,
-      "pop": 0.7937687516381446,
-      "m2m_flip_price": 358.34208033559844,
-      "m2m_flip_distance_pct": 0.02547635728474387,
-      "expiration_breakeven_price": 344.025,
-      "expiration_breakeven_distance_pct": 0.06441215089465868,
-      "expected_move": 31.220613209259458,
-      "atr": 14.455001831054688,
-      "early_red_pl_score": 0.03333333333333333,
-      "exit_50pct_target_credit": 0.4874999999999998,
-      "exit_25pct_target_credit": 0.7312499999999997,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 1.6864419664434547,
-      "rank_reasons": [
-        "pop_score=0.97",
-        "m2m_score=0.13",
+        "m2m_score=0.11",
         "credit_score=0.65",
-        "liquidity_score=0.66",
-        "early_red_score=0.03",
-        "penalty=0.70"
-      ],
-      "flags": [
-        "M2M_WARN",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 21.68250274658203,
-        "short_delta": -0.20623124836185536,
-        "credit_to_width_ratio": 0.19499999999999992
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 97,
-        "M2M Distance": 13,
-        "Credit Quality": 65,
-        "Liquidity": 66,
-        "Resilience": 3,
-        "Overall": 31
-      }
-    },
-    {
-      "symbol": "TSLA",
-      "strategy": "BULL_PUT",
-      "expiration": "2026-10-02",
-      "underlying_price": 367.7099914550781,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "P",
-          "strike": 345.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 4.125,
-          "bid": 4.05,
-          "ask": 4.2,
-          "delta": -0.20623124836185536,
-          "iv": 0.4162656030273437,
-          "contract_symbol": "TSLA261002P00345000"
-        },
-        {
-          "action": "BUY",
-          "right": "P",
-          "strike": 340.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 3.1500000000000004,
-          "bid": 3.1,
-          "ask": 3.2,
-          "delta": -0.16316689482042213,
-          "iv": 0.42139250488281255,
-          "contract_symbol": "TSLA261002P00340000"
-        }
-      ],
-      "credit": 0.9749999999999996,
-      "width": 5.0,
-      "max_loss": 4.025,
-      "credit_to_width_ratio": 0.19499999999999992,
-      "pop": 0.7937687516381446,
-      "m2m_flip_price": 358.34208033559844,
-      "m2m_flip_distance_pct": 0.02547635728474387,
-      "expiration_breakeven_price": 344.025,
-      "expiration_breakeven_distance_pct": 0.06441215089465868,
-      "expected_move": 31.220613209259458,
-      "atr": 14.455001831054688,
-      "early_red_pl_score": 0.03333333333333333,
-      "exit_50pct_target_credit": 0.4874999999999998,
-      "exit_25pct_target_credit": 0.7312499999999997,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 1.6864419664434547,
-      "rank_reasons": [
-        "pop_score=0.97",
-        "m2m_score=0.13",
-        "credit_score=0.65",
-        "liquidity_score=0.66",
-        "early_red_score=0.03",
-        "penalty=0.70"
-      ],
-      "flags": [
-        "M2M_WARN",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 21.68250274658203,
-        "short_delta": -0.20623124836185536,
-        "credit_to_width_ratio": 0.19499999999999992
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 97,
-        "M2M Distance": 13,
-        "Credit Quality": 65,
-        "Liquidity": 66,
-        "Resilience": 3,
-        "Overall": 31
-      }
-    },
-    {
-      "symbol": "AMZN",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-10-02",
-      "underlying_price": 251.1999969482422,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "C",
-          "strike": 265.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 1.69,
-          "bid": 1.63,
-          "ask": 1.75,
-          "delta": 0.20482298856976927,
-          "iv": 0.29798065307617183,
-          "contract_symbol": "AMZN261002C00265000"
-        },
-        {
-          "action": "BUY",
-          "right": "C",
-          "strike": 270.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 0.965,
-          "bid": 0.96,
-          "ask": 0.97,
-          "delta": 0.12634963903334967,
-          "iv": 0.2955392712402344,
-          "contract_symbol": "AMZN261002C00270000"
-        }
-      ],
-      "credit": 0.725,
-      "width": 5.0,
-      "max_loss": 4.275,
-      "credit_to_width_ratio": 0.145,
-      "pop": 0.7951770114302308,
-      "m2m_flip_price": 255.46157388039865,
-      "m2m_flip_distance_pct": 0.016964876528380385,
-      "expiration_breakeven_price": 265.725,
-      "expiration_breakeven_distance_pct": 0.05782246508048565,
-      "expected_move": 14.993968496450615,
-      "atr": 6.077139718191964,
-      "early_red_pl_score": 0.03333333333333333,
-      "exit_50pct_target_credit": 0.3625,
-      "exit_25pct_target_credit": 0.54375,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 1.4632235536459304,
-      "rank_reasons": [
-        "pop_score=0.98",
-        "m2m_score=0.13",
-        "credit_score=0.48",
-        "liquidity_score=0.59",
-        "early_red_score=0.03",
-        "penalty=0.70"
-      ],
-      "flags": [
-        "M2M_WARN",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 9.115709577287946,
-        "short_delta": 0.20482298856976927,
-        "credit_to_width_ratio": 0.145
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 98,
-        "M2M Distance": 13,
-        "Credit Quality": 48,
-        "Liquidity": 59,
-        "Resilience": 3,
-        "Overall": 27
-      }
-    },
-    {
-      "symbol": "AMZN",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-10-02",
-      "underlying_price": 251.1999969482422,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "C",
-          "strike": 265.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 1.69,
-          "bid": 1.63,
-          "ask": 1.75,
-          "delta": 0.20482298856976927,
-          "iv": 0.29798065307617183,
-          "contract_symbol": "AMZN261002C00265000"
-        },
-        {
-          "action": "BUY",
-          "right": "C",
-          "strike": 270.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 0.965,
-          "bid": 0.96,
-          "ask": 0.97,
-          "delta": 0.12634963903334967,
-          "iv": 0.2955392712402344,
-          "contract_symbol": "AMZN261002C00270000"
-        }
-      ],
-      "credit": 0.725,
-      "width": 5.0,
-      "max_loss": 4.275,
-      "credit_to_width_ratio": 0.145,
-      "pop": 0.7951770114302308,
-      "m2m_flip_price": 255.46157388039865,
-      "m2m_flip_distance_pct": 0.016964876528380385,
-      "expiration_breakeven_price": 265.725,
-      "expiration_breakeven_distance_pct": 0.05782246508048565,
-      "expected_move": 14.993968496450615,
-      "atr": 6.077139718191964,
-      "early_red_pl_score": 0.03333333333333333,
-      "exit_50pct_target_credit": 0.3625,
-      "exit_25pct_target_credit": 0.54375,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 1.4632235536459304,
-      "rank_reasons": [
-        "pop_score=0.98",
-        "m2m_score=0.13",
-        "credit_score=0.48",
-        "liquidity_score=0.59",
-        "early_red_score=0.03",
-        "penalty=0.70"
-      ],
-      "flags": [
-        "M2M_WARN",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 9.115709577287946,
-        "short_delta": 0.20482298856976927,
-        "credit_to_width_ratio": 0.145
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 98,
-        "M2M Distance": 13,
-        "Credit Quality": 48,
-        "Liquidity": 59,
-        "Resilience": 3,
-        "Overall": 27
-      }
-    },
-    {
-      "symbol": "WMT",
-      "strategy": "BULL_PUT",
-      "expiration": "2026-10-02",
-      "underlying_price": 106.74500274658203,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "P",
-          "strike": 104.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 0.845,
-          "bid": 0.84,
-          "ask": 0.85,
-          "delta": -0.25675807621732416,
-          "iv": 0.2180253979492187,
-          "contract_symbol": "WMT261002P00104000"
-        },
-        {
-          "action": "BUY",
-          "right": "P",
-          "strike": 101.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 0.28,
-          "bid": 0.27,
-          "ask": 0.29,
-          "delta": -0.10103848413317529,
-          "iv": 0.22510540527343748,
-          "contract_symbol": "WMT261002P00101000"
-        }
-      ],
-      "credit": 0.565,
-      "width": 3.0,
-      "max_loss": 2.435,
-      "credit_to_width_ratio": 0.18833333333333332,
-      "pop": 0.7432419237826758,
-      "m2m_flip_price": 105.10104880668223,
-      "m2m_flip_distance_pct": 0.01540075785845105,
-      "expiration_breakeven_price": 103.435,
-      "expiration_breakeven_distance_pct": 0.031008503081311832,
-      "expected_move": 4.938521662765073,
-      "atr": 1.737142835344587,
-      "early_red_pl_score": 0.1,
-      "exit_50pct_target_credit": 0.2825,
-      "exit_25pct_target_credit": 0.42374999999999996,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 1.4528583773293262,
-      "rank_reasons": [
-        "pop_score=0.72",
-        "m2m_score=0.15",
-        "credit_score=0.63",
-        "liquidity_score=0.58",
-        "early_red_score=0.10",
-        "penalty=0.70"
-      ],
-      "flags": [
-        "M2M_WARN",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 2.6057142530168806,
-        "short_delta": -0.25675807621732416,
-        "credit_to_width_ratio": 0.18833333333333332
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 72,
-        "M2M Distance": 15,
-        "Credit Quality": 63,
-        "Liquidity": 58,
-        "Resilience": 10,
-        "Overall": 26
-      }
-    },
-    {
-      "symbol": "MCD",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-10-02",
-      "underlying_price": 249.5,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "C",
-          "strike": 260.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 1.1400000000000001,
-          "bid": 1.1,
-          "ask": 1.18,
-          "delta": 0.19402871083819634,
-          "iv": 0.21936815795898437,
-          "contract_symbol": "MCD261002C00260000"
-        },
-        {
-          "action": "BUY",
-          "right": "C",
-          "strike": 265.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 0.5700000000000001,
-          "bid": 0.51,
-          "ask": 0.63,
-          "delta": 0.11003147262485974,
-          "iv": 0.23059851440429688,
-          "contract_symbol": "MCD261002C00265000"
-        }
-      ],
-      "credit": 0.5700000000000001,
-      "width": 5.0,
-      "max_loss": 4.43,
-      "credit_to_width_ratio": 0.11400000000000002,
-      "pop": 0.8059712891618036,
-      "m2m_flip_price": 252.9773406982422,
-      "m2m_flip_distance_pct": 0.013937237267503757,
-      "expiration_breakeven_price": 260.57,
-      "expiration_breakeven_distance_pct": 0.04436873747494987,
-      "expected_move": 11.18493432899148,
-      "atr": 3.86785888671875,
-      "early_red_pl_score": 0.06666666666666667,
-      "exit_50pct_target_credit": 0.28500000000000003,
-      "exit_25pct_target_credit": 0.42750000000000005,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 0.3374069197122789,
-      "rank_reasons": [
-        "pop_score=0.97",
-        "m2m_score=0.14",
-        "credit_score=0.38",
         "liquidity_score=0.00",
-        "early_red_score=0.07",
+        "early_red_score=0.03",
         "penalty=1.30"
       ],
       "flags": [
@@ -613,193 +519,146 @@
         "EARLY_RED_VULNERABLE"
       ],
       "metrics": {
-        "buffer_dollars": 5.801788330078125,
-        "short_delta": 0.19402871083819634,
-        "credit_to_width_ratio": 0.11400000000000002
+        "buffer_dollars": 2.6057142530168806,
+        "short_delta": -0.25523773220795,
+        "credit_to_width_ratio": 0.19499999999999984
       },
       "mode": "income",
       "score_card": {
-        "POP Fit": 97,
-        "M2M Distance": 14,
-        "Credit Quality": 38,
+        "POP Fit": 72,
+        "M2M Distance": 11,
+        "Credit Quality": 65,
         "Liquidity": 0,
-        "Resilience": 7,
-        "Overall": 6
-      }
-    },
-    {
-      "symbol": "MCD",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-10-02",
-      "underlying_price": 249.5,
-      "legs": [
-        {
-          "action": "SELL",
-          "right": "C",
-          "strike": 260.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 1.1400000000000001,
-          "bid": 1.1,
-          "ask": 1.18,
-          "delta": 0.19402871083819634,
-          "iv": 0.21936815795898437,
-          "contract_symbol": "MCD261002C00260000"
-        },
-        {
-          "action": "BUY",
-          "right": "C",
-          "strike": 265.0,
-          "expiration": "2026-10-02",
-          "quantity": 1,
-          "mid": 0.5700000000000001,
-          "bid": 0.51,
-          "ask": 0.63,
-          "delta": 0.11003147262485974,
-          "iv": 0.23059851440429688,
-          "contract_symbol": "MCD261002C00265000"
-        }
-      ],
-      "credit": 0.5700000000000001,
-      "width": 5.0,
-      "max_loss": 4.43,
-      "credit_to_width_ratio": 0.11400000000000002,
-      "pop": 0.8059712891618036,
-      "m2m_flip_price": 252.9773406982422,
-      "m2m_flip_distance_pct": 0.013937237267503757,
-      "expiration_breakeven_price": 260.57,
-      "expiration_breakeven_distance_pct": 0.04436873747494987,
-      "expected_move": 11.18493432899148,
-      "atr": 3.86785888671875,
-      "early_red_pl_score": 0.06666666666666667,
-      "exit_50pct_target_credit": 0.28500000000000003,
-      "exit_25pct_target_credit": 0.42750000000000005,
-      "est_days_to_50pct": 7,
-      "est_days_to_25pct": 3,
-      "rank_score": 0.3374069197122789,
-      "rank_reasons": [
-        "pop_score=0.97",
-        "m2m_score=0.14",
-        "credit_score=0.38",
-        "liquidity_score=0.00",
-        "early_red_score=0.07",
-        "penalty=1.30"
-      ],
-      "flags": [
-        "M2M_TOO_CLOSE",
-        "EARLY_RED_VULNERABLE"
-      ],
-      "metrics": {
-        "buffer_dollars": 5.801788330078125,
-        "short_delta": 0.19402871083819634,
-        "credit_to_width_ratio": 0.11400000000000002
-      },
-      "mode": "income",
-      "score_card": {
-        "POP Fit": 97,
-        "M2M Distance": 14,
-        "Credit Quality": 38,
-        "Liquidity": 0,
-        "Resilience": 7,
-        "Overall": 6
+        "Resilience": 3,
+        "Overall": 5
       }
     }
   ],
   "validations": [
     {
+      "symbol": "TSLA",
+      "strategy": "BEAR_CALL",
+      "expiration": "2026-10-02",
+      "valid": false,
+      "reasons": [
+        "resilience 0.02 at or below hard-reject floor 0.10"
+      ],
+      "fresh_credit": null,
+      "credit_drift_pct": null,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 15.4399995803833,
+          "vix_spike_1d_pct": -0.12817615027883264,
+          "breakout_state": "none",
+          "bb_width": 0.02576280096849635,
+          "bb_width_avg": 0.04635968108079898,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-09-17T20:59:55.386450"
+      },
+      "flags": []
+    },
+    {
+      "symbol": "TSLA",
+      "strategy": "BEAR_CALL",
+      "expiration": "2026-10-02",
+      "valid": false,
+      "reasons": [
+        "resilience 0.02 at or below hard-reject floor 0.10"
+      ],
+      "fresh_credit": null,
+      "credit_drift_pct": null,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 15.4399995803833,
+          "vix_spike_1d_pct": -0.12817615027883264,
+          "breakout_state": "none",
+          "bb_width": 0.02576280096849635,
+          "bb_width_avg": 0.04635968108079898,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-09-17T20:59:55.387735"
+      },
+      "flags": []
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-02",
+      "valid": false,
+      "reasons": [
+        "resilience 0.05 at or below hard-reject floor 0.10"
+      ],
+      "fresh_credit": null,
+      "credit_drift_pct": null,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 15.4399995803833,
+          "vix_spike_1d_pct": -0.12817615027883264,
+          "breakout_state": "none",
+          "bb_width": 0.02576280096849635,
+          "bb_width_avg": 0.04635968108079898,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-09-17T20:59:55.388984"
+      },
+      "flags": []
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-02",
+      "valid": false,
+      "reasons": [
+        "resilience 0.05 at or below hard-reject floor 0.10"
+      ],
+      "fresh_credit": null,
+      "credit_drift_pct": null,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 15.4399995803833,
+          "vix_spike_1d_pct": -0.12817615027883264,
+          "breakout_state": "none",
+          "bb_width": 0.02576280096849635,
+          "bb_width_avg": 0.04635968108079898,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-09-17T20:59:55.390172"
+      },
+      "flags": []
+    },
+    {
       "symbol": "WMT",
-      "strategy": "BULL_PUT",
-      "expiration": "2026-10-02",
-      "valid": true,
-      "reasons": [
-        "all checks passed"
-      ],
-      "fresh_credit": 0.2649999999999999,
-      "credit_drift_pct": 0.0,
-      "regime": {
-        "regime": "BENIGN_TREND",
-        "deploy": true,
-        "size_mult": 1.0,
-        "reasons": [
-          "SPX above slow SMA \u2014 benign trend"
-        ],
-        "metrics": {
-          "vix": 15.619999885559082,
-          "vix_spike_1d_pct": -0.11801238322739345,
-          "breakout_state": "none",
-          "bb_width": 0.025861861559412187,
-          "bb_width_avg": 0.04636215759558425,
-          "trend_state": "trend"
-        },
-        "timestamp": "2026-09-17T17:27:47.273866"
-      },
-      "flags": []
-    },
-    {
-      "symbol": "TSLA",
-      "strategy": "BULL_PUT",
-      "expiration": "2026-10-02",
-      "valid": false,
-      "reasons": [
-        "resilience 0.03 at or below hard-reject floor 0.10"
-      ],
-      "fresh_credit": null,
-      "credit_drift_pct": null,
-      "regime": {
-        "regime": "BENIGN_TREND",
-        "deploy": true,
-        "size_mult": 1.0,
-        "reasons": [
-          "SPX above slow SMA \u2014 benign trend"
-        ],
-        "metrics": {
-          "vix": 15.619999885559082,
-          "vix_spike_1d_pct": -0.11801238322739345,
-          "breakout_state": "none",
-          "bb_width": 0.025861861559412187,
-          "bb_width_avg": 0.04636215759558425,
-          "trend_state": "trend"
-        },
-        "timestamp": "2026-09-17T17:27:47.275168"
-      },
-      "flags": []
-    },
-    {
-      "symbol": "TSLA",
-      "strategy": "BULL_PUT",
-      "expiration": "2026-10-02",
-      "valid": false,
-      "reasons": [
-        "resilience 0.03 at or below hard-reject floor 0.10"
-      ],
-      "fresh_credit": null,
-      "credit_drift_pct": null,
-      "regime": {
-        "regime": "BENIGN_TREND",
-        "deploy": true,
-        "size_mult": 1.0,
-        "reasons": [
-          "SPX above slow SMA \u2014 benign trend"
-        ],
-        "metrics": {
-          "vix": 15.619999885559082,
-          "vix_spike_1d_pct": -0.11801238322739345,
-          "breakout_state": "none",
-          "bb_width": 0.025861861559412187,
-          "bb_width_avg": 0.04636215759558425,
-          "trend_state": "trend"
-        },
-        "timestamp": "2026-09-17T17:27:47.276397"
-      },
-      "flags": []
-    },
-    {
-      "symbol": "AMZN",
       "strategy": "BEAR_CALL",
       "expiration": "2026-10-02",
       "valid": false,
       "reasons": [
-        "resilience 0.03 at or below hard-reject floor 0.10"
+        "resilience 0.07 at or below hard-reject floor 0.10",
+        "builder flagged M2M_TOO_CLOSE at construction"
       ],
       "fresh_credit": null,
       "credit_drift_pct": null,
@@ -811,43 +670,14 @@
           "SPX above slow SMA \u2014 benign trend"
         ],
         "metrics": {
-          "vix": 15.619999885559082,
-          "vix_spike_1d_pct": -0.11801238322739345,
+          "vix": 15.4399995803833,
+          "vix_spike_1d_pct": -0.12817615027883264,
           "breakout_state": "none",
-          "bb_width": 0.025861861559412187,
-          "bb_width_avg": 0.04636215759558425,
+          "bb_width": 0.02576280096849635,
+          "bb_width_avg": 0.04635968108079898,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-17T17:27:47.277569"
-      },
-      "flags": []
-    },
-    {
-      "symbol": "AMZN",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-10-02",
-      "valid": false,
-      "reasons": [
-        "resilience 0.03 at or below hard-reject floor 0.10"
-      ],
-      "fresh_credit": null,
-      "credit_drift_pct": null,
-      "regime": {
-        "regime": "BENIGN_TREND",
-        "deploy": true,
-        "size_mult": 1.0,
-        "reasons": [
-          "SPX above slow SMA \u2014 benign trend"
-        ],
-        "metrics": {
-          "vix": 15.619999885559082,
-          "vix_spike_1d_pct": -0.11801238322739345,
-          "breakout_state": "none",
-          "bb_width": 0.025861861559412187,
-          "bb_width_avg": 0.04636215759558425,
-          "trend_state": "trend"
-        },
-        "timestamp": "2026-09-17T17:27:47.278726"
+        "timestamp": "2026-09-17T20:59:55.391348"
       },
       "flags": []
     }
