@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-17 22:30 UTC (live data)
-Generated (Pacific): Thursday, September 17, 2026 at 03:30 PM Pacific
+Generated: 2026-09-18 16:56 UTC (live data)
+Generated (Pacific): Friday, September 18, 2026 at 09:56 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,82 +12,57 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-- TSLA: score 0.65, spot $366.20, near-ATM IV 40.7%, ATR $14.46
-- WMT: score 0.53, spot $106.79, near-ATM IV 22.9%, ATR $1.74
-- AMZN: score 0.50, spot $251.19, near-ATM IV 28.7%, ATR $6.08
+- TSLA: score 0.65, spot $363.08, near-ATM IV 40.4%, ATR $14.21
+- MCD: score 0.30, spot $249.72, near-ATM IV 22.8%, ATR $3.72
 
 ## Trade Proposals
-### #1: TSLA BEAR_CALL exp 2026-10-02 (15 DTE)
+### #1: TSLA BULL_PUT exp 2026-10-09 (21 DTE)
   Mode: INCOME
-  Overall score: 27/100 (POP Fit 75, M2M Distance 13, Credit Quality 63, Liquidity 75, Resilience 2)
-  Leg: SELL Call $390.00 mid 4.55
-  Leg: BUY Call $395.00 mid 3.60
-  Spot $366.20  Credit $0.95  Width $5.00  POP 75%
-  Early-red M2M flip: $374.86 (2.36% above spot)
-  Expiration breakeven: $390.95  Resilience: 0.02
-  Exits: 50% at $0.48, 25% at $0.71
-  Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10)
+  Overall score: 32/100 (POP Fit 88, M2M Distance 12, Credit Quality 78, Liquidity 73, Resilience 3)
+  Leg: SELL Put $340.00 mid 5.12
+  Leg: BUY Put $335.00 mid 3.95
+  Spot $363.08  Credit $1.17  Width $5.00  POP 78%
+  Early-red M2M flip: $353.38 (2.67% below spot)
+  Expiration breakeven: $338.82  Resilience: 0.03
+  Exits: 50% at $0.59, 25% at $0.88
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: TSLA BEAR_CALL exp 2026-10-02 (15 DTE)
+### #2: TSLA BULL_PUT exp 2026-10-09 (21 DTE)
   Mode: INCOME
-  Overall score: 27/100 (POP Fit 75, M2M Distance 13, Credit Quality 63, Liquidity 75, Resilience 2)
-  Leg: SELL Call $390.00 mid 4.55
-  Leg: BUY Call $395.00 mid 3.60
-  Spot $366.20  Credit $0.95  Width $5.00  POP 75%
-  Early-red M2M flip: $374.86 (2.36% above spot)
-  Expiration breakeven: $390.95  Resilience: 0.02
-  Exits: 50% at $0.48, 25% at $0.71
-  Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10)
+  Overall score: 32/100 (POP Fit 88, M2M Distance 12, Credit Quality 78, Liquidity 73, Resilience 3)
+  Leg: SELL Put $340.00 mid 5.12
+  Leg: BUY Put $335.00 mid 3.95
+  Spot $363.08  Credit $1.17  Width $5.00  POP 78%
+  Early-red M2M flip: $353.38 (2.67% below spot)
+  Expiration breakeven: $338.82  Resilience: 0.03
+  Exits: 50% at $0.59, 25% at $0.88
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #3: AMZN BULL_PUT exp 2026-10-02 (15 DTE)
+### #3: MCD BULL_PUT exp 2026-10-09 (21 DTE)
   Mode: INCOME
-  Overall score: 21/100 (POP Fit 100, M2M Distance 13, Credit Quality 50, Liquidity 9, Resilience 5)
-  Leg: SELL Put $240.00 mid 1.82
-  Leg: BUY Put $235.00 mid 1.07
-  Spot $251.19  Credit $0.75  Width $5.00  POP 80%
-  Early-red M2M flip: $246.77 (1.76% below spot)
-  Expiration breakeven: $239.25  Resilience: 0.05
-  Exits: 50% at $0.37, 25% at $0.56
-  Validation: INVALID (resilience 0.05 at or below hard-reject floor 0.10)
+  Overall score: 21/100 (POP Fit 96, M2M Distance 13, Credit Quality 51, Liquidity 0, Resilience 13)
+  Leg: SELL Put $240.00 mid 1.47
+  Leg: BUY Put $235.00 mid 0.70
+  Spot $249.72  Credit $0.77  Width $5.00  POP 81%
+  Early-red M2M flip: $245.60 (1.65% below spot)
+  Expiration breakeven: $239.24  Resilience: 0.13
+  Exits: 50% at $0.38, 25% at $0.57
+  Validation: VALID
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #4: AMZN BULL_PUT exp 2026-10-02 (15 DTE)
+### #4: MCD BULL_PUT exp 2026-10-09 (21 DTE)
   Mode: INCOME
-  Overall score: 21/100 (POP Fit 100, M2M Distance 13, Credit Quality 50, Liquidity 9, Resilience 5)
-  Leg: SELL Put $240.00 mid 1.82
-  Leg: BUY Put $235.00 mid 1.07
-  Spot $251.19  Credit $0.75  Width $5.00  POP 80%
-  Early-red M2M flip: $246.77 (1.76% below spot)
-  Expiration breakeven: $239.25  Resilience: 0.05
-  Exits: 50% at $0.37, 25% at $0.56
-  Validation: INVALID (resilience 0.05 at or below hard-reject floor 0.10)
+  Overall score: 21/100 (POP Fit 96, M2M Distance 13, Credit Quality 51, Liquidity 0, Resilience 13)
+  Leg: SELL Put $240.00 mid 1.47
+  Leg: BUY Put $235.00 mid 0.70
+  Spot $249.72  Credit $0.77  Width $5.00  POP 81%
+  Early-red M2M flip: $245.60 (1.65% below spot)
+  Expiration breakeven: $239.24  Resilience: 0.13
+  Exits: 50% at $0.38, 25% at $0.57
+  Validation: VALID
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
-### #5: WMT BEAR_CALL exp 2026-10-02 (15 DTE)
-  Mode: INCOME
-  Overall score: 7/100 (POP Fit 61, M2M Distance 14, Credit Quality 80, Liquidity 0, Resilience 7)
-  Leg: SELL Call $110.00 mid 0.79
-  Leg: BUY Call $111.00 mid 0.55
-  Spot $106.79  Credit $0.24  Width $1.00  POP 72%
-  Early-red M2M flip: $108.37 (1.48% above spot)
-  Expiration breakeven: $110.24  Resilience: 0.07
-  Exits: 50% at $0.12, 25% at $0.18
-  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
-  Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
-
-### #6: WMT BULL_PUT exp 2026-10-02 (15 DTE)
-  Mode: INCOME
-  Overall score: 5/100 (POP Fit 72, M2M Distance 11, Credit Quality 65, Liquidity 0, Resilience 3)
-  Leg: SELL Put $104.00 mid 0.77
-  Leg: BUY Put $103.00 mid 0.58
-  Spot $106.79  Credit $0.19  Width $1.00  POP 74%
-  Early-red M2M flip: $105.55 (1.16% below spot)
-  Expiration breakeven: $103.81  Resilience: 0.03
-  Exits: 50% at $0.10, 25% at $0.15
-  Validation: not run
-  Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
 - INCOME mode = conservative spec (wide strikes, 70-90% POP).
