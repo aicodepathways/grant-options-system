@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-23T21:08:51.208503",
+  "generated_utc": "2026-09-23T22:31:48.926732",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -15,7 +15,7 @@
       "bb_width_avg": 0.0461550343561734,
       "trend_state": "trend"
     },
-    "timestamp": "2026-09-23T21:08:28.451732"
+    "timestamp": "2026-09-23T22:31:26.678377"
   },
   "candidates": [
     {
@@ -389,7 +389,7 @@
           "bb_width_avg": 0.0461550343561734,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-23T21:08:51.204084"
+        "timestamp": "2026-09-23T22:31:48.916423"
       },
       "flags": []
     },
@@ -418,7 +418,7 @@
           "bb_width_avg": 0.0461550343561734,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-23T21:08:51.205268"
+        "timestamp": "2026-09-23T22:31:48.917180"
       },
       "flags": []
     },
@@ -447,7 +447,7 @@
           "bb_width_avg": 0.0461550343561734,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-23T21:08:51.206403"
+        "timestamp": "2026-09-23T22:31:48.917895"
       },
       "flags": []
     },
@@ -476,7 +476,7 @@
           "bb_width_avg": 0.0461550343561734,
           "trend_state": "trend"
         },
-        "timestamp": "2026-09-23T21:08:51.207538"
+        "timestamp": "2026-09-23T22:31:48.918597"
       },
       "flags": []
     }
