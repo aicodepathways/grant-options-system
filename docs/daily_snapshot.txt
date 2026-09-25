@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-25 17:45 UTC (live data)
-Generated (Pacific): Friday, September 25, 2026 at 10:45 AM Pacific
+Generated: 2026-09-25 21:08 UTC (live data)
+Generated (Pacific): Friday, September 25, 2026 at 02:08 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,80 +12,80 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-- TSLA: score 0.63, spot $372.63, near-ATM IV 40.4%, ATR $11.21
-- AMZN: score 0.52, spot $249.91, near-ATM IV 27.6%, ATR $5.32
-- GLD: score 0.39, spot $393.02, near-ATM IV 19.2%, ATR $6.71
+- TSLA: score 0.62, spot $372.11, near-ATM IV 39.4%, ATR $11.21
+- AMZN: score 0.53, spot $249.67, near-ATM IV 28.6%, ATR $5.32
+- GLD: score 0.39, spot $393.41, near-ATM IV 19.1%, ATR $6.71
 
 ## Trade Proposals
 ### #1: TSLA BULL_PUT exp 2026-10-09 (14 DTE)
   Mode: INCOME
-  Overall score: 33/100 (POP Fit 79, M2M Distance 14, Credit Quality 83, Liquidity 70, Resilience 8)
-  Leg: SELL Put $355.00 mid 4.55
-  Leg: BUY Put $352.50 mid 3.92
-  Spot $372.53  Credit $0.62  Width $2.50  POP 76%
-  Early-red M2M flip: $363.25 (2.49% below spot)
-  Expiration breakeven: $354.38  Resilience: 0.08
+  Overall score: 31/100 (POP Fit 78, M2M Distance 12, Credit Quality 83, Liquidity 71, Resilience 3)
+  Leg: SELL Put $355.00 mid 4.58
+  Leg: BUY Put $352.50 mid 3.95
+  Spot $372.11  Credit $0.62  Width $2.50  POP 76%
+  Early-red M2M flip: $364.03 (2.17% below spot)
+  Expiration breakeven: $354.38  Resilience: 0.03
   Exits: 50% at $0.31, 25% at $0.47
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ### #2: TSLA BULL_PUT exp 2026-10-09 (14 DTE)
   Mode: INCOME
-  Overall score: 33/100 (POP Fit 79, M2M Distance 14, Credit Quality 83, Liquidity 70, Resilience 8)
-  Leg: SELL Put $355.00 mid 4.55
-  Leg: BUY Put $352.50 mid 3.92
-  Spot $372.53  Credit $0.62  Width $2.50  POP 76%
-  Early-red M2M flip: $363.25 (2.49% below spot)
-  Expiration breakeven: $354.38  Resilience: 0.08
+  Overall score: 31/100 (POP Fit 78, M2M Distance 12, Credit Quality 83, Liquidity 71, Resilience 3)
+  Leg: SELL Put $355.00 mid 4.58
+  Leg: BUY Put $352.50 mid 3.95
+  Spot $372.11  Credit $0.62  Width $2.50  POP 76%
+  Early-red M2M flip: $364.03 (2.17% below spot)
+  Expiration breakeven: $354.38  Resilience: 0.03
   Exits: 50% at $0.31, 25% at $0.47
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #3: AMZN BULL_PUT exp 2026-10-09 (14 DTE)
+### #3: AMZN BULL_PUT exp 2026-10-16 (21 DTE)
   Mode: INCOME
-  Overall score: 31/100 (POP Fit 99, M2M Distance 14, Credit Quality 52, Liquidity 69, Resilience 8)
-  Leg: SELL Put $240.00 mid 1.71
-  Leg: BUY Put $235.00 mid 0.94
-  Spot $249.90  Credit $0.78  Width $5.00  POP 80%
-  Early-red M2M flip: $245.52 (1.75% below spot)
-  Expiration breakeven: $239.22  Resilience: 0.08
-  Exits: 50% at $0.39, 25% at $0.58
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Overall score: 30/100 (POP Fit 74, M2M Distance 12, Credit Quality 79, Liquidity 68, Resilience 7)
+  Leg: SELL Put $240.00 mid 2.84
+  Leg: BUY Put $237.50 mid 2.25
+  Spot $249.67  Credit $0.59  Width $2.50  POP 75%
+  Early-red M2M flip: $244.93 (1.90% below spot)
+  Expiration breakeven: $239.41  Resilience: 0.07
+  Exits: 50% at $0.29, 25% at $0.44
+  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #4: AMZN BULL_PUT exp 2026-10-09 (14 DTE)
+### #4: AMZN BULL_PUT exp 2026-10-16 (21 DTE)
   Mode: INCOME
-  Overall score: 31/100 (POP Fit 99, M2M Distance 14, Credit Quality 52, Liquidity 69, Resilience 8)
-  Leg: SELL Put $240.00 mid 1.71
-  Leg: BUY Put $235.00 mid 0.94
-  Spot $249.90  Credit $0.78  Width $5.00  POP 80%
-  Early-red M2M flip: $245.52 (1.75% below spot)
-  Expiration breakeven: $239.22  Resilience: 0.08
-  Exits: 50% at $0.39, 25% at $0.58
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Overall score: 30/100 (POP Fit 74, M2M Distance 12, Credit Quality 79, Liquidity 68, Resilience 7)
+  Leg: SELL Put $240.00 mid 2.84
+  Leg: BUY Put $237.50 mid 2.25
+  Spot $249.67  Credit $0.59  Width $2.50  POP 75%
+  Early-red M2M flip: $244.93 (1.90% below spot)
+  Expiration breakeven: $239.41  Resilience: 0.07
+  Exits: 50% at $0.29, 25% at $0.44
+  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ### #5: GLD BULL_PUT exp 2026-10-16 (21 DTE)
   Mode: INCOME
-  Overall score: 14/100 (POP Fit 82, M2M Distance 11, Credit Quality 72, Liquidity 42, Resilience 2)
-  Leg: SELL Put $382.00 mid 2.81
-  Leg: BUY Put $379.00 mid 2.16
-  Spot $393.04  Credit $0.65  Width $3.00  POP 76%
-  Early-red M2M flip: $388.71 (1.10% below spot)
-  Expiration breakeven: $381.35  Resilience: 0.02
-  Exits: 50% at $0.32, 25% at $0.49
+  Overall score: 16/100 (POP Fit 75, M2M Distance 12, Credit Quality 92, Liquidity 39, Resilience 2)
+  Leg: SELL Put $383.00 mid 3.00
+  Leg: BUY Put $382.00 mid 2.73
+  Spot $393.41  Credit $0.27  Width $1.00  POP 75%
+  Early-red M2M flip: $388.53 (1.24% below spot)
+  Expiration breakeven: $382.73  Resilience: 0.02
+  Exits: 50% at $0.14, 25% at $0.21
   Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
   Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
 ### #6: GLD BULL_PUT exp 2026-10-16 (21 DTE)
   Mode: INCOME
-  Overall score: 14/100 (POP Fit 82, M2M Distance 11, Credit Quality 78, Liquidity 37, Resilience 0)
-  Leg: SELL Put $382.00 mid 2.81
-  Leg: BUY Put $380.00 mid 2.34
-  Spot $393.04  Credit $0.47  Width $2.00  POP 76%
-  Early-red M2M flip: $388.70 (1.10% below spot)
-  Expiration breakeven: $381.54  Resilience: 0.00
-  Exits: 50% at $0.23, 25% at $0.35
+  Overall score: 14/100 (POP Fit 75, M2M Distance 12, Credit Quality 83, Liquidity 40, Resilience 2)
+  Leg: SELL Put $383.00 mid 3.00
+  Leg: BUY Put $381.00 mid 2.51
+  Spot $393.41  Credit $0.50  Width $2.00  POP 75%
+  Early-red M2M flip: $388.68 (1.20% below spot)
+  Expiration breakeven: $382.50  Resilience: 0.02
+  Exits: 50% at $0.25, 25% at $0.37
   Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
   Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
