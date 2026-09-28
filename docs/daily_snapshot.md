@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-09-25 22:53 UTC (live data)
-Generated (Pacific): Friday, September 25, 2026 at 03:53 PM Pacific
+Generated: 2026-09-28 19:59 UTC (live data)
+Generated (Pacific): Monday, September 28, 2026 at 12:59 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,81 +12,56 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-- TSLA: score 0.62, spot $372.11, near-ATM IV 39.4%, ATR $11.21
-- AMZN: score 0.53, spot $249.67, near-ATM IV 28.6%, ATR $5.32
-- GLD: score 0.39, spot $393.41, near-ATM IV 19.1%, ATR $6.71
+- TSLA: score 0.65, spot $357.74, near-ATM IV 40.4%, ATR $11.16
+- GLD: score 0.42, spot $377.99, near-ATM IV 22.8%, ATR $7.37
 
 ## Trade Proposals
-### #1: TSLA BULL_PUT exp 2026-10-09 (14 DTE)
+### #1: TSLA BULL_PUT exp 2026-10-16 (18 DTE)
   Mode: INCOME
-  Overall score: 31/100 (POP Fit 78, M2M Distance 12, Credit Quality 83, Liquidity 71, Resilience 3)
-  Leg: SELL Put $355.00 mid 4.58
-  Leg: BUY Put $352.50 mid 3.95
-  Spot $372.11  Credit $0.62  Width $2.50  POP 76%
-  Early-red M2M flip: $364.03 (2.17% below spot)
-  Expiration breakeven: $354.38  Resilience: 0.03
-  Exits: 50% at $0.31, 25% at $0.47
+  Overall score: 32/100 (POP Fit 72, M2M Distance 12, Credit Quality 85, Liquidity 85, Resilience 3)
+  Leg: SELL Put $340.00 mid 5.40
+  Leg: BUY Put $335.00 mid 4.12
+  Spot $357.78  Credit $1.28  Width $5.00  POP 74%
+  Early-red M2M flip: $349.07 (2.44% below spot)
+  Expiration breakeven: $338.73  Resilience: 0.03
+  Exits: 50% at $0.64, 25% at $0.96
   Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: TSLA BULL_PUT exp 2026-10-09 (14 DTE)
+### #2: TSLA BULL_PUT exp 2026-10-16 (18 DTE)
   Mode: INCOME
-  Overall score: 31/100 (POP Fit 78, M2M Distance 12, Credit Quality 83, Liquidity 71, Resilience 3)
-  Leg: SELL Put $355.00 mid 4.58
-  Leg: BUY Put $352.50 mid 3.95
-  Spot $372.11  Credit $0.62  Width $2.50  POP 76%
-  Early-red M2M flip: $364.03 (2.17% below spot)
-  Expiration breakeven: $354.38  Resilience: 0.03
-  Exits: 50% at $0.31, 25% at $0.47
+  Overall score: 32/100 (POP Fit 72, M2M Distance 12, Credit Quality 85, Liquidity 85, Resilience 3)
+  Leg: SELL Put $340.00 mid 5.40
+  Leg: BUY Put $335.00 mid 4.12
+  Spot $357.78  Credit $1.28  Width $5.00  POP 74%
+  Early-red M2M flip: $349.07 (2.44% below spot)
+  Expiration breakeven: $338.73  Resilience: 0.03
+  Exits: 50% at $0.64, 25% at $0.96
   Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #3: AMZN BULL_PUT exp 2026-10-16 (21 DTE)
+### #3: GLD BULL_PUT exp 2026-10-16 (18 DTE)
   Mode: INCOME
-  Overall score: 30/100 (POP Fit 74, M2M Distance 12, Credit Quality 79, Liquidity 68, Resilience 7)
-  Leg: SELL Put $240.00 mid 2.84
-  Leg: BUY Put $237.50 mid 2.25
-  Spot $249.67  Credit $0.59  Width $2.50  POP 75%
-  Early-red M2M flip: $244.93 (1.90% below spot)
-  Expiration breakeven: $239.41  Resilience: 0.07
-  Exits: 50% at $0.29, 25% at $0.44
-  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10)
-  Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
-### #4: AMZN BULL_PUT exp 2026-10-16 (21 DTE)
-  Mode: INCOME
-  Overall score: 30/100 (POP Fit 74, M2M Distance 12, Credit Quality 79, Liquidity 68, Resilience 7)
-  Leg: SELL Put $240.00 mid 2.84
-  Leg: BUY Put $237.50 mid 2.25
-  Spot $249.67  Credit $0.59  Width $2.50  POP 75%
-  Early-red M2M flip: $244.93 (1.90% below spot)
-  Expiration breakeven: $239.41  Resilience: 0.07
-  Exits: 50% at $0.29, 25% at $0.44
-  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10)
-  Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
-### #5: GLD BULL_PUT exp 2026-10-16 (21 DTE)
-  Mode: INCOME
-  Overall score: 16/100 (POP Fit 75, M2M Distance 12, Credit Quality 92, Liquidity 39, Resilience 2)
-  Leg: SELL Put $383.00 mid 3.00
-  Leg: BUY Put $382.00 mid 2.73
-  Spot $393.41  Credit $0.27  Width $1.00  POP 75%
-  Early-red M2M flip: $388.53 (1.24% below spot)
-  Expiration breakeven: $382.73  Resilience: 0.02
-  Exits: 50% at $0.14, 25% at $0.21
-  Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
+  Overall score: 16/100 (POP Fit 86, M2M Distance 11, Credit Quality 68, Liquidity 53, Resilience 3)
+  Leg: SELL Put $366.00 mid 2.75
+  Leg: BUY Put $365.00 mid 2.54
+  Spot $377.98  Credit $0.21  Width $1.00  POP 77%
+  Early-red M2M flip: $373.23 (1.26% below spot)
+  Expiration breakeven: $365.80  Resilience: 0.03
+  Exits: 50% at $0.10, 25% at $0.15
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
   Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
-### #6: GLD BULL_PUT exp 2026-10-16 (21 DTE)
+### #4: GLD BULL_PUT exp 2026-10-16 (18 DTE)
   Mode: INCOME
-  Overall score: 14/100 (POP Fit 75, M2M Distance 12, Credit Quality 83, Liquidity 40, Resilience 2)
-  Leg: SELL Put $383.00 mid 3.00
-  Leg: BUY Put $381.00 mid 2.51
-  Spot $393.41  Credit $0.50  Width $2.00  POP 75%
-  Early-red M2M flip: $388.68 (1.20% below spot)
-  Expiration breakeven: $382.50  Resilience: 0.02
-  Exits: 50% at $0.25, 25% at $0.37
-  Validation: INVALID (resilience 0.02 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
+  Overall score: 16/100 (POP Fit 86, M2M Distance 11, Credit Quality 67, Liquidity 53, Resilience 3)
+  Leg: SELL Put $366.00 mid 2.75
+  Leg: BUY Put $364.00 mid 2.34
+  Spot $377.98  Credit $0.40  Width $2.00  POP 77%
+  Early-red M2M flip: $373.12 (1.28% below spot)
+  Expiration breakeven: $365.60  Resilience: 0.03
+  Exits: 50% at $0.20, 25% at $0.30
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10; builder flagged M2M_TOO_CLOSE at construction)
   Flags: M2M_TOO_CLOSE, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
