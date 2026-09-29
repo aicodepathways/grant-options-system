@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-29T18:27:39.905571",
+  "generated_utc": "2026-09-29T21:56:10.282516",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,16 +8,250 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 16.290000915527344,
-      "vix_spike_1d_pct": 0.013690182008776416,
+      "vix": 16.040000915527344,
+      "vix_spike_1d_pct": -0.0018667566811800826,
       "breakout_state": "none",
-      "bb_width": 0.03126663129943063,
-      "bb_width_avg": 0.045859387469879956,
+      "bb_width": 0.031265798918151046,
+      "bb_width_avg": 0.04585936666034796,
       "trend_state": "trend"
     },
-    "timestamp": "2026-09-29T18:27:14.044321"
+    "timestamp": "2026-09-29T21:55:51.129737"
   },
-  "candidates": [],
-  "proposals": [],
-  "validations": []
+  "candidates": [
+    {
+      "symbol": "GLD",
+      "is_index_product": false,
+      "underlying_price": 382.8900146484375,
+      "avg_iv": 0.21851367431640623,
+      "iv_rank": 0.6074766355140186,
+      "atr": 7.247861589704241,
+      "atr_compression_ratio": 0.9810123622502795,
+      "bb_width_compression_ratio": 0.6460574959672335,
+      "expirations_in_window": [
+        "2026-10-16"
+      ],
+      "quality_score": 0.42084497355060557,
+      "reasons": [
+        "passed all filters"
+      ]
+    }
+  ],
+  "proposals": [
+    {
+      "symbol": "GLD",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-16",
+      "underlying_price": 382.8900146484375,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 372.0,
+          "expiration": "2026-10-16",
+          "quantity": 1,
+          "mid": 2.88,
+          "bid": 2.8,
+          "ask": 2.96,
+          "delta": -0.24309074216186866,
+          "iv": 0.21295953063964845,
+          "contract_symbol": "GLD261016P00372000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 371.0,
+          "expiration": "2026-10-16",
+          "quantity": 1,
+          "mid": 2.6399999999999997,
+          "bid": 2.57,
+          "ask": 2.71,
+          "delta": -0.22586498877878758,
+          "iv": 0.2136919451904297,
+          "contract_symbol": "GLD261016P00371000"
+        }
+      ],
+      "credit": 0.2400000000000002,
+      "width": 1.0,
+      "max_loss": 0.7599999999999998,
+      "credit_to_width_ratio": 0.2400000000000002,
+      "pop": 0.7569092578381313,
+      "m2m_flip_price": 378.08312952518463,
+      "m2m_flip_distance_pct": 0.012554219069062069,
+      "expiration_breakeven_price": 371.76,
+      "expiration_breakeven_distance_pct": 0.02906843799166944,
+      "expected_move": 18.056380117486153,
+      "atr": 7.247861589704241,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.1200000000000001,
+      "exit_25pct_target_credit": 0.18000000000000016,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 0.8476797389910817,
+      "rank_reasons": [
+        "pop_score=0.78",
+        "m2m_score=0.12",
+        "credit_score=0.80",
+        "liquidity_score=0.46",
+        "early_red_score=0.02",
+        "penalty=1.30"
+      ],
+      "flags": [
+        "M2M_TOO_CLOSE",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 10.871792384556361,
+        "short_delta": -0.24309074216186866,
+        "credit_to_width_ratio": 0.2400000000000002
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 78,
+        "M2M Distance": 12,
+        "Credit Quality": 80,
+        "Liquidity": 46,
+        "Resilience": 2,
+        "Overall": 15
+      }
+    },
+    {
+      "symbol": "GLD",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-16",
+      "underlying_price": 382.8900146484375,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 372.0,
+          "expiration": "2026-10-16",
+          "quantity": 1,
+          "mid": 2.88,
+          "bid": 2.8,
+          "ask": 2.96,
+          "delta": -0.24309074216186866,
+          "iv": 0.21295953063964845,
+          "contract_symbol": "GLD261016P00372000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 370.0,
+          "expiration": "2026-10-16",
+          "quantity": 1,
+          "mid": 2.4450000000000003,
+          "bid": 2.39,
+          "ask": 2.5,
+          "delta": -0.21028803690638465,
+          "iv": 0.21527884338378905,
+          "contract_symbol": "GLD261016P00370000"
+        }
+      ],
+      "credit": 0.4349999999999996,
+      "width": 2.0,
+      "max_loss": 1.5650000000000004,
+      "credit_to_width_ratio": 0.2174999999999998,
+      "pop": 0.7569092578381313,
+      "m2m_flip_price": 378.389568451792,
+      "m2m_flip_distance_pct": 0.011753887603409362,
+      "expiration_breakeven_price": 371.565,
+      "expiration_breakeven_distance_pct": 0.02957772262312957,
+      "expected_move": 18.056380117486153,
+      "atr": 7.247861589704241,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.2174999999999998,
+      "exit_25pct_target_credit": 0.3262499999999997,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 0.7935276995436233,
+      "rank_reasons": [
+        "pop_score=0.78",
+        "m2m_score=0.11",
+        "credit_score=0.72",
+        "liquidity_score=0.50",
+        "early_red_score=0.02",
+        "penalty=1.30"
+      ],
+      "flags": [
+        "M2M_TOO_CLOSE",
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 10.871792384556361,
+        "short_delta": -0.24309074216186866,
+        "credit_to_width_ratio": 0.2174999999999998
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 78,
+        "M2M Distance": 11,
+        "Credit Quality": 72,
+        "Liquidity": 50,
+        "Resilience": 2,
+        "Overall": 14
+      }
+    }
+  ],
+  "validations": [
+    {
+      "symbol": "GLD",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-16",
+      "valid": false,
+      "reasons": [
+        "resilience 0.02 at or below hard-reject floor 0.10",
+        "builder flagged M2M_TOO_CLOSE at construction"
+      ],
+      "fresh_credit": null,
+      "credit_drift_pct": null,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 16.040000915527344,
+          "vix_spike_1d_pct": -0.0018667566811800826,
+          "breakout_state": "none",
+          "bb_width": 0.031265798918151046,
+          "bb_width_avg": 0.04585936666034796,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-09-29T21:56:10.280279"
+      },
+      "flags": []
+    },
+    {
+      "symbol": "GLD",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-16",
+      "valid": false,
+      "reasons": [
+        "resilience 0.02 at or below hard-reject floor 0.10",
+        "builder flagged M2M_TOO_CLOSE at construction"
+      ],
+      "fresh_credit": null,
+      "credit_drift_pct": null,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 16.040000915527344,
+          "vix_spike_1d_pct": -0.0018667566811800826,
+          "breakout_state": "none",
+          "bb_width": 0.031265798918151046,
+          "bb_width_avg": 0.04585936666034796,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-09-29T21:56:10.281232"
+      },
+      "flags": []
+    }
+  ]
 }
