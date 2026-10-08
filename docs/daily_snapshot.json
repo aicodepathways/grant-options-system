@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-08T19:08:38.176872",
+  "generated_utc": "2026-10-08T22:58:16.216545",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,29 +8,29 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 15.65999984741211,
-      "vix_spike_1d_pct": 0.03846153359684595,
+      "vix": 15.40999984741211,
+      "vix_spike_1d_pct": 0.021883284176101907,
       "breakout_state": "none",
-      "bb_width": 0.03723512373107054,
-      "bb_width_avg": 0.04043754515815644,
+      "bb_width": 0.037526251989474915,
+      "bb_width_avg": 0.04044482336461399,
       "trend_state": "trend"
     },
-    "timestamp": "2026-10-08T19:08:18.058016"
+    "timestamp": "2026-10-08T22:57:57.634408"
   },
   "candidates": [
     {
       "symbol": "NFLX",
       "is_index_product": false,
-      "underlying_price": 71.13999938964844,
-      "avg_iv": 0.5324753784179688,
-      "iv_rank": 0.49074074074074076,
-      "atr": 1.5407148088727678,
-      "atr_compression_ratio": 0.6894945298809059,
-      "bb_width_compression_ratio": 1.2647293610579664,
+      "underlying_price": 71.56999969482422,
+      "avg_iv": 0.5360153820800783,
+      "iv_rank": 0.5327102803738317,
+      "atr": 1.5475006103515625,
+      "atr_compression_ratio": 0.6924892262231618,
+      "bb_width_compression_ratio": 1.2630523118848322,
       "expirations_in_window": [
         "2026-10-23"
       ],
-      "quality_score": 0.5685809660970832,
+      "quality_score": 0.5708664383305606,
       "reasons": [
         "passed all filters"
       ]
