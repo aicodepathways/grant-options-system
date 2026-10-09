@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-09T18:39:16.591210",
+  "generated_utc": "2026-10-09T22:19:37.012919",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,35 +8,247 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 14.850000381469727,
-      "vix_spike_1d_pct": -0.03634000463902839,
+      "vix": 14.84000015258789,
+      "vix_spike_1d_pct": -0.03698894876497628,
       "breakout_state": "none",
-      "bb_width": 0.03942877683310827,
-      "bb_width_avg": 0.03934956226117036,
+      "bb_width": 0.03939082633865737,
+      "bb_width_avg": 0.03934861349880976,
       "trend_state": "trend"
     },
-    "timestamp": "2026-10-09T18:38:49.126902"
+    "timestamp": "2026-10-09T22:19:16.491630"
   },
   "candidates": [
     {
       "symbol": "NFLX",
       "is_index_product": false,
-      "underlying_price": 70.51000213623047,
-      "avg_iv": 0.5325974475097657,
-      "iv_rank": 0.49074074074074076,
-      "atr": 1.5267579214913505,
-      "atr_compression_ratio": 0.6904860644928243,
-      "bb_width_compression_ratio": 1.1898396462051462,
+      "underlying_price": 70.30000305175781,
+      "avg_iv": 0.5247850256347657,
+      "iv_rank": 0.4953271028037383,
+      "atr": 1.5356864929199219,
+      "atr_compression_ratio": 0.6944679829144134,
+      "bb_width_compression_ratio": 1.1913260699524726,
       "expirations_in_window": [
         "2026-10-23",
         "2026-10-30"
       ],
-      "quality_score": 0.5795342341112832,
+      "quality_score": 0.5878153144992417,
       "reasons": [
         "passed all filters"
       ]
     }
   ],
-  "proposals": [],
-  "validations": []
+  "proposals": [
+    {
+      "symbol": "NFLX",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-23",
+      "underlying_price": 70.30000305175781,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 67.0,
+          "expiration": "2026-10-23",
+          "quantity": 1,
+          "mid": 1.475,
+          "bid": 1.43,
+          "ask": 1.52,
+          "delta": -0.2912813723102836,
+          "iv": 0.508793974609375,
+          "contract_symbol": "NFLX261023P00067000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 65.0,
+          "expiration": "2026-10-23",
+          "quantity": 1,
+          "mid": 0.88,
+          "bid": 0.86,
+          "ask": 0.9,
+          "delta": -0.19479820293124017,
+          "iv": 0.5043994873046875,
+          "contract_symbol": "NFLX261023P00065000"
+        }
+      ],
+      "credit": 0.5950000000000001,
+      "width": 2.0,
+      "max_loss": 1.4049999999999998,
+      "credit_to_width_ratio": 0.29750000000000004,
+      "pop": 0.7087186276897164,
+      "m2m_flip_price": 68.00224895495921,
+      "m2m_flip_distance_pct": 0.03268497862093826,
+      "expiration_breakeven_price": 66.405,
+      "expiration_breakeven_distance_pct": 0.055405446410722724,
+      "expected_move": 7.225274707057949,
+      "atr": 1.5356864929199219,
+      "early_red_pl_score": 0.23333333333333334,
+      "exit_50pct_target_credit": 0.29750000000000004,
+      "exit_25pct_target_credit": 0.44625000000000004,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.9513845981300972,
+      "rank_reasons": [
+        "pop_score=0.54",
+        "m2m_score=0.14",
+        "credit_score=0.99",
+        "liquidity_score=0.47",
+        "early_red_score=0.23",
+        "penalty=0.45"
+      ],
+      "flags": [
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 2.303529739379883,
+        "short_delta": -0.2912813723102836,
+        "credit_to_width_ratio": 0.29750000000000004
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 54,
+        "M2M Distance": 14,
+        "Credit Quality": 99,
+        "Liquidity": 47,
+        "Resilience": 23,
+        "Overall": 35
+      }
+    },
+    {
+      "symbol": "NFLX",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-23",
+      "underlying_price": 70.30000305175781,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 67.0,
+          "expiration": "2026-10-23",
+          "quantity": 1,
+          "mid": 1.475,
+          "bid": 1.43,
+          "ask": 1.52,
+          "delta": -0.2912813723102836,
+          "iv": 0.508793974609375,
+          "contract_symbol": "NFLX261023P00067000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 64.0,
+          "expiration": "2026-10-23",
+          "quantity": 1,
+          "mid": 0.665,
+          "bid": 0.65,
+          "ask": 0.68,
+          "delta": -0.15450587517339265,
+          "iv": 0.5043994873046875,
+          "contract_symbol": "NFLX261023P00064000"
+        }
+      ],
+      "credit": 0.81,
+      "width": 3.0,
+      "max_loss": 2.19,
+      "credit_to_width_ratio": 0.27,
+      "pop": 0.7087186276897164,
+      "m2m_flip_price": 67.96013469365425,
+      "m2m_flip_distance_pct": 0.03328404347836015,
+      "expiration_breakeven_price": 66.19,
+      "expiration_breakeven_distance_pct": 0.05846376775733364,
+      "expected_move": 7.225274707057949,
+      "atr": 1.5356864929199219,
+      "early_red_pl_score": 0.23333333333333334,
+      "exit_50pct_target_credit": 0.405,
+      "exit_25pct_target_credit": 0.6075,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.8649708133844094,
+      "rank_reasons": [
+        "pop_score=0.54",
+        "m2m_score=0.14",
+        "credit_score=0.90",
+        "liquidity_score=0.47",
+        "early_red_score=0.23",
+        "penalty=0.45"
+      ],
+      "flags": [
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 2.303529739379883,
+        "short_delta": -0.2912813723102836,
+        "credit_to_width_ratio": 0.27
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 54,
+        "M2M Distance": 14,
+        "Credit Quality": 90,
+        "Liquidity": 47,
+        "Resilience": 23,
+        "Overall": 34
+      }
+    }
+  ],
+  "validations": [
+    {
+      "symbol": "NFLX",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-23",
+      "valid": true,
+      "reasons": [
+        "all checks passed"
+      ],
+      "fresh_credit": 0.5950000000000001,
+      "credit_drift_pct": 0.0,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 14.84000015258789,
+          "vix_spike_1d_pct": -0.03698894876497628,
+          "breakout_state": "none",
+          "bb_width": 0.03939082633865737,
+          "bb_width_avg": 0.03934861349880976,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-10-09T22:19:37.003886"
+      },
+      "flags": []
+    },
+    {
+      "symbol": "NFLX",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-10-23",
+      "valid": true,
+      "reasons": [
+        "all checks passed"
+      ],
+      "fresh_credit": 0.81,
+      "credit_drift_pct": 0.0,
+      "regime": {
+        "regime": "BENIGN_TREND",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX above slow SMA \u2014 benign trend"
+        ],
+        "metrics": {
+          "vix": 14.84000015258789,
+          "vix_spike_1d_pct": -0.03698894876497628,
+          "breakout_state": "none",
+          "bb_width": 0.03939082633865737,
+          "bb_width_avg": 0.03934861349880976,
+          "trend_state": "trend"
+        },
+        "timestamp": "2026-10-09T22:19:37.005204"
+      },
+      "flags": []
+    }
+  ]
 }
