@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-08T22:58:16.216545",
+  "generated_utc": "2026-10-09T00:01:51.311805",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -15,22 +15,23 @@
       "bb_width_avg": 0.04044482336461399,
       "trend_state": "trend"
     },
-    "timestamp": "2026-10-08T22:57:57.634408"
+    "timestamp": "2026-10-09T00:01:31.039585"
   },
   "candidates": [
     {
       "symbol": "NFLX",
       "is_index_product": false,
-      "underlying_price": 71.56999969482422,
-      "avg_iv": 0.5360153820800783,
-      "iv_rank": 0.5327102803738317,
+      "underlying_price": NaN,
+      "avg_iv": 0.5537154003906251,
+      "iv_rank": 0.42452830188679247,
       "atr": 1.5475006103515625,
       "atr_compression_ratio": 0.6924892262231618,
-      "bb_width_compression_ratio": 1.2630523118848322,
+      "bb_width_compression_ratio": NaN,
       "expirations_in_window": [
-        "2026-10-23"
+        "2026-10-23",
+        "2026-10-30"
       ],
-      "quality_score": 0.5708664383305606,
+      "quality_score": NaN,
       "reasons": [
         "passed all filters"
       ]

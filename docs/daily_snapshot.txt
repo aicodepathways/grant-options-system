@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-10-08 22:58 UTC (live data)
-Generated (Pacific): Thursday, October 08, 2026 at 03:58 PM Pacific
+Generated: 2026-10-09 00:01 UTC (live data)
+Generated (Pacific): Thursday, October 08, 2026 at 05:01 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,7 +12,7 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-- NFLX: score 0.57, spot $71.57, near-ATM IV 53.6%, ATR $1.55
+- NFLX: score nan, spot $nan, near-ATM IV 55.4%, ATR $1.55
 
 ## Trade Proposals
 No proposals built today.
