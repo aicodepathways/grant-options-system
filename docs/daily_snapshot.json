@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-13T01:42:11.687399",
+  "generated_utc": "2026-10-13T19:44:44.955719",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -8,14 +8,14 @@
       "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 15.210000038146973,
-      "vix_spike_1d_pct": 0.024932606587241793,
+      "vix": 15.40999984741211,
+      "vix_spike_1d_pct": 0.013149231345399958,
       "breakout_state": "none",
-      "bb_width": 0.039621859130747734,
-      "bb_width_avg": 0.038198723401767866,
+      "bb_width": 0.03778710929448631,
+      "bb_width_avg": 0.03700511703531025,
       "trend_state": "trend"
     },
-    "timestamp": "2026-10-13T01:41:53.383281"
+    "timestamp": "2026-10-13T19:44:17.032958"
   },
   "candidates": [],
   "proposals": [],
