@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-13T22:19:48.565977",
+  "generated_utc": "2026-10-13T23:29:23.343016",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -11,11 +11,11 @@
       "vix": 15.270000457763672,
       "vix_spike_1d_pct": 0.003944800753860421,
       "breakout_state": "none",
-      "bb_width": 0.0376345602152504,
-      "bb_width_avg": 0.03700130330833267,
+      "bb_width": 0.039621859130750565,
+      "bb_width_avg": 0.03819872340177122,
       "trend_state": "trend"
     },
-    "timestamp": "2026-10-13T22:19:26.052992"
+    "timestamp": "2026-10-13T23:28:54.315644"
   },
   "candidates": [],
   "proposals": [],
