@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-10-13 23:29 UTC (live data)
-Generated (Pacific): Tuesday, October 13, 2026 at 04:29 PM Pacific
+Generated: 2026-10-14 17:46 UTC (live data)
+Generated (Pacific): Wednesday, October 14, 2026 at 10:46 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,10 +12,33 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-No candidates passed scanner filters today.
+- META: score 0.73, spot $736.11, near-ATM IV 49.2%, ATR $22.50
 
 ## Trade Proposals
-No proposals built today.
+### #1: META BULL_PUT exp 2026-10-30 (16 DTE)
+  Mode: INCOME
+  Overall score: 33/100 (POP Fit 56, M2M Distance 14, Credit Quality 95, Liquidity 49, Resilience 12)
+  Leg: SELL Put $700.00 mid 15.23
+  Leg: BUY Put $695.00 mid 13.65
+  Spot $736.10  Credit $1.58  Width $5.00  POP 71%
+  Early-red M2M flip: $711.89 (3.29% below spot)
+  Expiration breakeven: $698.42  Resilience: 0.12
+  Exits: 50% at $0.79, 25% at $1.18
+  Validation: VALID
+  Flags: EARLY_RED_VULNERABLE
+
+### #2: META BULL_PUT exp 2026-10-30 (16 DTE)
+  Mode: INCOME
+  Overall score: 33/100 (POP Fit 56, M2M Distance 14, Credit Quality 95, Liquidity 49, Resilience 12)
+  Leg: SELL Put $700.00 mid 15.23
+  Leg: BUY Put $695.00 mid 13.65
+  Spot $736.10  Credit $1.58  Width $5.00  POP 71%
+  Early-red M2M flip: $711.89 (3.29% below spot)
+  Expiration breakeven: $698.42  Resilience: 0.12
+  Exits: 50% at $0.79, 25% at $1.18
+  Validation: VALID
+  Flags: EARLY_RED_VULNERABLE
+
 ## Notes for the AI advisor
 - INCOME mode = conservative spec (wide strikes, 70-90% POP).
 - OPPORTUNITY mode = the client's low-vol SPX style (strikes near half the expected move, credit 30-50% of width, POP floor ~55%). Index products only, VIX under 18.
