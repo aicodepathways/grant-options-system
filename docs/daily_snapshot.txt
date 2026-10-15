@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-10-14 22:46 UTC (live data)
-Generated (Pacific): Wednesday, October 14, 2026 at 03:46 PM Pacific
+Generated: 2026-10-15 17:35 UTC (live data)
+Generated (Pacific): Thursday, October 15, 2026 at 10:35 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,31 +12,32 @@ Size multiplier: 1.00
   - SPX above slow SMA — benign trend
 
 ## Candidates
-- META: score 0.73, spot $737.54, near-ATM IV 49.2%, ATR $22.50
+- META: score 0.74, spot $742.70, near-ATM IV 49.3%, ATR $22.31
+- NFLX: score 0.56, spot $72.82, near-ATM IV 59.9%, ATR $1.65
 
 ## Trade Proposals
-### #1: META BULL_PUT exp 2026-10-30 (16 DTE)
+### #1: META BULL_PUT exp 2026-10-30 (15 DTE)
   Mode: INCOME
-  Overall score: 28/100 (POP Fit 61, M2M Distance 13, Credit Quality 95, Liquidity 51, Resilience 8)
-  Leg: SELL Put $700.00 mid 14.43
-  Leg: BUY Put $695.00 mid 13.00
-  Spot $737.54  Credit $1.43  Width $5.00  POP 72%
-  Early-red M2M flip: $716.10 (2.91% below spot)
-  Expiration breakeven: $698.58  Resilience: 0.08
-  Exits: 50% at $0.71, 25% at $1.07
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Overall score: 26/100 (POP Fit 53, M2M Distance 13, Credit Quality 89, Liquidity 63, Resilience 3)
+  Leg: SELL Put $707.50 mid 15.80
+  Leg: BUY Put $700.00 mid 13.30
+  Spot $742.62  Credit $2.50  Width $7.50  POP 71%
+  Early-red M2M flip: $721.59 (2.83% below spot)
+  Expiration breakeven: $705.00  Resilience: 0.03
+  Exits: 50% at $1.25, 25% at $1.87
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: META BULL_PUT exp 2026-10-30 (16 DTE)
+### #2: META BULL_PUT exp 2026-10-30 (15 DTE)
   Mode: INCOME
-  Overall score: 28/100 (POP Fit 61, M2M Distance 13, Credit Quality 95, Liquidity 51, Resilience 8)
-  Leg: SELL Put $700.00 mid 14.43
-  Leg: BUY Put $695.00 mid 13.00
-  Spot $737.54  Credit $1.43  Width $5.00  POP 72%
-  Early-red M2M flip: $716.10 (2.91% below spot)
-  Expiration breakeven: $698.58  Resilience: 0.08
-  Exits: 50% at $0.71, 25% at $1.07
-  Validation: INVALID (resilience 0.08 at or below hard-reject floor 0.10)
+  Overall score: 26/100 (POP Fit 53, M2M Distance 13, Credit Quality 89, Liquidity 63, Resilience 3)
+  Leg: SELL Put $707.50 mid 15.80
+  Leg: BUY Put $700.00 mid 13.30
+  Spot $742.62  Credit $2.50  Width $7.50  POP 71%
+  Early-red M2M flip: $721.59 (2.83% below spot)
+  Expiration breakeven: $705.00  Resilience: 0.03
+  Exits: 50% at $1.25, 25% at $1.87
+  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
