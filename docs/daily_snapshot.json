@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-10-15T20:58:46.945401",
+  "generated_utc": "2026-10-15T22:44:43.602328",
   "regime": {
     "regime": "BENIGN_TREND",
     "deploy": true,
@@ -15,7 +15,7 @@
       "bb_width_avg": 0.03425044886285842,
       "trend_state": "trend"
     },
-    "timestamp": "2026-10-15T20:58:20.459024"
+    "timestamp": "2026-10-15T22:44:24.874386"
   },
   "candidates": [
     {
@@ -233,7 +233,7 @@
           "bb_width_avg": 0.03425044886285842,
           "trend_state": "trend"
         },
-        "timestamp": "2026-10-15T20:58:46.943706"
+        "timestamp": "2026-10-15T22:44:43.599657"
       },
       "flags": []
     },
@@ -262,7 +262,7 @@
           "bb_width_avg": 0.03425044886285842,
           "trend_state": "trend"
         },
-        "timestamp": "2026-10-15T20:58:46.944275"
+        "timestamp": "2026-10-15T22:44:43.601010"
       },
       "flags": []
     }
