@@ -2,43 +2,43 @@
 <html><head><meta charset='utf-8'><title>Grant Options System - Daily Snapshot</title></head><body><pre>
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-10-22 22:50 UTC (live data)
-Generated (Pacific): Thursday, October 22, 2026 at 03:50 PM Pacific
+Generated: 2026-10-23 17:41 UTC (live data)
+Generated (Pacific): Friday, October 23, 2026 at 10:41 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today&#x27;s first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: BENIGN_CHOP
+Label: ELEVATED_VOL
 Decision: DEPLOY
-Size multiplier: 1.00
-  - SPX below slow SMA, no compression — benign chop
+Size multiplier: 0.50
+  - VIX 20.28 elevated (&gt;20.0)
 
 ## Candidates
-- META: score 0.56, spot $648.85, near-ATM IV 39.9%, ATR $25.57
+- GLD: score 0.44, spot $365.76, near-ATM IV 22.9%, ATR $5.33
 
 ## Trade Proposals
-### #1: META BULL_PUT exp 2026-11-06 (15 DTE)
+### #1: GLD BULL_PUT exp 2026-11-13 (21 DTE)
   Mode: INCOME
-  Overall score: 26/100 (POP Fit 98, M2M Distance 13, Credit Quality 67, Liquidity 28, Resilience 3)
-  Leg: SELL Put $610.00 mid 6.70
-  Leg: BUY Put $605.00 mid 5.70
-  Spot $648.85  Credit $1.00  Width $5.00  POP 80%
-  Early-red M2M flip: $633.77 (2.32% below spot)
-  Expiration breakeven: $609.00  Resilience: 0.03
-  Exits: 50% at $0.50, 25% at $0.75
-  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
+  Overall score: 28/100 (POP Fit 67, M2M Distance 13, Credit Quality 73, Liquidity 68, Resilience 10)
+  Leg: SELL Put $355.00 mid 3.67
+  Leg: BUY Put $350.00 mid 2.58
+  Spot $365.74  Credit $1.10  Width $5.00  POP 73%
+  Early-red M2M flip: $359.96 (1.58% below spot)
+  Expiration breakeven: $353.90  Resilience: 0.10
+  Exits: 50% at $0.55, 25% at $0.82
+  Validation: INVALID (resilience 0.10 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
-### #2: META BULL_PUT exp 2026-11-06 (15 DTE)
+### #2: GLD BULL_PUT exp 2026-11-13 (21 DTE)
   Mode: INCOME
-  Overall score: 26/100 (POP Fit 98, M2M Distance 13, Credit Quality 67, Liquidity 28, Resilience 3)
-  Leg: SELL Put $610.00 mid 6.70
-  Leg: BUY Put $605.00 mid 5.70
-  Spot $648.85  Credit $1.00  Width $5.00  POP 80%
-  Early-red M2M flip: $633.77 (2.32% below spot)
-  Expiration breakeven: $609.00  Resilience: 0.03
-  Exits: 50% at $0.50, 25% at $0.75
-  Validation: INVALID (resilience 0.03 at or below hard-reject floor 0.10)
+  Overall score: 28/100 (POP Fit 67, M2M Distance 13, Credit Quality 73, Liquidity 68, Resilience 10)
+  Leg: SELL Put $355.00 mid 3.67
+  Leg: BUY Put $350.00 mid 2.58
+  Spot $365.74  Credit $1.10  Width $5.00  POP 73%
+  Early-red M2M flip: $359.96 (1.58% below spot)
+  Expiration breakeven: $353.90  Resilience: 0.10
+  Exits: 50% at $0.55, 25% at $0.82
+  Validation: INVALID (resilience 0.10 at or below hard-reject floor 0.10)
   Flags: M2M_WARN, EARLY_RED_VULNERABLE
 
 ## Notes for the AI advisor
