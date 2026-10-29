@@ -1,21 +1,21 @@
 {
-  "generated_utc": "2026-10-29T18:47:29.285437",
+  "generated_utc": "2026-10-29T22:28:53.757511",
   "regime": {
-    "regime": "BENIGN_CHOP",
+    "regime": "BENIGN_TREND",
     "deploy": true,
     "size_mult": 1.0,
     "reasons": [
-      "SPX below slow SMA, no compression \u2014 benign chop"
+      "SPX above slow SMA \u2014 benign trend"
     ],
     "metrics": {
-      "vix": 17.0,
-      "vix_spike_1d_pct": 0.005322303571851549,
+      "vix": 17.200000762939453,
+      "vix_spike_1d_pct": 0.017149669907993832,
       "breakout_state": "none",
-      "bb_width": 0.029519051387714067,
-      "bb_width_avg": 0.030021447361142067,
-      "trend_state": "chop"
+      "bb_width": 0.029150721652750854,
+      "bb_width_avg": 0.030012239117767257,
+      "trend_state": "trend"
     },
-    "timestamp": "2026-10-29T18:47:11.099424"
+    "timestamp": "2026-10-29T22:28:35.938808"
   },
   "candidates": [],
   "proposals": [],
