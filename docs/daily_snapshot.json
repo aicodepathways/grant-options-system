@@ -1,19 +1,260 @@
 {
-  "generated_utc": "2026-10-30T18:25:12.753530",
+  "generated_utc": "2026-10-30T21:58:23.778703",
   "regime": {
-    "regime": "PANIC",
-    "deploy": false,
-    "size_mult": 0.0,
+    "regime": "BENIGN_CHOP",
+    "deploy": true,
+    "size_mult": 1.0,
     "reasons": [
-      "VIX 1d spike 28.1% >= threshold"
+      "SPX below slow SMA, no compression \u2014 benign chop"
     ],
     "metrics": {
-      "vix": 22.030000686645508,
-      "vix_spike_1d_pct": 0.2808139365966293
+      "vix": 19.420000076293945,
+      "vix_spike_1d_pct": 0.12906972179547146,
+      "breakout_state": "none",
+      "bb_width": 0.034370719902527894,
+      "bb_width_avg": 0.030253359650688132,
+      "trend_state": "chop"
     },
-    "timestamp": "2026-10-30T18:25:12.752348"
+    "timestamp": "2026-10-30T21:58:05.013577"
   },
-  "candidates": [],
-  "proposals": [],
-  "validations": []
+  "candidates": [
+    {
+      "symbol": "QCOM",
+      "is_index_product": false,
+      "underlying_price": 164.7899932861328,
+      "avg_iv": 0.6912262322998048,
+      "iv_rank": 0.4722222222222222,
+      "atr": 7.4692873273577005,
+      "atr_compression_ratio": 1.0553013782519485,
+      "bb_width_compression_ratio": 0.6223624555473346,
+      "expirations_in_window": [
+        "2026-11-13",
+        "2026-11-20"
+      ],
+      "quality_score": 0.4363247388636511,
+      "reasons": [
+        "passed all filters"
+      ]
+    }
+  ],
+  "proposals": [
+    {
+      "symbol": "QCOM",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-11-13",
+      "underlying_price": 164.7899932861328,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 150.0,
+          "expiration": "2026-11-13",
+          "quantity": 1,
+          "mid": 3.4000000000000004,
+          "bid": 3.1,
+          "ask": 3.7,
+          "delta": -0.2218014978681112,
+          "iv": 0.7010527941894531,
+          "contract_symbol": "QCOM261113P00150000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 145.0,
+          "expiration": "2026-11-13",
+          "quantity": 1,
+          "mid": 2.4450000000000003,
+          "bid": 2.25,
+          "ask": 2.64,
+          "delta": -0.1638578954773423,
+          "iv": 0.7297390307617188,
+          "contract_symbol": "QCOM261113P00145000"
+        }
+      ],
+      "credit": 0.9550000000000001,
+      "width": 5.0,
+      "max_loss": 4.045,
+      "credit_to_width_ratio": 0.191,
+      "pop": 0.7781985021318888,
+      "m2m_flip_price": 158.13685291446745,
+      "m2m_flip_distance_pct": 0.04037344889087525,
+      "expiration_breakeven_price": 149.045,
+      "expiration_breakeven_distance_pct": 0.0955458093792991,
+      "expected_move": 22.308410791770097,
+      "atr": 7.4692873273577005,
+      "early_red_pl_score": 0.11666666666666667,
+      "exit_50pct_target_credit": 0.47750000000000004,
+      "exit_25pct_target_credit": 0.71625,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.4164822560225034,
+      "rank_reasons": [
+        "pop_score=0.89",
+        "m2m_score=0.13",
+        "credit_score=0.64",
+        "liquidity_score=0.00",
+        "early_red_score=0.12",
+        "penalty=0.45"
+      ],
+      "flags": [
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 11.20393099103655,
+        "short_delta": -0.2218014978681112,
+        "credit_to_width_ratio": 0.191
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 89,
+        "M2M Distance": 13,
+        "Credit Quality": 64,
+        "Liquidity": 0,
+        "Resilience": 12,
+        "Overall": 26
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-11-13",
+      "underlying_price": 164.7899932861328,
+      "legs": [
+        {
+          "action": "SELL",
+          "right": "P",
+          "strike": 150.0,
+          "expiration": "2026-11-13",
+          "quantity": 1,
+          "mid": 3.4000000000000004,
+          "bid": 3.1,
+          "ask": 3.7,
+          "delta": -0.2218014978681112,
+          "iv": 0.7010527941894531,
+          "contract_symbol": "QCOM261113P00150000"
+        },
+        {
+          "action": "BUY",
+          "right": "P",
+          "strike": 145.0,
+          "expiration": "2026-11-13",
+          "quantity": 1,
+          "mid": 2.4450000000000003,
+          "bid": 2.25,
+          "ask": 2.64,
+          "delta": -0.1638578954773423,
+          "iv": 0.7297390307617188,
+          "contract_symbol": "QCOM261113P00145000"
+        }
+      ],
+      "credit": 0.9550000000000001,
+      "width": 5.0,
+      "max_loss": 4.045,
+      "credit_to_width_ratio": 0.191,
+      "pop": 0.7781985021318888,
+      "m2m_flip_price": 158.13685291446745,
+      "m2m_flip_distance_pct": 0.04037344889087525,
+      "expiration_breakeven_price": 149.045,
+      "expiration_breakeven_distance_pct": 0.0955458093792991,
+      "expected_move": 22.308410791770097,
+      "atr": 7.4692873273577005,
+      "early_red_pl_score": 0.11666666666666667,
+      "exit_50pct_target_credit": 0.47750000000000004,
+      "exit_25pct_target_credit": 0.71625,
+      "est_days_to_50pct": 7,
+      "est_days_to_25pct": 3,
+      "rank_score": 1.4164822560225034,
+      "rank_reasons": [
+        "pop_score=0.89",
+        "m2m_score=0.13",
+        "credit_score=0.64",
+        "liquidity_score=0.00",
+        "early_red_score=0.12",
+        "penalty=0.45"
+      ],
+      "flags": [
+        "EARLY_RED_VULNERABLE"
+      ],
+      "metrics": {
+        "buffer_dollars": 11.20393099103655,
+        "short_delta": -0.2218014978681112,
+        "credit_to_width_ratio": 0.191
+      },
+      "mode": "income",
+      "score_card": {
+        "POP Fit": 89,
+        "M2M Distance": 13,
+        "Credit Quality": 64,
+        "Liquidity": 0,
+        "Resilience": 12,
+        "Overall": 26
+      }
+    }
+  ],
+  "validations": [
+    {
+      "symbol": "QCOM",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-11-13",
+      "valid": true,
+      "reasons": [
+        "all checks passed"
+      ],
+      "fresh_credit": 0.9550000000000001,
+      "credit_drift_pct": 0.0,
+      "regime": {
+        "regime": "BENIGN_CHOP",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX below slow SMA, no compression \u2014 benign chop"
+        ],
+        "metrics": {
+          "vix": 19.420000076293945,
+          "vix_spike_1d_pct": 0.12906972179547146,
+          "breakout_state": "none",
+          "bb_width": 0.034370719902527894,
+          "bb_width_avg": 0.030253359650688132,
+          "trend_state": "chop"
+        },
+        "timestamp": "2026-10-30T21:58:23.769147"
+      },
+      "flags": [
+        "wide spread on P 150.0: 17.6%",
+        "wide spread on P 145.0: 16.0%"
+      ]
+    },
+    {
+      "symbol": "QCOM",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-11-13",
+      "valid": true,
+      "reasons": [
+        "all checks passed"
+      ],
+      "fresh_credit": 0.9550000000000001,
+      "credit_drift_pct": 0.0,
+      "regime": {
+        "regime": "BENIGN_CHOP",
+        "deploy": true,
+        "size_mult": 1.0,
+        "reasons": [
+          "SPX below slow SMA, no compression \u2014 benign chop"
+        ],
+        "metrics": {
+          "vix": 19.420000076293945,
+          "vix_spike_1d_pct": 0.12906972179547146,
+          "breakout_state": "none",
+          "bb_width": 0.034370719902527894,
+          "bb_width_avg": 0.030253359650688132,
+          "trend_state": "chop"
+        },
+        "timestamp": "2026-10-30T21:58:23.770429"
+      },
+      "flags": [
+        "wide spread on P 150.0: 17.6%",
+        "wide spread on P 145.0: 16.0%"
+      ]
+    }
+  ]
 }
