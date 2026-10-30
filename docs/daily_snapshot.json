@@ -1,21 +1,17 @@
 {
-  "generated_utc": "2026-10-29T23:41:44.437032",
+  "generated_utc": "2026-10-30T18:25:12.753530",
   "regime": {
-    "regime": "BENIGN_TREND",
-    "deploy": true,
-    "size_mult": 1.0,
+    "regime": "PANIC",
+    "deploy": false,
+    "size_mult": 0.0,
     "reasons": [
-      "SPX above slow SMA \u2014 benign trend"
+      "VIX 1d spike 28.1% >= threshold"
     ],
     "metrics": {
-      "vix": 17.200000762939453,
-      "vix_spike_1d_pct": 0.017149669907993832,
-      "breakout_state": "none",
-      "bb_width": 0.029150721652750854,
-      "bb_width_avg": 0.030012239117767257,
-      "trend_state": "trend"
+      "vix": 22.030000686645508,
+      "vix_spike_1d_pct": 0.2808139365966293
     },
-    "timestamp": "2026-10-29T23:41:23.046782"
+    "timestamp": "2026-10-30T18:25:12.752348"
   },
   "candidates": [],
   "proposals": [],
