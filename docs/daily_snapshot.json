@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-04T23:15:51.974742",
+  "generated_utc": "2026-11-05T00:27:47.546590",
   "regime": {
     "regime": "BENIGN_CHOP",
     "deploy": true,
@@ -15,14 +15,14 @@
       "bb_width_avg": 0.031495339423652055,
       "trend_state": "chop"
     },
-    "timestamp": "2026-11-04T23:15:31.082173"
+    "timestamp": "2026-11-05T00:27:28.236418"
   },
   "candidates": [
     {
       "symbol": "GS",
       "is_index_product": false,
       "underlying_price": 928.0,
-      "avg_iv": 0.3290014610290527,
+      "avg_iv": 0.3391179370117187,
       "iv_rank": 0.3148148148148148,
       "atr": 24.912850516183035,
       "atr_compression_ratio": 1.027185909409609,
@@ -30,7 +30,7 @@
       "expirations_in_window": [
         "2026-11-20"
       ],
-      "quality_score": 0.49269747485787047,
+      "quality_score": 0.5035921413007416,
       "reasons": [
         "passed all filters"
       ]
@@ -52,8 +52,8 @@
           "mid": 10.95,
           "bid": 10.85,
           "ask": 11.05,
-          "delta": -0.2511713014030037,
-          "iv": 0.3285894778442382,
+          "delta": -0.25136107653680784,
+          "iv": 0.3386906951904296,
           "contract_symbol": "GS261120P00890000"
         },
         {
@@ -65,8 +65,8 @@
           "mid": 10.325,
           "bid": 10.2,
           "ask": 10.45,
-          "delta": -0.23933920063692693,
-          "iv": 0.3302679278564453,
+          "delta": -0.2395037159397435,
+          "iv": 0.3404301797485352,
           "contract_symbol": "GS261120P00887500"
         }
       ],
@@ -74,22 +74,22 @@
       "width": 2.5,
       "max_loss": 1.875,
       "credit_to_width_ratio": 0.25,
-      "pop": 0.7488286985969963,
-      "m2m_flip_price": 908.6169128417969,
-      "m2m_flip_distance_pct": 0.020886947368753368,
+      "pop": 0.7486389234631922,
+      "m2m_flip_price": 908.4105529785156,
+      "m2m_flip_distance_pct": 0.021109317911082302,
       "expiration_breakeven_price": 889.375,
       "expiration_breakeven_distance_pct": 0.04162176724137931,
-      "expected_move": 63.923325732126784,
+      "expected_move": 63.79665893771217,
       "atr": 24.912850516183035,
       "early_red_pl_score": 0.06666666666666667,
       "exit_50pct_target_credit": 0.3125,
       "exit_25pct_target_credit": 0.46875,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.7897145053160906,
+      "rank_score": 1.7913234258356436,
       "rank_reasons": [
         "pop_score=0.74",
-        "m2m_score=0.13",
+        "m2m_score=0.14",
         "credit_score=0.83",
         "liquidity_score=0.79",
         "early_red_score=0.07",
@@ -101,13 +101,13 @@
       ],
       "metrics": {
         "buffer_dollars": 37.369275774274556,
-        "short_delta": -0.2511713014030037,
+        "short_delta": -0.25136107653680784,
         "credit_to_width_ratio": 0.25
       },
       "mode": "income",
       "score_card": {
         "POP Fit": 74,
-        "M2M Distance": 13,
+        "M2M Distance": 14,
         "Credit Quality": 83,
         "Liquidity": 79,
         "Resilience": 7,
@@ -129,8 +129,8 @@
           "mid": 10.95,
           "bid": 10.85,
           "ask": 11.05,
-          "delta": -0.2511713014030037,
-          "iv": 0.3285894778442382,
+          "delta": -0.25136107653680784,
+          "iv": 0.3386906951904296,
           "contract_symbol": "GS261120P00890000"
         },
         {
@@ -142,8 +142,8 @@
           "mid": 10.325,
           "bid": 10.2,
           "ask": 10.45,
-          "delta": -0.23933920063692693,
-          "iv": 0.3302679278564453,
+          "delta": -0.2395037159397435,
+          "iv": 0.3404301797485352,
           "contract_symbol": "GS261120P00887500"
         }
       ],
@@ -151,22 +151,22 @@
       "width": 2.5,
       "max_loss": 1.875,
       "credit_to_width_ratio": 0.25,
-      "pop": 0.7488286985969963,
-      "m2m_flip_price": 908.6169128417969,
-      "m2m_flip_distance_pct": 0.020886947368753368,
+      "pop": 0.7486389234631922,
+      "m2m_flip_price": 908.4105529785156,
+      "m2m_flip_distance_pct": 0.021109317911082302,
       "expiration_breakeven_price": 889.375,
       "expiration_breakeven_distance_pct": 0.04162176724137931,
-      "expected_move": 63.923325732126784,
+      "expected_move": 63.79665893771217,
       "atr": 24.912850516183035,
       "early_red_pl_score": 0.06666666666666667,
       "exit_50pct_target_credit": 0.3125,
       "exit_25pct_target_credit": 0.46875,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.7897145053160906,
+      "rank_score": 1.7913234258356436,
       "rank_reasons": [
         "pop_score=0.74",
-        "m2m_score=0.13",
+        "m2m_score=0.14",
         "credit_score=0.83",
         "liquidity_score=0.79",
         "early_red_score=0.07",
@@ -178,13 +178,13 @@
       ],
       "metrics": {
         "buffer_dollars": 37.369275774274556,
-        "short_delta": -0.2511713014030037,
+        "short_delta": -0.25136107653680784,
         "credit_to_width_ratio": 0.25
       },
       "mode": "income",
       "score_card": {
         "POP Fit": 74,
-        "M2M Distance": 13,
+        "M2M Distance": 14,
         "Credit Quality": 83,
         "Liquidity": 79,
         "Resilience": 7,
@@ -218,7 +218,7 @@
           "bb_width_avg": 0.031495339423652055,
           "trend_state": "chop"
         },
-        "timestamp": "2026-11-04T23:15:51.972314"
+        "timestamp": "2026-11-05T00:27:47.536468"
       },
       "flags": []
     },
@@ -247,7 +247,7 @@
           "bb_width_avg": 0.031495339423652055,
           "trend_state": "chop"
         },
-        "timestamp": "2026-11-04T23:15:51.973490"
+        "timestamp": "2026-11-05T00:27:47.537666"
       },
       "flags": []
     }
