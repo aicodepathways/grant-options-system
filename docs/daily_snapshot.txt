@@ -1,44 +1,21 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-11-05 00:35 UTC (live data)
-Generated (Pacific): Wednesday, November 04, 2026 at 04:35 PM Pacific
+Generated: 2026-11-05 20:27 UTC (live data)
+Generated (Pacific): Thursday, November 05, 2026 at 12:27 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: BENIGN_CHOP
-Decision: DEPLOY
-Size multiplier: 1.00
-  - SPX below slow SMA, no compression — benign chop
+Label: PANIC
+Decision: NO-TRADE
+Size multiplier: 0.00
+  - VIX 1d spike 59.1% >= threshold
 
 ## Candidates
-- GS: score 0.50, spot $928.00, near-ATM IV 33.9%, ATR $24.91
+No candidates passed scanner filters today.
 
 ## Trade Proposals
-### #1: GS BULL_PUT exp 2026-11-20 (15 DTE)
-  Mode: INCOME
-  Overall score: 33/100 (POP Fit 74, M2M Distance 14, Credit Quality 83, Liquidity 79, Resilience 7)
-  Leg: SELL Put $890.00 mid 10.95
-  Leg: BUY Put $887.50 mid 10.32
-  Spot $928.00  Credit $0.62  Width $2.50  POP 75%
-  Early-red M2M flip: $908.41 (2.11% below spot)
-  Expiration breakeven: $889.38  Resilience: 0.07
-  Exits: 50% at $0.31, 25% at $0.47
-  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10)
-  Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
-### #2: GS BULL_PUT exp 2026-11-20 (15 DTE)
-  Mode: INCOME
-  Overall score: 33/100 (POP Fit 74, M2M Distance 14, Credit Quality 83, Liquidity 79, Resilience 7)
-  Leg: SELL Put $890.00 mid 10.95
-  Leg: BUY Put $887.50 mid 10.32
-  Spot $928.00  Credit $0.62  Width $2.50  POP 75%
-  Early-red M2M flip: $908.41 (2.11% below spot)
-  Expiration breakeven: $889.38  Resilience: 0.07
-  Exits: 50% at $0.31, 25% at $0.47
-  Validation: INVALID (resilience 0.07 at or below hard-reject floor 0.10)
-  Flags: M2M_WARN, EARLY_RED_VULNERABLE
-
+No proposals built today.
 ## Notes for the AI advisor
 - INCOME mode = conservative spec (wide strikes, 70-90% POP).
 - OPPORTUNITY mode = the client's low-vol SPX style (strikes near half the expected move, credit 30-50% of width, POP floor ~55%). Index products only, VIX under 18.
