@@ -1,15 +1,15 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-11-06 00:36 UTC (live data)
-Generated (Pacific): Thursday, November 05, 2026 at 04:36 PM Pacific
+Generated: 2026-11-06 19:50 UTC (live data)
+Generated (Pacific): Friday, November 06, 2026 at 11:50 AM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: PANIC
-Decision: NO-TRADE
-Size multiplier: 0.00
-  - VIX 1d spike 69.7% >= threshold
+Label: ELEVATED_VOL
+Decision: DEPLOY
+Size multiplier: 0.50
+  - VIX 24.94 elevated (>20.0)
 
 ## Candidates
 No candidates passed scanner filters today.
