@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-09T22:51:56.062311",
+  "generated_utc": "2026-11-10T00:39:05.297345",
   "regime": {
     "regime": "BENIGN_CHOP",
     "deploy": true,
@@ -15,14 +15,14 @@
       "bb_width_avg": 0.03424299737614344,
       "trend_state": "chop"
     },
-    "timestamp": "2026-11-09T22:51:36.866129"
+    "timestamp": "2026-11-10T00:38:42.947892"
   },
   "candidates": [
     {
       "symbol": "BAC",
       "is_index_product": false,
       "underlying_price": 50.54999923706055,
-      "avg_iv": 0.26074958007812504,
+      "avg_iv": 0.26782958740234375,
       "iv_rank": 0.9906542056074766,
       "atr": 1.250000272478376,
       "atr_compression_ratio": 1.0298238633693555,
@@ -30,7 +30,7 @@
       "expirations_in_window": [
         "2026-11-27"
       ],
-      "quality_score": 0.5302407436357877,
+      "quality_score": 0.5378653669080231,
       "reasons": [
         "passed all filters"
       ]
@@ -52,8 +52,8 @@
           "mid": 0.32,
           "bid": 0.28,
           "ask": 0.36,
-          "delta": -0.18135217391265912,
-          "iv": 0.27637442382812494,
+          "delta": -0.18172480180197548,
+          "iv": 0.2841868457031249,
           "contract_symbol": "BAC261127P00048000"
         },
         {
@@ -65,8 +65,8 @@
           "mid": 0.12,
           "bid": 0.0,
           "ask": 0.24,
-          "delta": -0.10456488587352042,
-          "iv": 0.35742830078125,
+          "delta": -0.10450021095420503,
+          "iv": 0.367193828125,
           "contract_symbol": "BAC261127P00046000"
         }
       ],
@@ -74,19 +74,19 @@
       "width": 2.0,
       "max_loss": 1.8,
       "credit_to_width_ratio": 0.1,
-      "pop": 0.8186478260873409,
+      "pop": 0.8182751981980245,
       "m2m_flip_price": 49.141799204284325,
       "m2m_flip_distance_pct": 0.02785756783441858,
       "expiration_breakeven_price": 47.8,
       "expiration_breakeven_distance_pct": 0.0544015683197953,
-      "expected_move": 2.9270799938944987,
+      "expected_move": 2.9218487718861574,
       "atr": 1.250000272478376,
       "early_red_pl_score": 0.35,
       "exit_50pct_target_credit": 0.1,
       "exit_25pct_target_credit": 0.15000000000000002,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.2808234018966658,
+      "rank_score": 1.2832607687504531,
       "rank_reasons": [
         "pop_score=0.91",
         "m2m_score=0.21",
@@ -101,7 +101,7 @@
       ],
       "metrics": {
         "buffer_dollars": 1.8750004087175642,
-        "short_delta": -0.18135217391265912,
+        "short_delta": -0.18172480180197548,
         "credit_to_width_ratio": 0.1
       },
       "mode": "income",
@@ -129,8 +129,8 @@
           "mid": 0.32999999999999996,
           "bid": 0.31,
           "ask": 0.35,
-          "delta": 0.22011173986305116,
-          "iv": 0.25391371093750004,
+          "delta": 0.2189702519476326,
+          "iv": 0.260749580078125,
           "contract_symbol": "BAC261127C00053000"
         },
         {
@@ -142,8 +142,8 @@
           "mid": 0.175,
           "bid": 0.15,
           "ask": 0.2,
-          "delta": 0.1378381460928047,
-          "iv": 0.256843369140625,
+          "delta": 0.1372459639360039,
+          "iv": 0.26416751464843746,
           "contract_symbol": "BAC261127C00054000"
         }
       ],
@@ -151,22 +151,22 @@
       "width": 1.0,
       "max_loss": 0.845,
       "credit_to_width_ratio": 0.15499999999999997,
-      "pop": 0.7798882601369488,
-      "m2m_flip_price": 51.357503530802205,
-      "m2m_flip_distance_pct": 0.01597436806981472,
+      "pop": 0.7810297480523674,
+      "m2m_flip_price": 51.396376822842285,
+      "m2m_flip_distance_pct": 0.016743374847792668,
       "expiration_breakeven_price": 53.155,
       "expiration_breakeven_distance_pct": 0.051533151379943194,
-      "expected_move": 2.9270799938944987,
+      "expected_move": 2.9218487718861574,
       "atr": 1.250000272478376,
       "early_red_pl_score": 0.03333333333333333,
       "exit_50pct_target_credit": 0.07749999999999999,
       "exit_25pct_target_credit": 0.11624999999999998,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 0.940023745857864,
+      "rank_score": 0.9549300298630254,
       "rank_reasons": [
-        "pop_score=0.90",
-        "m2m_score=0.12",
+        "pop_score=0.91",
+        "m2m_score=0.13",
         "credit_score=0.52",
         "liquidity_score=0.00",
         "early_red_score=0.03",
@@ -178,13 +178,13 @@
       ],
       "metrics": {
         "buffer_dollars": 1.8750004087175642,
-        "short_delta": 0.22011173986305116,
+        "short_delta": 0.2189702519476326,
         "credit_to_width_ratio": 0.15499999999999997
       },
       "mode": "income",
       "score_card": {
-        "POP Fit": 90,
-        "M2M Distance": 12,
+        "POP Fit": 91,
+        "M2M Distance": 13,
         "Credit Quality": 52,
         "Liquidity": 0,
         "Resilience": 3,
@@ -218,7 +218,7 @@
           "bb_width_avg": 0.03424299737614344,
           "trend_state": "chop"
         },
-        "timestamp": "2026-11-09T22:51:56.059849"
+        "timestamp": "2026-11-10T00:39:05.279707"
       },
       "flags": [
         "wide spread on P 48.0: 25.0%",
@@ -250,7 +250,7 @@
           "bb_width_avg": 0.03424299737614344,
           "trend_state": "chop"
         },
-        "timestamp": "2026-11-09T22:51:56.061054"
+        "timestamp": "2026-11-10T00:39:05.280888"
       },
       "flags": []
     }
