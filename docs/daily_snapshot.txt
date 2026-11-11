@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-11-11 00:18 UTC (live data)
-Generated (Pacific): Tuesday, November 10, 2026 at 04:18 PM Pacific
+Generated: 2026-11-11 20:00 UTC (live data)
+Generated (Pacific): Wednesday, November 11, 2026 at 12:00 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -12,10 +12,33 @@ Size multiplier: 1.00
   - SPX below slow SMA, no compression — benign chop
 
 ## Candidates
-No candidates passed scanner filters today.
+- BAC: score 0.53, spot $50.89, near-ATM IV 24.0%, ATR $1.21
 
 ## Trade Proposals
-No proposals built today.
+### #1: BAC BULL_PUT exp 2026-11-27 (16 DTE)
+  Mode: INCOME
+  Overall score: 19/100 (POP Fit 91, M2M Distance 15, Credit Quality 57, Liquidity 0, Resilience 5)
+  Leg: SELL Put $49.00 mid 0.36
+  Leg: BUY Put $48.00 mid 0.20
+  Spot $50.88  Credit $0.17  Width $1.00  POP 78%
+  Early-red M2M flip: $50.03 (1.67% below spot)
+  Expiration breakeven: $48.83  Resilience: 0.05
+  Exits: 50% at $0.08, 25% at $0.13
+  Validation: INVALID (resilience 0.05 at or below hard-reject floor 0.10)
+  Flags: M2M_WARN, EARLY_RED_VULNERABLE
+
+### #2: BAC BULL_PUT exp 2026-11-27 (16 DTE)
+  Mode: INCOME
+  Overall score: 16/100 (POP Fit 91, M2M Distance 15, Credit Quality 41, Liquidity 0, Resilience 5)
+  Leg: SELL Put $49.00 mid 0.36
+  Leg: BUY Put $47.00 mid 0.12
+  Spot $50.88  Credit $0.24  Width $2.00  POP 78%
+  Early-red M2M flip: $50.05 (1.64% below spot)
+  Expiration breakeven: $48.76  Resilience: 0.05
+  Exits: 50% at $0.12, 25% at $0.18
+  Validation: INVALID (resilience 0.05 at or below hard-reject floor 0.10)
+  Flags: M2M_WARN, EARLY_RED_VULNERABLE
+
 ## Notes for the AI advisor
 - INCOME mode = conservative spec (wide strikes, 70-90% POP).
 - OPPORTUNITY mode = the client's low-vol SPX style (strikes near half the expected move, credit 30-50% of width, POP floor ~55%). Index products only, VIX under 18.
