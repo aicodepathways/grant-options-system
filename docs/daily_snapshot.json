@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-10T22:53:35.404584",
+  "generated_utc": "2026-11-11T00:07:33.300474",
   "regime": {
     "regime": "BENIGN_CHOP",
     "deploy": true,
@@ -15,7 +15,7 @@
       "bb_width_avg": 0.03520342443200779,
       "trend_state": "chop"
     },
-    "timestamp": "2026-11-10T22:53:17.267518"
+    "timestamp": "2026-11-11T00:07:15.766978"
   },
   "candidates": [],
   "proposals": [],
