@@ -1,15 +1,15 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-11-14 00:31 UTC (live data)
-Generated (Pacific): Friday, November 13, 2026 at 04:31 PM Pacific
+Generated: 2026-11-16 22:43 UTC (live data)
+Generated (Pacific): Monday, November 16, 2026 at 02:43 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
 ## Regime
-Label: BENIGN_CHOP
+Label: ELEVATED_VOL
 Decision: DEPLOY
-Size multiplier: 1.00
-  - SPX below slow SMA, no compression — benign chop
+Size multiplier: 0.50
+  - VIX 22.91 elevated (>20.0)
 
 ## Candidates
 No candidates passed scanner filters today.
