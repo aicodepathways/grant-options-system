@@ -1,18 +1,17 @@
 {
-  "generated_utc": "2026-11-20T01:29:09.048933",
+  "generated_utc": "2026-11-20T20:54:56.672881",
   "regime": {
-    "regime": "BREAKOUT",
-    "deploy": true,
-    "size_mult": 0.5,
+    "regime": "PANIC",
+    "deploy": false,
+    "size_mult": 0.0,
     "reasons": [
-      "SPX breakout down"
+      "VIX 1d spike 32.3% >= threshold"
     ],
     "metrics": {
-      "vix": 28.440000534057617,
-      "vix_spike_1d_pct": 0.15798050295138133,
-      "breakout_state": "breakout_down"
+      "vix": 37.63999938964844,
+      "vix_spike_1d_pct": 0.3234879986930236
     },
-    "timestamp": "2026-11-20T01:28:56.288572"
+    "timestamp": "2026-11-20T20:54:56.665096"
   },
   "candidates": [],
   "proposals": [],
