@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-21T00:53:08.072141",
+  "generated_utc": "2026-11-21T00:59:08.020339",
   "regime": {
     "regime": "PANIC",
     "deploy": false,
@@ -11,7 +11,7 @@
       "vix": 35.88999938964844,
       "vix_spike_1d_pct": 0.2619549478091345
     },
-    "timestamp": "2026-11-21T00:53:08.065653"
+    "timestamp": "2026-11-21T00:59:08.013572"
   },
   "candidates": [],
   "proposals": [],
