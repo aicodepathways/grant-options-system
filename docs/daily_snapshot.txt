@@ -1,7 +1,7 @@
 # Grant Options Income System — Daily Snapshot
 
-Generated: 2026-11-26 02:31 UTC (live data)
-Generated (Pacific): Wednesday, November 25, 2026 at 06:31 PM Pacific
+Generated: 2026-11-26 22:06 UTC (live data)
+Generated (Pacific): Thursday, November 26, 2026 at 02:06 PM Pacific
 
 Freshness note for the reader: this page refreshes several times each weekday morning, roughly 6:45 AM to noon Pacific. Exact times drift because the free scheduler queues jobs. If the date above is not today, today's first run has not completed yet; advise re-checking after 7:30 AM Pacific rather than treating it as a failure.
 
@@ -9,7 +9,7 @@ Freshness note for the reader: this page refreshes several times each weekday mo
 Label: ELEVATED_VOL
 Decision: DEPLOY
 Size multiplier: 0.50
-  - VIX 28.29 elevated (>20.0)
+  - VIX 26.80 elevated (>20.0)
 
 ## Candidates
 - META: score 0.66, spot $609.89, near-ATM IV 50.5%, ATR $24.32

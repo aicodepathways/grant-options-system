@@ -1,20 +1,20 @@
 {
-  "generated_utc": "2026-11-26T02:31:45.306937",
+  "generated_utc": "2026-11-26T22:06:48.894161",
   "regime": {
     "regime": "ELEVATED_VOL",
     "deploy": true,
     "size_mult": 0.5,
     "reasons": [
-      "VIX 28.29 elevated (>20.0)"
+      "VIX 26.80 elevated (>20.0)"
     ],
     "metrics": {
-      "vix": 28.290000915527344,
-      "vix_spike_1d_pct": 0.07321700532957769,
+      "vix": 26.799999237060547,
+      "vix_spike_1d_pct": -0.052668845183705515,
       "breakout_state": "none",
       "bb_width": 0.11195572027304573,
       "bb_width_avg": 0.049838737921374436
     },
-    "timestamp": "2026-11-26T02:31:28.830960"
+    "timestamp": "2026-11-26T22:06:30.561711"
   },
   "candidates": [
     {
@@ -205,16 +205,16 @@
         "deploy": true,
         "size_mult": 0.5,
         "reasons": [
-          "VIX 28.29 elevated (>20.0)"
+          "VIX 26.80 elevated (>20.0)"
         ],
         "metrics": {
-          "vix": 28.290000915527344,
-          "vix_spike_1d_pct": 0.07321700532957769,
+          "vix": 26.799999237060547,
+          "vix_spike_1d_pct": -0.052668845183705515,
           "breakout_state": "none",
           "bb_width": 0.11195572027304573,
           "bb_width_avg": 0.049838737921374436
         },
-        "timestamp": "2026-11-26T02:31:45.305049"
+        "timestamp": "2026-11-26T22:06:48.885524"
       },
       "flags": []
     },
@@ -233,16 +233,16 @@
         "deploy": true,
         "size_mult": 0.5,
         "reasons": [
-          "VIX 28.29 elevated (>20.0)"
+          "VIX 26.80 elevated (>20.0)"
         ],
         "metrics": {
-          "vix": 28.290000915527344,
-          "vix_spike_1d_pct": 0.07321700532957769,
+          "vix": 26.799999237060547,
+          "vix_spike_1d_pct": -0.052668845183705515,
           "breakout_state": "none",
           "bb_width": 0.11195572027304573,
           "bb_width_avg": 0.049838737921374436
         },
-        "timestamp": "2026-11-26T02:31:45.305651"
+        "timestamp": "2026-11-26T22:06:48.886600"
       },
       "flags": []
     }
