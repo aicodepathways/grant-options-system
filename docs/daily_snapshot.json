@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-26T22:06:48.894161",
+  "generated_utc": "2026-11-27T00:59:23.489466",
   "regime": {
     "regime": "ELEVATED_VOL",
     "deploy": true,
@@ -14,22 +14,23 @@
       "bb_width": 0.11195572027304573,
       "bb_width_avg": 0.049838737921374436
     },
-    "timestamp": "2026-11-26T22:06:30.561711"
+    "timestamp": "2026-11-27T00:59:05.467332"
   },
   "candidates": [
     {
       "symbol": "META",
       "is_index_product": false,
       "underlying_price": 609.8900146484375,
-      "avg_iv": 0.5045062977600097,
+      "avg_iv": 0.5127917373657226,
       "iv_rank": 0.5963302752293578,
       "atr": 24.315708705357142,
       "atr_compression_ratio": 0.9837514195143323,
       "bb_width_compression_ratio": 0.6421216051620245,
       "expirations_in_window": [
-        "2026-12-11"
+        "2026-12-11",
+        "2026-12-18"
       ],
-      "quality_score": 0.6637925746106321,
+      "quality_score": 0.6548697934967873,
       "reasons": [
         "passed all filters"
       ]
@@ -38,60 +39,60 @@
   "proposals": [
     {
       "symbol": "META",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-12-11",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-12-18",
       "underlying_price": 609.8900146484375,
       "legs": [
         {
           "action": "SELL",
-          "right": "C",
-          "strike": 650.0,
-          "expiration": "2026-12-11",
+          "right": "P",
+          "strike": 572.5,
+          "expiration": "2026-12-18",
           "quantity": 1,
-          "mid": 9.475000000000001,
-          "bid": 9.15,
-          "ask": 9.8,
-          "delta": 0.2753327218388047,
-          "iv": 0.47318031707763675,
-          "contract_symbol": "META261211C00650000"
+          "mid": 14.575,
+          "bid": 14.2,
+          "ask": 14.95,
+          "delta": -0.27488831225102306,
+          "iv": 0.5115100119018555,
+          "contract_symbol": "META261218P00572500"
         },
         {
           "action": "BUY",
-          "right": "C",
-          "strike": 655.0,
-          "expiration": "2026-12-11",
+          "right": "P",
+          "strike": 567.5,
+          "expiration": "2026-12-18",
           "quantity": 1,
-          "mid": 8.1,
-          "bid": 7.75,
-          "ask": 8.45,
-          "delta": 0.2468953119477963,
-          "iv": 0.46854169158935544,
-          "contract_symbol": "META261211C00655000"
+          "mid": 13.25,
+          "bid": 12.9,
+          "ask": 13.6,
+          "delta": -0.2533623382885182,
+          "iv": 0.5168505346679688,
+          "contract_symbol": "META261218P00567500"
         }
       ],
-      "credit": 1.3750000000000018,
+      "credit": 1.3249999999999993,
       "width": 5.0,
-      "max_loss": 3.6249999999999982,
-      "credit_to_width_ratio": 0.27500000000000036,
-      "pop": 0.7246672781611954,
-      "m2m_flip_price": 628.7371685858816,
-      "m2m_flip_distance_pct": 0.03090254551602762,
-      "expiration_breakeven_price": 651.375,
-      "expiration_breakeven_distance_pct": 0.06802043705450062,
-      "expected_move": 62.375969979267474,
+      "max_loss": 3.6750000000000007,
+      "credit_to_width_ratio": 0.26499999999999985,
+      "pop": 0.7251116877489769,
+      "m2m_flip_price": 591.2427872419357,
+      "m2m_flip_distance_pct": 0.030574737999687865,
+      "expiration_breakeven_price": 571.175,
+      "expiration_breakeven_distance_pct": 0.0634786825797669,
+      "expected_move": 75.01632022312873,
       "atr": 24.315708705357142,
-      "early_red_pl_score": 0.05,
-      "exit_50pct_target_credit": 0.6875000000000009,
-      "exit_25pct_target_credit": 1.0312500000000013,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.6624999999999996,
+      "exit_25pct_target_credit": 0.9937499999999995,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.531353767227573,
+      "rank_score": 1.627456185390485,
       "rank_reasons": [
-        "pop_score=0.62",
-        "m2m_score=0.13",
-        "credit_score=0.92",
-        "liquidity_score=0.22",
-        "early_red_score=0.05",
+        "pop_score=0.63",
+        "m2m_score=0.11",
+        "credit_score=0.88",
+        "liquidity_score=0.48",
+        "early_red_score=0.02",
         "penalty=0.45"
       ],
       "flags": [
@@ -99,75 +100,75 @@
       ],
       "metrics": {
         "buffer_dollars": 36.473563058035715,
-        "short_delta": 0.2753327218388047,
-        "credit_to_width_ratio": 0.27500000000000036
+        "short_delta": -0.27488831225102306,
+        "credit_to_width_ratio": 0.26499999999999985
       },
       "mode": "income",
       "score_card": {
-        "POP Fit": 62,
-        "M2M Distance": 13,
-        "Credit Quality": 92,
-        "Liquidity": 22,
-        "Resilience": 5,
-        "Overall": 28
+        "POP Fit": 63,
+        "M2M Distance": 11,
+        "Credit Quality": 88,
+        "Liquidity": 48,
+        "Resilience": 2,
+        "Overall": 30
       }
     },
     {
       "symbol": "META",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-12-11",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-12-18",
       "underlying_price": 609.8900146484375,
       "legs": [
         {
           "action": "SELL",
-          "right": "C",
-          "strike": 650.0,
-          "expiration": "2026-12-11",
+          "right": "P",
+          "strike": 572.5,
+          "expiration": "2026-12-18",
           "quantity": 1,
-          "mid": 9.475000000000001,
-          "bid": 9.15,
-          "ask": 9.8,
-          "delta": 0.2753327218388047,
-          "iv": 0.47318031707763675,
-          "contract_symbol": "META261211C00650000"
+          "mid": 14.575,
+          "bid": 14.2,
+          "ask": 14.95,
+          "delta": -0.27488831225102306,
+          "iv": 0.5115100119018555,
+          "contract_symbol": "META261218P00572500"
         },
         {
           "action": "BUY",
-          "right": "C",
-          "strike": 655.0,
-          "expiration": "2026-12-11",
+          "right": "P",
+          "strike": 567.5,
+          "expiration": "2026-12-18",
           "quantity": 1,
-          "mid": 8.1,
-          "bid": 7.75,
-          "ask": 8.45,
-          "delta": 0.2468953119477963,
-          "iv": 0.46854169158935544,
-          "contract_symbol": "META261211C00655000"
+          "mid": 13.25,
+          "bid": 12.9,
+          "ask": 13.6,
+          "delta": -0.2533623382885182,
+          "iv": 0.5168505346679688,
+          "contract_symbol": "META261218P00567500"
         }
       ],
-      "credit": 1.3750000000000018,
+      "credit": 1.3249999999999993,
       "width": 5.0,
-      "max_loss": 3.6249999999999982,
-      "credit_to_width_ratio": 0.27500000000000036,
-      "pop": 0.7246672781611954,
-      "m2m_flip_price": 628.7371685858816,
-      "m2m_flip_distance_pct": 0.03090254551602762,
-      "expiration_breakeven_price": 651.375,
-      "expiration_breakeven_distance_pct": 0.06802043705450062,
-      "expected_move": 62.375969979267474,
+      "max_loss": 3.6750000000000007,
+      "credit_to_width_ratio": 0.26499999999999985,
+      "pop": 0.7251116877489769,
+      "m2m_flip_price": 591.2427872419357,
+      "m2m_flip_distance_pct": 0.030574737999687865,
+      "expiration_breakeven_price": 571.175,
+      "expiration_breakeven_distance_pct": 0.0634786825797669,
+      "expected_move": 75.01632022312873,
       "atr": 24.315708705357142,
-      "early_red_pl_score": 0.05,
-      "exit_50pct_target_credit": 0.6875000000000009,
-      "exit_25pct_target_credit": 1.0312500000000013,
+      "early_red_pl_score": 0.016666666666666666,
+      "exit_50pct_target_credit": 0.6624999999999996,
+      "exit_25pct_target_credit": 0.9937499999999995,
       "est_days_to_50pct": 7,
       "est_days_to_25pct": 3,
-      "rank_score": 1.531353767227573,
+      "rank_score": 1.627456185390485,
       "rank_reasons": [
-        "pop_score=0.62",
-        "m2m_score=0.13",
-        "credit_score=0.92",
-        "liquidity_score=0.22",
-        "early_red_score=0.05",
+        "pop_score=0.63",
+        "m2m_score=0.11",
+        "credit_score=0.88",
+        "liquidity_score=0.48",
+        "early_red_score=0.02",
         "penalty=0.45"
       ],
       "flags": [
@@ -175,28 +176,28 @@
       ],
       "metrics": {
         "buffer_dollars": 36.473563058035715,
-        "short_delta": 0.2753327218388047,
-        "credit_to_width_ratio": 0.27500000000000036
+        "short_delta": -0.27488831225102306,
+        "credit_to_width_ratio": 0.26499999999999985
       },
       "mode": "income",
       "score_card": {
-        "POP Fit": 62,
-        "M2M Distance": 13,
-        "Credit Quality": 92,
-        "Liquidity": 22,
-        "Resilience": 5,
-        "Overall": 28
+        "POP Fit": 63,
+        "M2M Distance": 11,
+        "Credit Quality": 88,
+        "Liquidity": 48,
+        "Resilience": 2,
+        "Overall": 30
       }
     }
   ],
   "validations": [
     {
       "symbol": "META",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-12-11",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-12-18",
       "valid": false,
       "reasons": [
-        "resilience 0.05 at or below hard-reject floor 0.10"
+        "resilience 0.02 at or below hard-reject floor 0.10"
       ],
       "fresh_credit": null,
       "credit_drift_pct": null,
@@ -214,17 +215,17 @@
           "bb_width": 0.11195572027304573,
           "bb_width_avg": 0.049838737921374436
         },
-        "timestamp": "2026-11-26T22:06:48.885524"
+        "timestamp": "2026-11-27T00:59:23.479597"
       },
       "flags": []
     },
     {
       "symbol": "META",
-      "strategy": "BEAR_CALL",
-      "expiration": "2026-12-11",
+      "strategy": "BULL_PUT",
+      "expiration": "2026-12-18",
       "valid": false,
       "reasons": [
-        "resilience 0.05 at or below hard-reject floor 0.10"
+        "resilience 0.02 at or below hard-reject floor 0.10"
       ],
       "fresh_credit": null,
       "credit_drift_pct": null,
@@ -242,7 +243,7 @@
           "bb_width": 0.11195572027304573,
           "bb_width_avg": 0.049838737921374436
         },
-        "timestamp": "2026-11-26T22:06:48.886600"
+        "timestamp": "2026-11-27T00:59:23.480663"
       },
       "flags": []
     }
